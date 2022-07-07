@@ -1,0 +1,39 @@
+{
+	"env": {
+		"browser": true,
+		"mocha": true,
+		"node": true,
+		"es2021": true
+	},
+	"extends": [
+		"standard"
+	],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"mocha"
+	],
+	"rules": {
+		"semi": [
+			"error",
+			"always"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"no-unused-vars": "warn",
+		"no-warning-comments": [
+			"warn",
+			{
+				"terms": [
+					"todo",
+					"fixme"
+				],
+				"location": "anywhere"
+			}
+		]
+	}
+}

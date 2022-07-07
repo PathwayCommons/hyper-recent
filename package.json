@@ -1,0 +1,31 @@
+{
+  "name": "hyper-recent",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Hyper-recent article feed",
+  "main": "src/index.js",
+  "bin": {
+    "hyper-recent": "hyper-recent.js"
+  },
+  "scripts": {
+    "start": "echo Nothing to start yet",
+    "test": "mocha"
+  },
+  "author": "Pathway Commons",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "commander": "^9.3.0",
+    "get-stdin": "^9.0.0",
+    "minisearch": "^5.0.0",
+    "node-fetch": "^3.2.6"
+  }
+}

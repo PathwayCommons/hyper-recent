@@ -1,0 +1,277 @@
+[
+  {
+    "id": "10.1101/2021.08.06.455417",
+    "score": 14.654171166734894,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "title",
+        "abstract"
+      ]
+    },
+    "title": "Deep learning based kcat prediction enables improved enzyme constrained model reconstruction",
+    "authors": "Li, F.; Yuan, L.; Lu, H.; Li, G.; Chen, Y.; Engqvist, M. K.; Kerkhoven, E. J.; Nielsen, J.",
+    "category": "systems biology",
+    "abstract": "Enzyme turnover numbers (kcat values) are key parameters to understand cell metabolism, proteome allocation and physiological diversity, but experimentally measured kcat data are sparse and noisy. Here we provide a deep learning approach to predict kcat values for metabolic enzymes in a high-throughput manner with the input of substrate structures and protein sequences. Our approach can capture kcat changes for mutated enzymes and identify amino acid residues with great impact on kcat values. Furthermore, we applied the approach to predict genome scale kcat values for over 300 yeast species, demonstrating that the predicted kcat values are consistent with current evolutional understanding. Additionally, we designed an automatic pipeline using the predicted kcat values to parameterize enzyme-constrained genome scale metabolic models (ecGEMs) facilitated by a Bayesian approach, which outperformed the default ecGEMs in predicting phenotypes and proteomes and enabled to explain phenotype differences among yeast species. The deep learning kcat prediction approach and automatic ecGEM construction pipeline would thus be a valuable tool to uncover the global trend of enzyme kinetics and physiological diversity, and to further elucidate cell metabolism on a large scale."
+  },
+  {
+    "id": "10.1101/2021.12.06.471469",
+    "score": 12.821627095271058,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "title",
+        "abstract"
+      ]
+    },
+    "title": "A naturally DNase-free CRISPR-Cas12c enzyme silences gene expression",
+    "authors": "Huang, C. J.; Adler, B. A.; Doudna, J. A.",
+    "category": "biochemistry",
+    "abstract": "Used widely for genome editing in human cells, plants and animals, CRISPR-Cas enzymes including Cas9 and Cas12 provide RNA-guided immunity to microbes by targeting foreign DNA sequences for cleavage. We show here that the native activity of CRISPR-Cas12c protects bacteria from phage infection by binding to DNA targets without cleaving them, revealing that antiviral interference can be accomplished without chemical attack on the invader or general metabolic disruption in the host. Biochemical experiments demonstrate that Cas12c is a site-specific ribonuclease capable of generating mature CRISPR RNAs (crRNAs) from precursor transcripts. Furthermore, we find that crRNA maturation is essential for Cas12c-mediated DNA targeting. Surprisingly, however, these crRNAs direct double-stranded DNA binding by Cas12c using a mechanism that precludes DNA cutting. Cas12cs RNA-guided DNA binding activity enables robust transcriptional repression of fluorescent reporter proteins in cells. Furthermore, this naturally DNase-free Cas12c enzyme can protect bacteria from lytic bacteriophage infection when targeting an essential phage gene. Together these results show that Cas12c employs targeted DNA binding to provide anti-viral immunity in bacteria, providing a native DNase-free pathway for transient antiviral immunity."
+  },
+  {
+    "id": "10.1101/2020.10.11.335026",
+    "score": 12.418318802843576,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "title",
+        "abstract"
+      ]
+    },
+    "title": "Acquisition of a type 3 secretion signal in an housekeeping enzyme shaped glycogen metabolism in Chlamydia",
+    "authors": "Triboulet, S.; N'Gadjaga, M. D.; Niragire, B.; Köstlbacher, S.; Horn, M.; Subtil, A.",
+    "category": "microbiology",
+    "abstract": "The obligate intracellular bacteria Chlamydia trachomatis store glycogen in the lumen of the vacuoles in which they grow. Glycogen catabolism generates glucose-1-phosphate (Glc1P), while the bacteria are capable of taking up only glucose-6-phosphate (Glc6P). We tested whether the conversion of Glc1P into Glc6P could be catalyzed by a phosphoglucomutase (PGM) of host or bacterial origin. We found no evidence for the presence of the host enzyme in the vacuole. In C. trachomatis, two proteins are potential PGMs. By reconstituting the reaction, and by complementing PGM deficient fibroblasts, we demonstrated that only CT295 displayed robust PGM activity. Furthermore, we showed that glycogen accumulation by a subset of Chlamydia species correlated with the presence of a type three secretion (T3S) signal in their PGM. In conclusion, we established that the conversion of Glc1P into Glc6P was accomplished by a bacterial PGM, through the acquisition of a T3S signal in a \"housekeeping\" gene."
+  },
+  {
+    "id": "10.1101/2021.09.17.460877",
+    "score": 7.5743585509338995,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Structural analysis and construction of thermostable antifungal chitinase",
+    "authors": "Kozome, D.; Uechi, K.; Taira, T.; fukada, h.; Kubota, T.; Ishikawa, K.",
+    "category": "biochemistry",
+    "abstract": "Chitin is a biopolymer of N-acetyl-D-glucosamine with {beta}-1,4-bond and is the main component of arthropod exoskeletons and the cell walls of many fungi. Chitinase (EC 3.2.1.14) is an enzyme that hydrolyzes the {beta}-1,4-bond in chitin and degrades chitin into oligomers. It has been found in a wide range of organisms. Chitinase from Gazyumaru (Ficus microcarpa) latex exhibits antifungal activity by degrading chitin in the cell wall of fungi and is expected to be used in medical and agricultural fields. However, the enzymes thermostability is an important factor; chitinase is not thermostable enough to maintain its activity under the actual applicable conditions. We solved the crystal structure of chitinase to explore the target sites to improve its thermostability. Based on the crystal structure and sequence alignment among other chitinases, we rationally introduced proline residues, a disulfide bond, and salt bridge in the chitinase using protein engineering methods. As a result, we successfully constructed the thermostable mutant chitinases rationally with high antifungal and specific activities. The results provide a useful strategy to enhance the thermostability of this enzyme family.\n\nIMPORTANCEWe solved the crystal structure of the chitinase from Gazyumaru (Ficus microcarpa) latex exhibiting antifungal activity. Furthermore, we demonstrated that the thermostable mutant enzyme with a melting temperature (Tm) 6.9 {degrees}C higher than wild type (WT) and a half-life at 60{degrees}C that is 15 times longer than WT was constructed through 10 amino acid substitutions, including five proline residues substitutions, making disulfide bonding, and building a salt bridge network in the enzyme. These mutations do not affect its high antifungal activity and chitinase activity, and the principle for the construction of the thermostable chitinase was well explained by its crystal structure. Our results provide a useful strategy to enhance the thermostability of this enzyme family and to use the thermostable mutant as a seed for antifungal agents for practical use."
+  },
+  {
+    "id": "10.1101/2020.11.17.387662",
+    "score": 6.964835450292997,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "title"
+      ]
+    },
+    "title": "ATP hydrolysis coordinates the activities of two motors in a dimeric chromatin remodeling enzyme",
+    "authors": "Johnson, S. L.; Narlikar, G.",
+    "category": "biophysics",
+    "abstract": "ATP-dependent chromatin remodelers are essential enzymes that restructure eukaryotic genomes to enable all DNA-based processes. The diversity and complexity of these processes are matched by the complexity of the enzymes that carry them out, making remodelers a challenging class of molecular motors to study by conventional methods. Here we use a single molecule biophysical assay to overcome some of these challenges, enabling a detailed mechanistic dissection of a paradigmatic remodeler reaction, that of sliding a nucleosome towards the longer DNA linker. We focus on how two motors of a dimeric remodeler coordinate to accomplish such directional sliding. We find that ATP hydrolysis by both motors promotes coordination, suggesting a role for ATP in resolving the competition for directional commitment. Furthermore, we show an artificially constitutive dimer is no more or less coordinated, but is more processive, suggesting a cell could modulate a remodelers oligomeric state to modulate local chromatin dynamics."
+  },
+  {
+    "id": "10.1101/2021.12.23.473985",
+    "score": 6.520455526500367,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Functional design of bacterial superoxide:quinone oxidoreductase",
+    "authors": "von Ballmoos, C.; Abou-Hamdan, A.; Mahler, R.; Grossenbacher, P.; Biner, O.; Sjöstrand, D.; Lochner, M.; Högbom, M.",
+    "category": "biochemistry",
+    "abstract": "The superoxide anion - molecular oxygen reduced by a single electron - is produced in large amounts by enzymatic and adventitious reactions and can perform a range of cellular functions, including bacterial warfare and iron uptake, signalling and host immune response in eukaryotes. However, it also serves as precursor for more deleterious species such as the hydroxyl anion or peroxynitrite and therefore, cellular defense mechanisms for superoxide neutralization have evolved. In addition to the soluble proteins superoxide dismutase and superoxide reductase, recently the membrane embedded diheme cytochrome b561(CybB) from E. coli has been proposed to act as a superoxide:quinone oxidoreductase. Here, we confirm superoxide and cellular ubiquinones or menaquinones as natural substrates and show that quinone binding to the enzyme accelerates the reaction with superoxide. The reactivity of the substrates is in accordance with the here determined midpoint potential of the two b hemes (+48 and -23 mV / NHE). Our data suggest that the enzyme can work near the diffusion limit in the forward direction and can also catalyse the reverse reaction efficiently under physiological conditions. The data is discussed in context of described cytochrome b561 proteins and potential physiological roles of CybB."
+  },
+  {
+    "id": "10.1101/2022.02.10.479870",
+    "score": 5.497624202330734,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Simple and efficient modification of Golden Gate design standards and parts using oligo stitching",
+    "authors": "De Saeger, J.; Vermeersch, M.; Gaillochet, C.; Jacobs, T. B.",
+    "category": "synthetic biology",
+    "abstract": "The assembly of DNA parts is a critical aspect of contemporary biological research. Gibson assembly and Golden Gate cloning are two popular options. Here, we explore the use of single stranded DNA oligos with Gibson assembly to augment Golden Gate cloning workflows in a process called \"oligo stitching\". Our results show that oligo stitching can efficiently convert Golden Gate parts between different assembly standards and directly assemble incompatible Golden Gate parts without PCR amplification. Building on previous reports, we show that it can also be used to assemble de novo sequences. As a final application, we show that restriction enzyme recognition sites can be removed from plasmids and utilize the same concept to perform saturation mutagenesis. Given oligo stitchings versatility and high efficiency, we expect that it will be a useful addition to the molecular biologists toolbox.\n\nAbstract Graphic O_FIG_DISPLAY_L [Figure 1] M_FIG_DISPLAY C_FIG_DISPLAY"
+  },
+  {
+    "id": "10.1101/2021.12.28.474321",
+    "score": 5.418686267443234,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Crystal structure of chloroplast fructose-1,6-bisphosphate aldolase from the green alga Chlamydomonas reinhardtii",
+    "authors": "Le Moigne, T.; Sarti, E.; Nourisson, A.; Carbone, A.; Lemaire, S. D.; Henri, J.",
+    "category": "biochemistry",
+    "abstract": "The Calvin-Benson cycle fixes carbon dioxide into organic triosephosphates through the collective action of eleven conserved enzymes. Regeneration of ribulose-1,5-bisphosphate, the substrate of Rubisco-mediated carboxylation, requires two lyase reactions catalyzed by fructose-1,6-bisphosphate aldolase (FBA). While cytoplasmic FBA has been extensively studied in non-photosynthetic organisms, functional and structural details are limited for chloroplast FBA encoded by oxygenic phototrophs. Here we determined the crystal structure of plastidial FBA from the unicellular green alga Chlamydomonas reinhardtii (Cr). We confirm that CrFBA folds as a TIM barrel, describe its catalytic pocket and homo-tetrameric state. Multiple sequence profiling classified the photosynthetic paralogs of FBA in a distinct group from non-photosynthetic paralogs. We mapped the sites of thiol- and phospho-based post-translational modifications known from photosynthetic organisms and predict their effects on enzyme catalysis."
+  },
+  {
+    "id": "10.1101/2022.03.08.483452",
+    "score": 5.39673264488277,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "A CRISPR screen identifies redox vulnerabilities for KEAP1/NRF2 mutant non-small cell lung cancer",
+    "authors": "Jiang, C.; Ward, N. P.; Prieto-Farigua, N.; Kang, Y. P.; Thalakola, A.; Teng, M.; DeNicola, G. M.",
+    "category": "cancer biology",
+    "abstract": "The redox regulator NRF2 is hyperactivated in a large percentage of non-small cell lung cancer (NSCLC) cases, which is associated with chemotherapy and radiation resistance. To identify redox vulnerabilities for KEAP1/NRF2 mutant NSCLC, we conducted a CRISPR-Cas9-based negative selection screen for antioxidant enzyme genes whose loss sensitized cells to sub-lethal concentrations of the superoxide (O2*-)-generating drug {beta}-Lapachone. While our screen identified expected hits in the pentose phosphate pathway, the thioredoxin-dependent antioxidant system, and glutathione reductase, we also identified the mitochondrial superoxide dismutase 2 (SOD2) as one of the top hits. Surprisingly, {beta}-Lapachone did not generate mitochondrial O2*- but rather SOD2 loss enhanced the efficacy of {beta}-Lapachone due to loss of iron-sulfur protein function, loss of mitochondrial ATP maintenance and deficient NADPH production. Importantly, inhibition of mitochondrial electron transport activity sensitized to {beta}-Lapachone, demonstrating these effects may be translated to increase ROS sensitivity therapeutically."
+  },
+  {
+    "id": "10.1101/2022.03.28.486064",
+    "score": 5.342967809135341,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Cell-free prototyping enables implementation of optimized reverse beta-oxidation pathways in heterotrophic and autotrophic bacteria",
+    "authors": "Vogeli, B.; Schulz, L.; Garg, S.; Tarasava, K.; Clomburg, J. M.; Lee, S. H.; Gonnot, A.; Moully, E. H.; Kimmel, B. R.; Tran, L.; Zeleznik, H.; Brown, S. D.; Simpson, S. D.; Mrksich, M.; Karim, A. S.; Gonzalez, R.; Koepke, M.; Jewett, M.",
+    "category": "synthetic biology",
+    "abstract": "Carbon-negative synthesis of biochemical products has the potential to mitigate global CO2 emissions. An attractive route to do this is the reverse {beta}-oxidation (r-BOX) pathway coupled to the Wood-Ljungdahl pathway. Here, we optimized and implemented r-BOX for the synthesis of C4-C6 acids and alcohols. With a high-throughput in vitro prototyping workflow, we screened 762 unique pathway combinations using cell-free extracts tailored for r-BOX to identify enzyme sets for enhanced product selectivity. Implementation of these pathways into Escherichia coli generated designer strains for the selective production of butanoic acid (4.9 {+/-}0.1 gL-1), hexanoic acid (3.06 {+/-} 0.03 gL-1) and 1-hexanol (1.0 {+/-} 0.1 gL-1) at the best performance reported to date in this bacterium. We also generated Clostridium autoethanogenum strains able to produce 1-hexanol from syngas, achieving a titer of 0.26 gL-1 in a 1.5-L continuous fermentation. Our strategy enables optimization of rBOX derived products for biomanufacturing and industrial biotechnology."
+  },
+  {
+    "id": "10.1101/2022.03.10.483831",
+    "score": 5.230027291311352,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "CRISPR-Cas12a targeting of ssDNA plays no detectable role in immunity",
+    "authors": "Marino, N. D.; Pinilla-Redondo, R.; Bondy-Denomy, J.",
+    "category": "microbiology",
+    "abstract": "CRISPR-Cas12a (Cpf1) is a bacterial RNA-guided nuclease that cuts double-stranded DNA (dsDNA) at sites specified by a CRISPR RNA (crRNA) guide. Additional activities have been ascribed to this enzyme in vitro: site-specific (cis) single-stranded DNA (ssDNA) cleavage and indiscriminate (trans) degradation of ssDNA, RNA, and dsDNA after activation by a complementary target. The ability of Cas12a to cleave nucleic acids indiscriminately has been harnessed for many applications, including diagnostics, but it remains unknown if it contributes to bacterial immunity. Here, we provide evidence that cleavage of ssDNA in cis or in trans by Cas12a is insufficient to impact immunity. Using LbCas12a expressed in either Pseudomonas aeruginosa or Escherichia coli, we observed that cleavage of dsDNA targets did not elicit cell death or dormancy, suggesting insignificant levels of collateral damage against host RNA or DNA. Canonical immunity against invasive dsDNA also had no impact on the replicative fitness of co-infecting ssDNA phage or plasmid in trans. Lastly, crRNAs complementary to invasive ssDNA did not provide protection, suggesting that ssDNA cleavage does not occur in vivo or is insignificant. Overall, these results suggest that CRISPR-Cas12a immunity predominantly occurs via canonical targeting of dsDNA, and that the other activities are in vitro irregularities."
+  },
+  {
+    "id": "10.1101/2022.01.25.477573",
+    "score": 4.997708809306626,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Norepinephrine and dopamine contribute to distinct repetitive behaviors induced by novel odorant stress in male and female mice",
+    "authors": "Lustberg, D. J.; Liu, J. Q.; Iannitelli, A. F.; Vanderhoof, S. O.; Liles, L. C.; McCann, K. E.; Weinshenker, D.",
+    "category": "neuroscience",
+    "abstract": "Exposure to unfamiliar odorants induces an array of repetitive defensive and non-defensive behaviors in rodents which likely reflect adaptive stress responses to the uncertain valence of novel stimuli. Mice genetically deficient for dopamine {beta}-hydroxylase (Dbh-/-) lack the enzyme required to convert dopamine (DA) into norepinephrine (NE), resulting in globally undetectable NE and supranormal DA levels. Because catecholamines modulate novelty detection and reactivity, we investigated the effects of novel plant-derived odorants on repetitive behaviors in Dbh-/- mice and Dbh+/- littermate controls, which have catecholamine levels comparable to wild-type mice. Unlike Dbh+/- controls, which exhibited vigorous digging in response to novel odorants, Dbh-/- mice displayed excessive grooming. Drugs that block NE synthesis or neurotransmission suppressed odorant-induced digging in Dbh+/- mice, while a DA receptor antagonist attenuated grooming in Dbh-/- mice. The testing paradigm elicited high circulating levels of corticosterone regardless of Dbh genotype, indicating that NE is dispensable for this systemic stress response. Odorant exposure increased NE and DA abundance in the prefrontal cortex (PFC) of Dbh+/- mice, while Dbh-/- animals lacked NE and had elevated PFC DA levels that were unaffected by novel smells. Together, these findings suggest that novel odorant-induced increases in central NE tone contribute to repetitive digging and reflect psychological stress, while central DA signaling contributes to repetitive grooming. Further, we have established a simple method for repeated assessment of stress-induced repetitive behaviors in mice, which may be relevant for modeling neuropsychiatric disorders like Tourette syndrome or obsessive-compulsive disorder that are characterized by stress-induced exacerbation of compulsive symptoms."
+  },
+  {
+    "id": "10.1101/2021.10.30.466557",
+    "score": 4.741555427707587,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Metabolic evidence for distinct pyruvate pools inside plant mitochondria",
+    "authors": "Le, X.; Lee, C. P.; Monachello, D.; Millar, A. H.",
+    "category": "plant biology",
+    "abstract": "The majority of the pyruvate inside plant mitochondria is either transported into the matrix from the cytosol via the mitochondria pyruvate carrier (MPC) or synthesised in the matrix by alanine aminotransferase (AlaAT) or NAD-malic enzyme (NAD-ME). Pyruvate from these origins could mix into a single pool in the matrix and contribute indistinguishably to respiration, or they could maintain a degree of independence in metabolic regulation. Here, we demonstrated that feeding isolated mitochondria with U-13C-pyruvate and unlabelled malate enables the assessment of pyruvate contribution from different sources to TCA cycle intermediate production. Imported pyruvate is the preferred source for citrate production even when the synthesis of NAD-ME-derived pyruvate was optimised. Genetic or pharmacological elimination of MPC activity removed this preference and allowed an equivalent amount of citrate to be generated from the pyruvate produced by NAD-ME. Increasing mitochondrial pyruvate pool size by exogenous addition only affected metabolites from pyruvate transported by MPC whereas depleting pyruvate pool size by transamination to alanine only affected metabolic products derived from NAD-ME. Together, these data reveal respiratory substrate supply in plants involves distinct pyruvate pools inside the matrix that can be flexibly mixed based on the rate of pyruvate transport from the cytosol. These pools are independently regulated and contribute differentially to organic acids export from plant mitochondria.\n\nSignificance statementPyruvate is the primary respiratory substrate for energy production to support plant growth and development. However, it is also the starting material of many other pathways. Prioritisation of respiratory use over other competing pathways would enable a level of control when pyruvate is delivered to mitochondria via the mitochondrial pyruvate transporter. We demonstrated the existence of two distinct pyruvate pools in plant mitochondria suggesting inner mitochondrial organisation allows metabolic heterogeneity, hence metabolic specialisation. This explains why NAD-ME flux into plant respiration is low and confirms the prominent link between imported pyruvate and energy production. This compartmentation also reveals how NAD-ME supplies substrate to the mitochondrial pyruvate exporter in plants, especially during C4 metabolism."
+  },
+  {
+    "id": "10.1101/2021.11.09.467864",
+    "score": 4.60076324090259,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "PRMT5 epigenetically regulates the E3 ubiquitin ligase ITCH to influence lipid accumulation during mycobacterial infection",
+    "authors": "Borbora, S. M.; Rajmani, R. S.; Balaji, K. N.",
+    "category": "microbiology",
+    "abstract": "Mycobacterium tuberculosis (Mtb), the causative agent of tuberculosis (TB), triggers enhanced accumulation of lipids to generate foamy macrophages (FMs). This process has been often attributed to the surge in the expression of lipid influx genes with a concomitant decrease in those involved in lipid efflux genes. Here, we define an Mtb-orchestrated modulation of the ubiquitination mechanism of lipid accumulation markers to enhance lipid accretion during infection. We find that Mtb infection represses the expression of the E3 ubiquitin ligase, ITCH, resulting in the sustenance of key lipid accrual molecules viz. ADRP and CD36, that are otherwise targeted by ITCH for proteasomal degradation. In line, overexpressing ITCH in Mtb-infected cells was found to suppress Mtb-induced lipid accumulation. Molecular analyses including loss-of-function and ChIP assays demonstrated a role for the concerted action of the transcription factor YY1 and the arginine methyl transferase PRMT5 in restricting the expression of Itch gene by conferring repressive symmetrical H4R3me2 marks on its promoter. Consequently, siRNA-mediated depletion of YY1 or PRMT5 rescued ITCH expression, thereby compromising the levels of Mtb-induced ADRP and CD36 and limiting FM formation during infection. Accumulation of lipids within the host has been implicated as a pro-mycobacterial process that aids in pathogen persistence and dormancy. In our study, perturbation of PRMT5 enzyme activity resulted in compromised lipid levels and reduced mycobacterial survival in primary murine macrophages (ex vivo) and in a therapeutic mouse model of TB infection (in vivo). These findings provide new insights on the role of PRMT5 and YY1 in augmenting mycobacterial pathogenesis. Thus, we posit that our observations could help design novel adjunct therapies and combinatorial drug regimen for effective anti-TB strategies.\n\nAuthor SummaryMycobacterium tuberculosis generates lipid-laden cells (foamy macrophages-FMs) that offer a favorable shelter for its persistence. During infection, we observe a significant reduction in the expression of the E3 ubiquitin ligase, ITCH. This repression allows the sustenance of key lipid accretion molecules (ADRP and CD36), by curbing their proteasomal degradation. Further, we show the repression of ITCH to be dependent on the concerted action of the bifunctional transcription factor, YY1 and the arginine methyl transferase, PRMT5. NOTCH signaling pathway was identified as a master-regulator of YY1 expression. In vitro and in vivo analyses revealed the significance of PRMT5 in regulating FM formation and consequently mycobacterial burden."
+  },
+  {
+    "id": "10.1101/2022.01.16.476502",
+    "score": 4.541580019147974,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Strategies of invertebrate osmoregulation: an evolutionary blueprint for transmuting into fresh water from the sea",
+    "authors": "McNamara, J. C.; Freire, C. A.",
+    "category": "evolutionary biology",
+    "abstract": "Early marine invertebrates like the Branchiopoda began their sojourn into dilute media some 500 million years ago in the Middle Cambrian. Others like the Mollusca, Annelida and many crustacean taxa have followed, accompanying major marine transgressions and regressions, shifting landmasses, orogenies and glaciations. In adapting to these events and new habitats such invertebrates acquired novel physiological abilities that attenuate the ion loss and water gain that constitute severe challenges to life in dilute media. Among these taxon-specific adaptations, selected from the subcellular to organismal levels of organization, are reduced body permeability and surface (S) to volume (V) ratios, lowered osmotic gradients, increased surface areas of interface epithelia, relocation of membrane proteins in ion-transporting cells and augmented transport enzyme abundance, activity and affinity. We examine adaptations in taxa that have penetrated into fresh water, revealing diversified modifications, a consequence of distinct body plans, morpho-physiological resources and occupation routes. Contingent on life history and reproductive strategy, numerous patterns of osmotic regulation have emerged, including intracellular isosmotic regulation in weak hyper-regulators and well-developed anisosmotic extracellular regulation in strong hyper-regulators, likely reflecting inertial adaptations to early life in an estuarine environment. Our analyses show that across sixty-four freshwater invertebrate species from six phyla/classes, hemolymph osmolalities decrease logarithmically with increasing S: V ratios. The arthropods have the highest osmolalities, from 300 to 650 mOsmoles/kg H2O in the Decapoda with 220 to 320 mOsmoles/kg H2O in the Insecta; osmolalities in the Annelida range from 150 to 200 mOsmoles/kg H2O, the Mollusca showing the lowest osmolalities at 40 to 120 mOsmoles/kg H2O. Overall, osmolalities reach a cut-off at {approx}200 mOsmoles/kg H2O, independently of increasing S: V ratio. The ability of species with small S: V ratios to maintain large osmotic gradients is mirrored in their putatively higher Na+/K+-ATPase activities that drive ion uptake processes. Selection pressures on these morpho-physiological characteristics have led to differential osmoregulatory abilities, rendering possible the conquest of fresh water while retaining some tolerance of the ancestral medium."
+  },
+  {
+    "id": "10.1101/2022.02.10.480010",
+    "score": 4.516046059047712,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Low-cost sample preservation methods for high-throughput processing of rumen microbiomes",
+    "authors": "Budel, J. C. C.; Hess, M. K.; Bilton, T. P.; Henry, H.; Dodds, K. G.; Janssen, P. H.; McEwan, J. C.; Rowe, S. J.",
+    "category": "microbiology",
+    "abstract": "BackgroundThe use of rumen microbial community (RMC) profiles to predict methane emissions has driven interest in ruminal DNA preservation and extraction protocols that can be processed cheaply while also maintaining or improving DNA quality for RMC profiling. Our standard approach for preserving rumen samples, as defined in the Global Rumen Census (GRC), requires time-consuming pre-processing steps of freeze drying and grinding prior to international transportation and DNA extraction. This impedes researchers unable to access sufficient funding or infrastructure. To circumvent these pre-processing steps, we investigated three methods of preserving rumen samples for subsequent DNA extraction, based on existing lysis buffers Tris-NaCl-EDTA-SDS (TNx2) and guanidine hydrochloride (GHx2), or 100% ethanol.\n\nResultsRumen samples were collected via stomach intubation from 151 sheep at two time-points two weeks apart. Each sample was separated into four subsamples and preserved using the three preservation methods and the GRC method (n = 4x302). DNA was extracted and sequenced using Restriction Enzyme-Reduced Representation Sequencing to generate RMC profiles. Differences in DNA yield, quality and integrity, and sequencing metrics were observed across the methods (p < 0.0001). Ethanol exhibited poorer quality DNA (A260/A230 < 2) and more failed samples compared to the other methods. Samples preserved using the GRC method had smaller relative abundances in gram-negative genera Anaerovibrio, Bacteroides, Prevotella, Selenomonas, and Succiniclasticum, but larger relative abundances in the majority of 56 additional genera compared to TNx2 and GHx2. However, log10 relative abundances across all genera and time-points for TNx2 and GHx2 were on average consistent (R2 > 0.99) but slightly more variable compared to the GRC method. Relative abundances were moderately to highly correlated (0.68 {+/-} 0.13) between methods for samples collected within a time-point, which was greater than the average correlation (0.17 {+/-} 0.11) between time-points within a preservation method.\n\nConclusionsThe two modified lysis buffers solutions (TNx2 and GHx2) proposed in this study were shown to be viable alternatives to the GRC method for RMC profiling in sheep. Use of these preservative solutions reduces cost and improves throughput associated with processing and sequencing ruminal samples. This development could significantly advance implementation of RMC profiles as a tool for breeding ruminant livestock."
+  },
+  {
+    "id": "10.1101/2022.03.22.485285",
+    "score": 4.503450730405842,
+    "terms": [
+      "enzyme"
+    ],
+    "match": {
+      "enzyme": [
+        "abstract"
+      ]
+    },
+    "title": "Strain design optimization using reinforcement learning",
+    "authors": "Sabzevari, M.; Szedmak, S.; Penttila, M.; Jouhten, P.; Rousu, J.",
+    "category": "bioinformatics",
+    "abstract": "Engineered microbial cells present a sustainable alternative to fossil-based synthesis of chemicals and fuels. Cellular synthesis routes are readily assembled and introduced into microbial strains using state-of-the-art synthetic biology tools. However, the optimization of the strains required to reach industrially feasible production levels is far less efficient. It typically relies on trial-and-error leading into high uncertainty in total duration and cost. New techniques that can cope with the complexity and limited mechanistic knowledge of the cellular regulation are called for guiding the strain optimization.\n\nIn this paper, we put forward a multi-agent reinforcement learning (MARL) approach that learns from experiments to tune the metabolic enzyme levels so that the production is improved. Our method is model-free and does not assume prior knowledge of the microbes metabolic network or its regulation. The multi-agent approach is well-suited to make use of parallel experiments such as multi-well plates commonly used for screening microbial strains.\n\nWe demonstrate the methods capabilities using the genome-scale kinetic model of Escherichia coli, k-ecoli457, as a surrogate for an in vivo cell behaviour in cultivation experiments. We investigate the methods performance relevant for practical applicability in strain engineering i.e. the speed of convergence towards the optimum response, noise tolerance, and the statistical stability of the solutions found. We further evaluate the proposed MARL approach in improving L-tryptophan production by yeast Saccharomyces cerevisiae, using publicly available experimental data on the performance of a combinatorial strain library.\n\nOverall, our results show that multi-agent reinforcement learning is a promising approach for guiding the strain optimization beyond mechanistic knowledge, with the goal of faster and more reliably obtaining industrially attractive production levels.\n\nAuthor summaryEngineered microbial cells offer a sustainable alternative solution to chemical production from fossil resources. However, to make the chemical production using microbial cells economically feasible, they need to be substantially optimized. Due to the biological complexity, this optimization to reach sufficiently high production is typically a costly trial and error process.\n\nThis paper presents an Artificial Intelligence (AI) approach to guide this task. Our tool learns a model from previous experiments and uses the model to suggest improvements to the engineering design, until a satisfactory production performance is reached. This paper evaluates the behaviour of the proposed AI method from several angles, including the amount of experiments needed, the tolerance to noise as well as the stability of the proposed designs."
+  }
+]
