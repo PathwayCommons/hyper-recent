@@ -7,27 +7,20 @@ import { program } from 'commander';
 import { Search } from './search.js';
 import { download as performDownload } from './download.js';
 import getStdin from 'get-stdin';
+import { prettyArticles } from './pretty.js';
 
 const readFile = promisify(fs.readFile);
 const formatJSON = obj => JSON.stringify(obj, null, 2);
 const printFormattedJSON = obj => console.log(formatJSON(obj));
 const writeFormattedJSON = async (obj, file) => await writeFile(file, formatJSON(obj));
+const writeText = async (text, file) => await writeFile(file, text);
+const printText = text => console.log(text);
+const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
 async function search(queryString, options) {
   const searcher = new Search();
   
-  let articles;
-
-  if (options.input) {
-    const file = options.input;
-    const fileData = await readFile(file, { encoding: 'utf8' });
-    
-    articles = JSON.parse(fileData);
-  } else {
-    const fileData = await getStdin();
-
-    articles = JSON.parse(fileData);
-  }
+  let articles = await getInput(options);
 
   await searcher.articles(articles);
 
@@ -35,11 +28,7 @@ async function search(queryString, options) {
     combineWith: options.strict ? 'AND' : 'OR'
   });
 
-  if (options.output) {
-    await writeFormattedJSON(res, options.output);
-  } else {
-    printFormattedJSON(res);
-  }
+  await sendOutput(res, options, queryString);
 }
 
 async function download(startDate, endDate, options) {
@@ -47,10 +36,39 @@ async function download(startDate, endDate, options) {
 
   const res = await performDownload(source, startDate, endDate);
 
-  if (options.output) {
-    await writeFormattedJSON(res, options.output);
+  await sendOutput(res, options);
+}
+
+async function sendOutput(res, options, queryString) {
+  if (options.reverse) {
+    res = res.reverse();
+  }
+
+  if (options.pretty) {
+    if (options.output) {
+      await writeText(getPrettyText(res, queryString, options), options.output);
+    } else {
+      printText(getPrettyText(res, queryString, options));
+    }
   } else {
-    printFormattedJSON(res);
+    if (options.output) {
+      await writeFormattedJSON(res, options.output);
+    } else {
+      printFormattedJSON(res);
+    }
+  }
+}
+
+async function getInput(options) {
+  if (options.input) {
+    const file = options.input;
+    const fileData = await readFile(file, { encoding: 'utf8' });
+    
+    return JSON.parse(fileData);
+  } else {
+    const fileData = await getStdin();
+
+    return JSON.parse(fileData);
   }
 }
 
@@ -65,13 +83,17 @@ async function main() {
     .option('-i, --input <file>', 'JSON input file from Biorxiv (standard input by default)')
     .option('-o, --output <file>', 'JSON output file (standard output by default)')
     .option('-s, --strict', 'must match all terms')
+    .option('-p, --pretty', 'pretty print the articles in a human-readable text format')
+    .option('-r, --reverse', 'reverse the order of the articles')
     .description('search for hyper-recent articles and send them to standard output or a file')
     .action(search)
   );
 
   ( program.command('download')
-    .option('-s, --source <biorxiv|medrxiv>', 'source to download')
+    .option('-s, --source <biorxiv|medrxiv>', 'source to download (biorxiv by default)')
     .option('-o, --output <file>', 'JSON output file (standard output by default)')
+    .option('-p, --pretty', 'pretty print the articles in a human-readable text format')
+    .option('-r, --reverse', 'reverse the order of the articles')
     .argument('<startDate>', 'start date to download (YYYY-MM-DD)')
     .argument('<endDate>', 'end date to download (YYYY-MM-DD)')
     .description('download papers from Biorxiv and send them to standard output or a file')
