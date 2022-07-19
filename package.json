@@ -23,6 +23,7 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
+    "chalk": "^5.0.1",
     "commander": "^9.3.0",
     "get-stdin": "^9.0.0",
     "minisearch": "^5.0.0",
