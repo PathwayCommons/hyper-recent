@@ -1,25 +1,25 @@
 import chalk from 'chalk';
 
-function stats(articles, searchQuery, options) {
+function stats (articles, searchQuery, options) {
   return chalk.magenta(
     `Found ${articles.length} articles` +
     (searchQuery ? ` for "${searchQuery}"` : '') +
-    (options.strict ? ' with strict filtering' : '') + 
+    (options.strict ? ' with strict filtering' : '') +
     (options.reverse ? ' in reversed order' : '') +
     '.'
   );
 }
 
-function highlight(text, term) {
+function highlight (text, term) {
   const regex = new RegExp('(' + term + ')', 'gi');
-  
+
   return text.replace(regex, chalk.magenta('$1'));
 }
 
-export function prettyArticle(article, searchQuery = '', options) {
+export function prettyArticle (article, searchQuery = '', options) {
   let title = article.title;
   let abstract = article.abstract;
-  
+
   const searchTerms = (searchQuery ?? '').split(/\s+/);
 
   for (const term of searchTerms) {
@@ -37,7 +37,7 @@ export function prettyArticle(article, searchQuery = '', options) {
   );
 }
 
-export function prettyArticles(articles, searchQuery, options) {
+export function prettyArticles (articles, searchQuery, options) {
   return [
     stats(articles, searchQuery, options),
 
@@ -49,4 +49,3 @@ export function prettyArticles(articles, searchQuery, options) {
     stats(articles, searchQuery, options)
   ].join('\n\n');
 }
-
