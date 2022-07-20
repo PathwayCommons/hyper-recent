@@ -23,18 +23,6 @@ export class Search {
     const collection = json;
 
     for (const entry of collection) {
-      const keys = Object.keys(entry);
-
-      for (const key of keys) {
-        if (key.indexOf('preprint_') === 0) {
-          const key2 = key.substring('preprint_'.length);
-          const value = entry[key];
-
-          entry[key2] = value;
-          delete entry[key];
-        }
-      }
-
       entry.id = entry.doi; // minisearch requires an id field
     }
 
