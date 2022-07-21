@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Download",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/hyper-recent.js",
+      "args": [
+        "download",
+        "--output",
+        "example-data/2022-06-22.json",
+        "2022-06-22",
+        "2022-06-22"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Search",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/hyper-recent.js",
+      "args": [
+        "search",
+        "--input",
+        "example-data/2022-06-22.json",
+        "breast cancer",
+        "--pretty"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}
