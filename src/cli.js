@@ -17,10 +17,10 @@ const writeText = async (text, file) => await writeFile(file, text);
 const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
-async function search(queryString, options) {
+async function search (queryString, options) {
   const searcher = new Search();
-  
-  let articles = await getInput(options);
+
+  const articles = await getInput(options);
 
   await searcher.articles(articles);
 
@@ -31,7 +31,7 @@ async function search(queryString, options) {
   await sendOutput(res, options, queryString);
 }
 
-async function download(startDate, endDate, options) {
+async function download (startDate, endDate, options) {
   const source = options.source ?? 'biorxiv';
 
   const res = await performDownload(source, startDate, endDate);
@@ -39,7 +39,7 @@ async function download(startDate, endDate, options) {
   await sendOutput(res, options);
 }
 
-async function sendOutput(res, options, queryString) {
+async function sendOutput (res, options, queryString) {
   if (options.reverse) {
     res = res.reverse();
   }
@@ -59,11 +59,11 @@ async function sendOutput(res, options, queryString) {
   }
 }
 
-async function getInput(options) {
+async function getInput (options) {
   if (options.input) {
     const file = options.input;
     const fileData = await readFile(file, { encoding: 'utf8' });
-    
+
     return JSON.parse(fileData);
   } else {
     const fileData = await getStdin();
@@ -72,13 +72,13 @@ async function getInput(options) {
   }
 }
 
-async function main() {
-  ( program
+async function main () {
+  (program
     .name('hyper-recent')
     .description('A CLI to do hyper-recent feed analysis')
   );
 
-  ( program.command('search')
+  (program.command('search')
     .argument('<string>', 'string to use as search query')
     .option('-i, --input <file>', 'JSON input file from Biorxiv (standard input by default)')
     .option('-o, --output <file>', 'JSON output file (standard output by default)')
@@ -89,7 +89,7 @@ async function main() {
     .action(search)
   );
 
-  ( program.command('download')
+  (program.command('download')
     .option('-s, --source <biorxiv|medrxiv>', 'source to download (biorxiv by default)')
     .option('-o, --output <file>', 'JSON output file (standard output by default)')
     .option('-p, --pretty', 'pretty print the articles in a human-readable text format')
@@ -99,9 +99,8 @@ async function main() {
     .description('download papers from Biorxiv and send them to standard output or a file')
     .action(download)
   );
-  
+
   await program.parseAsync();
 }
 
 main();
-
