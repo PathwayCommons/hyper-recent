@@ -15,14 +15,15 @@ function _recall (expected, actual) {
 /**
  * stats
  *
- * Return the performance metrics for classification
+ * Return the performance metrics for binary class tasks
  *
  * @param {object} expected set of expected
  * @param {object} actual set of observed
- * @returns precision, recall for the sets
+ * @returns precision, recall, and Fscore for the sets
  */
 export default function stats (expected, actual) {
   const precision = _precision(expected, actual);
   const recall = _recall(expected, actual);
-  return { precision, recall };
+  const F = 2 * precision * recall / (precision + recall);
+  return { precision, recall, F };
 }
