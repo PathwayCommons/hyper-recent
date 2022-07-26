@@ -1,6 +1,5 @@
 import { expect } from 'chai';
 import fs from 'fs';
-import _ from 'lodash';
 
 import stats from './util/stats.js';
 import { Search } from '../src/search.js';
@@ -80,10 +79,9 @@ describe('search module', function () {
 
   describe('short phrase', function () {
     it('returns expected articles for exact phrase', async () => {
-      const phrase = '"gene regulation"';
+      const phrase = '"cancer patient"';
       const expected = new Set([
-        '10.1101/2022.06.21.497104',
-        '10.1101/2022.06.20.496844'
+        '10.1101/2022.06.21.496924'
       ]);
 
       const hits = await strictSearch(phrase);
@@ -95,14 +93,10 @@ describe('search module', function () {
     });
 
     it('returns expected articles for root phrase', async () => {
-      const phrase = '"cell type"';
+      const phrase = '"gene regulation"';
       const expected = new Set([
-        '10.1101/2021.12.04.471124',
-        '10.1101/2022.04.06.487276',
-        '10.1101/2022.06.20.496810',
-        '10.1101/2022.06.20.496914',
-        '10.1101/2022.06.20.496449',
-        '10.1101/2022.06.20.496872'
+        '10.1101/2022.06.20.496844',
+        '10.1101/2022.06.21.497104'
       ]);
 
       const hits = await strictSearch(phrase);
