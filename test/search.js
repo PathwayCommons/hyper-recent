@@ -126,4 +126,34 @@ describe('search module', function () {
       expect(recall).to.equal(1.0);
     });
   });
+
+  describe('title', function () {
+    it('returns expected article with exact title', async () => {
+      const title = 'Fc-modified SARS-CoV-2 neutralizing antibodies with therapeutic effects in two animal models.';
+      const expected = new Set([
+        '10.1101/2022.06.21.496751'
+      ]);
+
+      const hits = await strictSearch(title);
+      const dois = hits.map(hit => hit.id);
+      const actual = new Set(dois);
+      const { precision, recall } = stats(expected, actual);
+      expect(precision).to.equal(1.0);
+      expect(recall).to.equal(1.0);
+    });
+
+    it('returns expected article with start of title', async () => {
+      const title = 'Cancer cells survival is dependent';
+      const expected = new Set([
+        '10.1101/2022.06.21.496924'
+      ]);
+
+      const hits = await strictSearch(title);
+      const dois = hits.map(hit => hit.id);
+      const actual = new Set(dois);
+      const { precision, recall } = stats(expected, actual);
+      expect(precision).to.equal(1.0);
+      expect(recall).to.equal(1.0);
+    });
+  });
 });
