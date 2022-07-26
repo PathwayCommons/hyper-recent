@@ -107,4 +107,23 @@ describe('search module', function () {
       expect(recall).to.equal(1.0);
     });
   });
+
+  describe('general category', function () {
+    it('returns expected articles for a category', async () => {
+      const phrase = '"evolutionary biology"';
+      const expected = new Set([
+        '10.1101/354704',
+        '10.1101/2022.06.20.496719',
+        '10.1101/2022.06.21.496957',
+        '10.1101/2022.06.22.497174'
+      ]);
+
+      const hits = await strictSearch(phrase);
+      const dois = hits.map(hit => hit.id);
+      const actual = new Set(dois);
+      const { precision, recall } = stats(expected, actual);
+      expect(precision).to.equal(1.0);
+      expect(recall).to.equal(1.0);
+    });
+  });
 });
