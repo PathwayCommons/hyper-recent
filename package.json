@@ -10,7 +10,7 @@
   "scripts": {
     "start": "echo Nothing to start yet",
     "test": "mocha",
-    "coverage": "nyc nyc --reporter=lcov mocha",
+    "coverage": "nyc mocha",
     "fix": "eslint ./src --fix",
     "lint": "eslint ./src"
   },

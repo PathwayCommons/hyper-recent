@@ -52,7 +52,7 @@ jobs:
         if: matrix.node-version == '16.16.0' && matrix.os == 'ubuntu-latest'  && (github.event_name == 'push' || github.event_name == 'pull_request')
         uses: codecov/codecov-action@v3
         with:
-          files: ./coverage.xml
+          files: ./coverage/clover.xml
           fail_ci_if_error: false
           verbose: true
 

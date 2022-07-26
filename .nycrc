@@ -3,5 +3,6 @@
   "include": [
     "test/**.js"
   ],
-  "exclude": []
+  "exclude": [],
+  "reporter": ["clover"]
 }
