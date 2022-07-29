@@ -1,6 +1,7 @@
 import MiniSearch from 'minisearch';
 
 const DEFAULT_SEARCH_OPTIONS = {
+  prefix: true,
   combineWith: 'OR'
 };
 
@@ -11,7 +12,7 @@ export class Search {
   constructor () {
     this.miniSearch = new MiniSearch({
       fields: ['title', 'authors', 'category', 'abstract'], // fields to index for full-text search
-      storeFields: ['title', 'authors', 'category', 'abstract'] // fields to return with search results
+      storeFields: ['title', 'authors', 'category', 'abstract', 'date', 'server'] // fields to return with search results
     });
   }
 
@@ -24,6 +25,7 @@ export class Search {
 
     for (const entry of collection) {
       entry.id = entry.doi; // minisearch requires an id field
+      entry.date = new Date(entry.date); // interpret as Date object
     }
 
     this.miniSearch.removeAll();
