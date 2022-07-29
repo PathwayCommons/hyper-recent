@@ -42,4 +42,15 @@ export class Search {
 
     return this.miniSearch.search(queryString, options);
   }
+
+  static tokenizer = MiniSearch.getDefault('tokenize');
+
+  /**
+   * tokenize
+   * @param {string} string A string that contains the search terms
+   * @returns {object} A list of tokens used in the search
+   */
+  static tokenize (string) {
+    return this.tokenizer(string);
+  }
 }
