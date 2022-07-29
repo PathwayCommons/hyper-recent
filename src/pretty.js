@@ -38,7 +38,7 @@ export function prettyArticle (article, searchQuery = '', options) {
       chalk.yellow(title),
       chalk.green(authors),
       chalk.cyan.underline(`https://doi.org/${article.id}`),
-      // `${chalk.blue(server)} / ${chalk.blue(category)} - ${chalk.blue(date.toLocaleDateString())}`,
+      `${chalk.blue(server)} / ${chalk.blue(category)} - ${chalk.blue(date.toLocaleDateString())}`,
       abstract
     ].join('\n')
   );
