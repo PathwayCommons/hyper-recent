@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import { Search } from './search.js';
 
 function stats (articles, searchQuery, options) {
   return chalk.magenta(
@@ -19,19 +20,25 @@ function highlight (text, term) {
 export function prettyArticle (article, searchQuery = '', options) {
   let title = article.title;
   let abstract = article.abstract;
+  let authors = article.authors;
+  const date = article.date;
+  const category = article.category;
+  const server = article.server;
 
-  const searchTerms = (searchQuery ?? '').split(/\s+/);
+  const searchTerms = Search.tokenize(searchQuery ?? '');
 
   for (const term of searchTerms) {
     title = highlight(title, term);
     abstract = highlight(abstract, term);
+    authors = highlight(authors, term);
   }
 
   return (
     [
       chalk.yellow(title),
-      chalk.green(article.authors),
+      chalk.green(authors),
       chalk.cyan.underline(`https://doi.org/${article.id}`),
+      `${chalk.blue(server)} / ${chalk.blue(category)} - ${chalk.blue(date.toLocaleDateString())}`,
       abstract
     ].join('\n')
   );
