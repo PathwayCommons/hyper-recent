@@ -9,6 +9,14 @@
   },
   "scripts": {
     "start": "echo Nothing to start yet",
+    "build:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl",
+    "watch:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl --watch --sourcemap",
+    "build:js": "esbuild src/dashboard/index.js --bundle --outfile=src/dashboard/build/bundle.js",
+    "watch:js": "esbuild src/dashboard/index.js --bundle --outfile=src/dashboard/build/bundle.js --watch --sourcemap",
+    "build": "run-s build:css build:js",
+    "watch": "run-p watch:css watch:js watch:reload watch:http",
+    "watch:reload": "livereload src/dashboard",
+    "watch:http": "http-server -o -p 3000 src/dashboard",
     "test": "mocha",
     "coverage": "nyc mocha",
     "fix": "eslint ./src --fix",
@@ -24,16 +32,23 @@
     "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
+    "http-server": "^14.1.1",
+    "livereload": "^0.9.3",
     "mocha": "^10.0.0",
     "nock": "^13.2.9",
+    "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0"
   },
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.3.0",
+    "esbuild": "^0.15.7",
+    "eventemitter3": "^4.0.7",
     "get-stdin": "^9.0.0",
     "minisearch": "^5.0.0",
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.6",
+    "preact": "^10.11.0",
+    "preact-router": "^4.1.0"
   },
   "engines": {
     "node": "16.16.0"

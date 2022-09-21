@@ -1,0 +1,13 @@
+body {
+  background: #fff;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial",sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  line-height: 1.4;
+}
+
+a, 
+.link {
+  color: #06c;
+  text-decoration: none;
+}

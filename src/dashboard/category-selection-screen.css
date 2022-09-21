@@ -1,0 +1,23 @@
+.category-selection-screen {
+  margin: 2em;
+}
+
+.app-name {
+  font-size: 2em;
+}
+
+.app-tagline {
+  margin: 0.25em 0;
+  font-weight: normal;
+  font-size: 1em;
+  color: #888;
+}
+
+.categories {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
