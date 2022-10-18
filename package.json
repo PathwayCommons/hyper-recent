@@ -16,7 +16,7 @@
     "build": "run-s build:css build:js",
     "watch": "run-p watch:css watch:js watch:reload watch:http",
     "watch:reload": "livereload src/dashboard",
-    "watch:http": "http-server -o -p 3000 src/dashboard",
+    "watch:http": "http-server -o -p 3000 --proxy http://localhost:3000? src/dashboard",
     "test": "mocha",
     "coverage": "nyc mocha",
     "fix": "eslint ./src --fix",
