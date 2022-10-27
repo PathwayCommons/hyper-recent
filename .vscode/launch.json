@@ -5,6 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "NPM watch",
+      "runtimeVersion": "16.17.0",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "watch"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node",
+      "console": "integratedTerminal"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "Download",
