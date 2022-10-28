@@ -24,11 +24,6 @@
 }
 
 .category-results-date,
-.paper-date {
-  color: #888;
-  font-size: 0.8em;
-  text-transform: uppercase;
-}
 
 .category-results-date {
   margin: 0.5em 0;
@@ -56,6 +51,18 @@
 
 .paper-link {
   position: relative;
+}
+
+.paper-date {
+  color: #888;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.paper-journal {
+  color: #888;
+  font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 .paper-read {

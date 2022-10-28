@@ -1,5 +1,5 @@
 import EventEmitter from 'eventemitter3';
-import { categories, cannedPapers } from './categories.js';
+import { categories, getPapers } from './categories.js';
 
 export default class Store {
   emitter = new EventEmitter();
@@ -12,7 +12,7 @@ export default class Store {
 
   selectCategory (category) {
     this.selectedCategory = category;
-    this.selectedPapers = cannedPapers;
+    this.selectedPapers = getPapers(category);
 
     document.title = `${this.selectedCategory.name} : ${this.appName}`;
 
