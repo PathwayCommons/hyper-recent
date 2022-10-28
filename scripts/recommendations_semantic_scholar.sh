@@ -64,6 +64,7 @@ do
       journal: .venue,
       date: .publicationDate,
       doi: .externalIds.DOI,
+      brief: .tldr.text,
       authors: .authors | [.[] | .name] | join("; ")
     }'
   )
