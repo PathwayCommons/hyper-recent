@@ -1,32 +1,30 @@
-// import ad from '../../example-data/alzheimer-disease.json';
-import ad from '../../example-data/alzheimer-diagnosis.json';
+import alzheimersDiagnosis from '../../example-data/alzheimers-diagnosis.json';
+
+const ALZHEIMERS_DIAGNOSIS_ID = 'alzheimers-diagnosis';
 
 const toDate = o => {
   o.date = new Date(o.date);
   return o;
 };
-const alzheimerDiagnosis = ad.map(toDate);
 const byDate = (a, b) => { return b.date - a.date; };
 export const categories = [
   {
-    id: 'alzheimer-diagnosis',
+    id: ALZHEIMERS_DIAGNOSIS_ID,
     name: 'Alzheimer\'s Disease: Diagnosis'
   }
 ];
 
-export const getPapers = ({ id, limit = 25 }) => {
+export const getPapers = ({ id, limit = 10 }) => {
   let papers;
 
   switch (id) {
-    case 'alzheimer-diagnosis':
-      papers = alzheimerDiagnosis;
+    case ALZHEIMERS_DIAGNOSIS_ID:
+      papers = alzheimersDiagnosis;
       break;
     default:
-      throw new Error('No matching category');
-  };
-
-  papers = papers.sort(byDate);
-  papers = papers.slice(1, limit);
+      console.error(`Unable to load ${id}.`);
+  }
+  papers = papers.map(toDate).sort(byDate).slice(1, limit);
   return papers;
 };
 
