@@ -1,17 +1,13 @@
 .category {
   position: relative;
-  width: 10em;
-  height: 10em;
-  background: linear-gradient(137deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  width: 18em;
+  height: 18em;
   border-radius: 1em;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   flex-shrink: 0;
   overflow: hidden;
-  /* transition-property: filter;
-  transition-duration: 150ms;
-  transition-timing-function: ease; */
 }
 
 .category-link {
@@ -24,13 +20,15 @@
 
 .category:hover,
 .category:active {
-  
+
 }
 
 .category-name {
-  font-size: 0.8em;
+  width: 100%;
   color: #fff;
   margin: 0.5em 0.666em;
+  /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 20%, rgba(255, 255, 255, 0) 50%); */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .category-bg-img {
@@ -40,11 +38,8 @@
   top: 0;
   bottom: 0;
   pointer-events: none;
-  background-image: url("img/example-bg.jpg");
   background-size: cover;
-  filter: saturate(0);
   z-index: -1;
-  opacity: 0.666;
 }
 
 .category-breast-cancer {

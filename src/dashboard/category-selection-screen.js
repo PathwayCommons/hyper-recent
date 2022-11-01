@@ -7,8 +7,8 @@ export default function CategorySelectionScreen ({ store }) {
   const haveCategories = categories != null && categories.length !== 0;
 
   return h('div', { class: 'category-selection-screen' }, [
-    h('div', { class: 'app-name' }, 'Hyper-recent Biology Papers'),
-    h('div', { class: 'app-tagline' }, 'Get the latest and greatest biology papers for your field.'),
+    h('div', { class: 'app-name' }, 'The Digest'),
+    h('div', { class: 'app-tagline' }, 'Stay up to date on topics in the biomedical literature.'),
     h('div', { class: 'categories' }, (haveCategories
       ? categories.map(category => h(CategoryCard, { category, store }))
       : h('div', {}, 'No categories!')

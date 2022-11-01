@@ -8,11 +8,10 @@ export default function CategoryCard ({ category, store, selectable = true, incl
     h('div', {
       class: 'category-bg-img',
       style: {
-        // TODO: enable this once the card background images are specified
-        // 'background-image': `url("img/${category.id}.jpg")`
+        'background-image': `url("img/${category.id}.jpg")`
       }
     }),
-    includeName ? h('div', { class: 'category-name' }, category.name) : null
+    includeName ? h('h2', { class: 'category-name' }, category.name) : null
   ]);
 
   if (selectable) {
