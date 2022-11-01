@@ -24,11 +24,20 @@
 }
 
 .category-name {
-  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  height: 3em;
   color: #fff;
-  margin: 0.5em 0.666em;
-  /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 20%, rgba(255, 255, 255, 0) 50%); */
-  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.category-img-bkg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 60%, rgba(251,251,251,0) 100%);
+  z-index: -1;
 }
 
 .category-bg-img {
@@ -39,7 +48,7 @@
   bottom: 0;
   pointer-events: none;
   background-size: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 .category-breast-cancer {

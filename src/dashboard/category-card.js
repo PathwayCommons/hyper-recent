@@ -11,6 +11,9 @@ export default function CategoryCard ({ category, store, selectable = true, incl
         'background-image': `url("img/${category.id}.jpg")`
       }
     }),
+    h('div', {
+      class: 'category-img-bkg'
+    }),
     includeName ? h('h2', { class: 'category-name' }, category.name) : null
   ]);
 
