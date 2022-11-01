@@ -11,7 +11,11 @@ export default function CategoryCard ({ category, store, selectable = true, incl
         'background-image': `url("img/${category.id}.jpg")`
       }
     }),
-    includeName ? h('h2', { class: 'category-name' }, category.name) : null
+    includeName
+      ? h('div', {
+        class: 'category-label'
+      }, [h('h2', { class: 'category-name' }, category.name)])
+      : null
   ]);
 
   if (selectable) {
