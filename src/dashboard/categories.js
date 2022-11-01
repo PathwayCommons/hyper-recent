@@ -1,5 +1,7 @@
+import alzheimersDisease from '../../example-data/alzheimers-disease.json';
 import alzheimersDiagnosis from '../../example-data/alzheimers-diagnosis.json';
 
+const ALZHEIMERS_DISEASE_ID = 'alzheimers-disease';
 const ALZHEIMERS_DIAGNOSIS_ID = 'alzheimers-diagnosis';
 
 const toDate = o => {
@@ -8,6 +10,10 @@ const toDate = o => {
 };
 const byDate = (a, b) => { return b.date - a.date; };
 export const categories = [
+  {
+    id: ALZHEIMERS_DISEASE_ID,
+    name: 'Alzheimer\'s Disease'
+  },
   {
     id: ALZHEIMERS_DIAGNOSIS_ID,
     name: 'Alzheimer\'s Disease: Diagnosis'
@@ -18,6 +24,9 @@ export const getPapers = ({ id, limit = 10 }) => {
   let papers;
 
   switch (id) {
+    case ALZHEIMERS_DISEASE_ID:
+      papers = alzheimersDisease;
+      break;
     case ALZHEIMERS_DIAGNOSIS_ID:
       papers = alzheimersDiagnosis;
       break;
