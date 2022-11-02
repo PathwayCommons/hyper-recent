@@ -45,15 +45,6 @@
   "authors": "Zhenhui Li; Xiaping He; Shihao Wu; Rongyao Huang; Hao Li; Zhengbo Wang; Limin Wang; Dongdong Qin; Yu Kong; Yingqi Guo; Xia Ma; C. Turck; Zhiqi Xiong; Wenchao Wang; Xintian Hu"
 },
 {
-  "paperId": "ab14b0e3396cc387b57fb4f12aae87fe20bb061d",
-  "title": "Brain and systemic inflammation in de novo Parkinson's disease",
-  "journal": "medRxiv",
-  "date": "2022-09-23",
-  "doi": "10.1101/2022.09.21.22280194",
-  "brief": "18F-DPA-714 imaging demonstrated increased central inflammation in de novo PD subjects compared to controls, and longitudinal follow-up will be important to determine whether the presence of inflammation predicts cognitive decline.",
-  "authors": "T. Yacoubian; Yaxiu Fang; A. Gerstenecker; A. Amara; N. Stover; L. Ruffrage; C. Collete; R. Kennedy; Y. Zhang; H. Hong; H. Qin; J. McConathy; E. Benveniste; D. Standaert"
-},
-{
   "paperId": "4ec24704ddce77e0cacbee05c754f6ff105ba837",
   "title": "Optimal combinations of CSF biomarkers for predicting cognitive decline and clinical conversion in cognitively unimpaired participants and mild cognitive impairment patients: A multi-cohort study",
   "journal": "medRxiv",
@@ -117,15 +108,6 @@
   "authors": "E. Tuzzi; A. Loktyushin; A. Zeller; R. Pohmann; C. Laske; K. Scheffler; G. Hagberg"
 },
 {
-  "paperId": "0dc2fdecb3ddb9d98b118c39d98f123d2f192943",
-  "title": "Association of Women-Specific Health Factors in the Severity of Parkinson's Disease",
-  "journal": "medRxiv",
-  "date": "2022-10-06",
-  "doi": "10.1101/2022.10.03.22280671",
-  "brief": "This study is the first nationally available questionnaire for women's health and PD, and shifts the paradigm in understanding PD etiology and acknowledging how sex-specific experiences may contribute to PD severity.",
-  "authors": "S. Rao; Y. Li; B. Lapin; S. Pattipati; K. Ghosh Galvelis; A. Naito; N. Gutierrez; T. Peixoto Leal; A. Salim; P. Salles; M. D. De Leon; I. Mata"
-},
-{
   "paperId": "9e34bde3c2c9288d62b9b3f764b7b240c852a508",
   "title": "Biological age and brain age in midlife: relationship to multimorbidity and mental health",
   "journal": "bioRxiv",
@@ -133,33 +115,6 @@
   "doi": "10.1101/2022.09.26.509522",
   "brief": "This study investigates whether elevated biological age and accelerated brain age are associated with an increased risk of multimorbidity using a large dataset from the Midlife in the United States (MIDUS) Refresher study and presents the first effort to test whether sex moderates the relationship between these surrogate aging biomarkers and multimOrbidity.",
   "authors": "Fengqing Zhang; Hansoo Chang; S. Schaefer; J. Gou"
-},
-{
-  "paperId": "703d7db60b636dac6033cc3132ab2d800dc76416",
-  "title": "Distinct and joint effects of low and high levels of AÎ² and tau deposition on cortical thickness",
-  "journal": "medRxiv",
-  "date": "2022-09-10",
-  "doi": "10.1101/2022.09.09.22279694",
-  "brief": "It is confirmed that prior findings of an association between A{beta} deposition and cortical thickening and suggest this may also be the case in the earliest stages of deposition in normal aging and illustrated that resonance between high levels of A{ beta} and tau uptake is strongly associated with cortical thinning.",
-  "authors": "S. H. Hojjati; T. Butler; G. Chiang; C. Habeck; A. Roychoudhury; F. Feiz; J. Shteingart; S. Nayak; S. Ozoria; A. Fernández; Y. Stern; J. Luchsinger; D. Devanand; Q. Razlighi"
-},
-{
-  "paperId": "01b5569a34603fafb2e825d6e06515c87e905319",
-  "title": "Disrupted role of the connectivity between the locus coeruleus and the hippocampus in cognition of healthy, middle-aged individuals at risk of dementia: the PREVENT-Dementia study",
-  "journal": "medRxiv",
-  "date": "2022-09-02",
-  "doi": "10.1101/2022.09.02.22279541",
-  "brief": "Light is shed on the brain mechanism of incipient AD neuropathology in individuals, who are at high risk for late-life dementia on the cardiovascular risk score, but presently cognitively healthy.",
-  "authors": "F. Deng; Maria-Eleni Dounavi; K. Ritchie; G. Muniz-Terrera; P. Malhotra; C. Ritchie; B. Lawlor; L. Naci"
-},
-{
-  "paperId": "78d9a98d331cca51d62e75eecfed9c8524cfbcd7",
-  "title": "Amyloid-beta biomarkers in Braak stages and their predictive relationships with cognitive impairment: Support vector machine and deep learning approaches",
-  "journal": "bioRxiv",
-  "date": "2022-09-27",
-  "doi": "10.1101/2022.09.25.509432",
-  "brief": "Support vector machine and artificial neural network models showed predictive multivariate relationships between Aβ makers of Braak regions and cognitive impairment, highlighting the importance of computer-aided research efforts for understanding AD pathophysiology.",
-  "authors": "Ahmed Taha; Bhavin Soni; Deepa S. Thakuri; Erin Ritter; Puskar Bhattarai; G. Chand"
 },
 {
   "paperId": "3f5ddc694fdc8bc128e8741d9888118221b8a0d1",
@@ -171,13 +126,13 @@
   "authors": "M. Kleiman; T. Ariko; J. Galvin"
 },
 {
-  "paperId": "e7da2e1f4e3deb5b18b5cc2515033bb9961d91f8",
-  "title": "Prediction of misfolded proteins spreading in Alzheimer’s disease using machine learning",
+  "paperId": "1db06af1ac8cef9d42b575d6283e28499d3cc457",
+  "title": "Age-specific activation of microglial genes in a mouse model of AD",
   "journal": "bioRxiv",
-  "date": "2022-10-07",
-  "doi": "10.1101/2022.10.04.510701",
-  "brief": "The proposed method applies an autoregressive model, constrained by structural connectivity, to predict concentrations of Amyloid-β two years after the provided baseline, and outperformed the state-of-art models yielding the lowest average prediction error.",
-  "authors": "L. Gherardini; Aleksandra Pestka; Lorenzo Pini; A. Crimi"
+  "date": "2022-10-30",
+  "doi": "10.1101/2022.10.28.514172",
+  "brief": null,
+  "authors": "Haoyang Zhou; Yizhou Yu"
 },
 {
   "paperId": "92886cc056a1c2894aebc7af67806531f37e2270",
@@ -189,40 +144,31 @@
   "authors": "M. Heston; K. Hanslik; K. Zarbock; S. Harding; N. Davenport-Sis; R. Kerby; N. Chin; Y. Sun; A. Hoeft; Y. Deming; N. Vogt; T. Betthauser; S. Johnson; S. Asthana; G. Kollmorgen; I. Suridjan; N. Wild; H. Zetterberg; K. Blennow; F. Rey; B. Bendlin; T. Ulland"
 },
 {
+  "paperId": "856e268330b9c31c1b70a770574752d140dccade",
+  "title": "Association between cancer and dementia risk in the UK Biobank: evidence of diagnostic bias",
+  "journal": "medRxiv",
+  "date": "2022-10-21",
+  "doi": "10.1101/2022.10.20.22281285",
+  "brief": "Investigation of the UK Biobank to generate and compare estimates for the cancer-dementia association using different analytical specifications designed to address different sources of bias found incident cancer diagnoses were associated with a higher risk of subsequent dementia diagnoses.",
+  "authors": "J. Wang; P. Buto; S. Ackley; L. Kobayashi; R. E. Graff; S. Zimmerman; S. Asiimwe; C. Calmasini; M. Glymour"
+},
+{
   "paperId": "2b489ba34093dd6e665382a85d16f16b186490de",
   "title": "Menopause, Brain Anatomy, Cognition and Alzheimer’s Disease",
   "journal": "bioRxiv",
   "date": "2022-10-21",
   "doi": "10.1101/2022.10.18.512730",
-  "brief": null,
+  "brief": "It is confirmed that both early and surgical menopause are associated with a higher risk of developing AD, indicating that early and abrupt ovarian hormone deprivation might contribute to the development of the disorder.",
   "authors": "M. Costantino; Grace Pigeau; Olivier Parent; Justine Ziolkowski; Gabriel A. Devenyi; N. Gervais; M. Mallar Chakravarty"
 },
 {
-  "paperId": "850b2035cf77779567486fd98eb60e83f391a336",
-  "title": "Visual evoked potentials as an early-stage biomarker in the rTg4510 tauopathy mouse model",
+  "paperId": "0eb8746015fd194130c32bd2277b8d060c64a096",
+  "title": "Virtual histology of Alzheimer’s Disease: why are amyloid-β plaques visible with X-ray phase-contrast imaging?",
   "journal": "bioRxiv",
-  "date": "2022-10-04",
-  "doi": "10.1101/2022.10.03.510063",
-  "brief": "Visual processing could be useful as a novel electrophysiological biomarker for early stages of tauopathy, and functional alterations in the visual cortex were positively correlated with pathological tau levels.",
-  "authors": "Aleksandra Parka; C. Volbracht; Benjamin J. Hall; J. Bastlund; M. Nedergaard; Bettina Laursen; Paolo Botta; F. Sotty"
-},
-{
-  "paperId": "4a319b705727c3c3afab858daf1dd81ea1476adf",
-  "title": "APOE ε4 gene dose effect on imaging and blood biomarkers of glial reactivity and β-amyloid pathology",
-  "journal": "bioRxiv",
-  "date": "2022-09-19",
-  "doi": "10.1101/2022.09.19.508484",
-  "brief": "It is observed that increased glial reactivity might emerge in later stages of preclinical Alzheimer’s disease in parallel with early neurodegenerative changes.",
-  "authors": "Anniina Snellman; Laura L. Ekblad; J. Tuisku; Mikko Koivumäki; N. Ashton; Juan Lantero-Rodríguez; T. Karikari; S. Helin; M. Bucci; E. Löyttyniemi; R. Parkkola; M. Karrasch; M. Schöll; H. Zetterberg; K. Blennow; J. Rinne"
-},
-{
-  "paperId": "96f88ce9c1b5dc6e9ce524512095c349c399589c",
-  "title": "CHRNA5 links chandelier cells to protection against amyloid pathology in human aging and Alzheimer’s Disease",
-  "journal": "bioRxiv",
-  "date": "2022-08-30",
-  "doi": "10.1101/2022.05.03.490491",
-  "brief": "Findings suggest that CHRNA5 and its nicotinic α5 subunit exert a neuroprotective role in aging and Alzheimer’s disease potentially centered on chandelier interneurons.",
-  "authors": "Jonas Rybnicek; Yuxiao Chen; Milos Millic; J. McLaurin; P. D. De Jager; J. Schneider; Yanling Wang; David A. Bennett; S. Tripathy; D. Felsky; E. Lambe"
+  "date": "2022-09-28",
+  "doi": "10.1101/2022.09.27.509706",
+  "brief": "The fibrillar and elemental compositions of Aβ plaques in brain samples from different types of AD patients and different AD animal models were probed to establish a relationship between XPCT contrast and Aβ plaque characteristics and the hypothesis that the Aβ–related contrast in XPCT could be caused by the A β fibrils and/or by metal entrapment within the Aα plaques was tested.",
+  "authors": "Matthieu Chourrout; C. Sandt; T. Weitkamp; T. Dučić; D. Meyronet; T. Baron; J. Klohs; Nicolas Rama; H. Boutin; Shifali Singh; C. Olivier; M. Wiart; E. Brun; S. Bohic; F. Chauveau"
 },
 {
   "paperId": "5c719dba8b594ea346f0b2fc4d8eeb5d607bc2c7",
@@ -252,15 +198,6 @@
   "authors": "Y. Tian; V. Cropley; A. Maier; N. Lautenschlager; M. Breakspear; A. Zalesky"
 },
 {
-  "paperId": "755a3972d5a3ff864a88b831df3f01e1e501dc13",
-  "title": "Detecting multiple sclerosis disease activity and progression in progress notes from electronic medical records using natural language processing and machine learning",
-  "journal": "medRxiv",
-  "date": "2022-10-13",
-  "doi": "10.1101/2022.10.11.22280951",
-  "brief": null,
-  "authors": "J. Chang; M. Hyland; K. Munger; R. Canissario; R. Holloway; J. Luo; T. Dye"
-},
-{
   "paperId": "ccf3ba36ab51f0baa058ba641f344236a1d66179",
   "title": "Feasibility of linking markers of dementia-related health in primary care medical records to cognitive function assessed in a specialist dementia service",
   "journal": "medRxiv",
@@ -268,5 +205,14 @@
   "doi": "10.1101/2022.10.11.22279756",
   "brief": "This feasibility study highlights the challenges in obtaining consent and linking primary and secondary care EHR in dementia, and in extracting cognitive function scores from dementia service EHR.",
   "authors": "M. Marshall; P. Campbell; J. Bailey; C. Chew‐Graham; P. Croft; M. Frisher; R. Hayward; R. Negi; T. Rathod-Mistry; S. Singh; L. Robinson; A. Sumathipala; N. Thein; K. Walters; S. Weich; K. Jordan"
+},
+{
+  "paperId": "17cd27b613b40b4cade33071fa498868f7e7adee",
+  "title": "A spatiotemporal map of the aging mouse brain reveals white matter tracts as vulnerable foci",
+  "journal": "bioRxiv",
+  "date": "2022-09-18",
+  "doi": "10.1101/2022.09.18.508419",
+  "brief": "It is revealed that glia aging is profoundly accelerated in white matter compared to cortical areas, and distinct clusters of brain regions that differentially express genes associated with 3 human neurodegenerative diseases are discovered, highlighting regional aging as a potential modulator of disease.",
+  "authors": "Oliver Hahn; Aulden G. Foltz; Micaiah Atkins; Blen Kedir; Patricia Moran-Losada; Ian H. Guldner; Christy Munson; Fabian Kern; Róbert Pálovics; Nannan Lu; Achint Kaur; Jacob Hull; J. Huguenard; Andreas Keller; B. Lehallier; T. Wyss-Coray"
 }
 ]
