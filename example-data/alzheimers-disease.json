@@ -1,0 +1,848 @@
+[
+  {
+    "paperId": "10.1101/2022.10.26.22281539",
+    "doi": "10.1101/2022.10.26.22281539",
+    "title": "Directed functional brain connectivity is altered in sub-threshold amyloid-β accumulators",
+    "journal": "medrxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Mijalkov, M.; Vereb, D.; Canal-Garcia, A.; Volpe, G.; Pereira, J.; Alzheimer's Disease Neuroimaging Initiative, "
+  },
+  {
+    "paperId": "10.1101/2022.10.12.22280874",
+    "doi": "10.1101/2022.10.12.22280874",
+    "title": "Neuropathology-based APOE genetic risk score better quantifies Alzheimer's risk",
+    "journal": "medrxiv",
+    "date": "2022-10-13T00:00:00.000Z",
+    "brief": null,
+    "authors": "Deming, Y.; Vasiljevic, E.; Morrow, A. R.; Miao, J.; Van Hulle, C.; Jonaitis, E. M.; Ma, Y.; Whitenack, V.; Kollmorgen, G.; Wild, N.; Suridjan, I.; Shaw, L. M.; Asthana, S.; Carlsson, C. M.; Johnson, S. C.; Zetterberg, H.; Blennow, K.; Bendlin, B. B.; Lu, Q.; Engelman, C. D.; Alzheimer's Disease Neuroimaging Initiative, "
+  },
+  {
+    "paperId": "10.1101/2022.10.11.511653",
+    "doi": "10.1101/2022.10.11.511653",
+    "title": "Data Descriptor: Human whole exome genotype data for Alzheimer's Disease",
+    "journal": "biorxiv",
+    "date": "2022-10-13T00:00:00.000Z",
+    "brief": null,
+    "authors": "Leung, Y. Y.; Naj, A. C.; Chou, Y.-F.; Valladares, O.; Wheeler, N.; Lin, H.; Gangadharan, P.; Qu, L.; Clark, K.; Cantwell, L.; Nicaretta, H.; the Alzheimer's Disease Sequencing Project, ; Seshadri, S.; Brkanac, Z.; Cruchaga, C.; Pericak-Vance, M. A.; Mayeux, R.; Kuzma, A. B.; Lee, W.-P.; Bush, W. S.; DeStefano, A. L.; Martin, E.; Schellenberg, G. D.; Wang, L.-S."
+  },
+  {
+    "paperId": "10.1101/2022.10.27.514114",
+    "doi": "10.1101/2022.10.27.514114",
+    "title": "Ancestry-related differences in chromatin accessibility and gene expression of APOE4 are associated with Alzheimer disease risk",
+    "journal": "biorxiv",
+    "date": "2022-10-28T00:00:00.000Z",
+    "brief": null,
+    "authors": "Celis, K.; Muniz Moreno, M. D.; Rajabli, F.; Whitehead, P.; Hamilton-Nelson, K.; Dykxhoorn, D. M.; Nuytemans, K.; Wang, L.; Dalgard, C. L.; Flanagan, M.; Weintraub, S.; Geula, C.; Gearing, M.; Bennett, D. A.; Schuck, T.; Jin, F.; Pericak-Vance, M. A.; Griswold, A. J.; Young, J. I.; Vance, J. M."
+  },
+  {
+    "paperId": "10.1101/2022.10.29.514239",
+    "doi": "10.1101/2022.10.29.514239",
+    "title": "Mixed Models Quantify Annual Volume Change; Linear Regression Determines Thalamic Volume as the Best Subcortical Structure Volume Predictor in Alzheimer's Disease and Aging",
+    "journal": "biorxiv",
+    "date": "2022-10-31T00:00:00.000Z",
+    "brief": null,
+    "authors": "Leger, C. S.; Herbert, M.; Stevens, W. D.; DeSouza, J. F."
+  },
+  {
+    "paperId": "10.1101/2022.10.17.512532",
+    "doi": "10.1101/2022.10.17.512532",
+    "title": "Characterization of the Tau Interactome in Human Brain Reveals Isoform-Dependent Interaction with 14-3-3 Family Proteins",
+    "journal": "biorxiv",
+    "date": "2022-10-18T00:00:00.000Z",
+    "brief": null,
+    "authors": "Betters, R. K.; Luhmann, E.; Gottschalk, A. C.; Xu, Z.; Ptak, C.; Fiock, K. L.; Radoshevich, L.; Hefti, M. M."
+  },
+  {
+    "paperId": "10.1101/2022.05.10.491265",
+    "doi": "10.1101/2022.05.10.491265",
+    "title": "Protection of high-frequency low-intensity pulsed electric fields and brain-derived neurotrophic factor for SH-SY5Y cells against hydrogen peroxide-induced cell damage",
+    "journal": "biorxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Lin, G.-B.; Chen, W.-T.; Kuo, Y.-Y.; Chen, Y.-M.; Liu, H.-H.; Chao, C.-Y."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.511008",
+    "doi": "10.1101/2022.10.05.511008",
+    "title": "Super-resolution ultrasound imaging of cerebrovascular impairment in a mouse model of Alzheimer's disease",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Lowerison, M.; Sekaran, N. V. C.; Dong, Z.; Chen, X.; You, Q.; Llano, D. A.; Song, P."
+  },
+  {
+    "paperId": "10.1101/2022.10.18.512730",
+    "doi": "10.1101/2022.10.18.512730",
+    "title": "Menopause, Brain Anatomy, Cognition and Alzheimer's Disease",
+    "journal": "biorxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Costantino, M.; Pigeau, G.; Parent, O.; Ziolkowski, J.; Devenyi, G. A.; Gervais, N. J.; Chakravarty, M. M."
+  },
+  {
+    "paperId": "10.1101/2022.10.20.513120",
+    "doi": "10.1101/2022.10.20.513120",
+    "title": "Naturally occurring Alzheimer's disease in rhesus monkeys",
+    "journal": "biorxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Li, Z.; He, X.; Wu, S.; Huang, R.; Li, H.; Wang, Z.; Wang, L.; Qin, D.; Kong, Y.; Guo, Y.; Ma, X.; Turck, C. W.; Xiong, Z.; Wang, W.; Hu, X."
+  },
+  {
+    "paperId": "10.1101/2022.10.20.22281336",
+    "doi": "10.1101/2022.10.20.22281336",
+    "title": "Signs and symptoms associated with a need for supervision in patients with Alzheimer's disease",
+    "journal": "medrxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Huey, C. C.; Kociolek, A. J.; Fernandez, K. K.; Hernandez, M.; Gottesman, R. T.; Barker, M. S.; Cosentino, S.; Stern, Y."
+  },
+  {
+    "paperId": "10.1101/2022.08.23.505030",
+    "doi": "10.1101/2022.08.23.505030",
+    "title": "Evaluation of Transfer Learning Methods for Detecting Alzheimer's Disease with Brain MRI",
+    "journal": "biorxiv",
+    "date": "2022-10-12T00:00:00.000Z",
+    "brief": null,
+    "authors": "Dhinagar, N. J.; Thomopoulos, S. I.; Rajagopalan, P.; Stripelis, D.; Ambite, J. L.; Steeg, G. V.; Thompson, P. M."
+  },
+  {
+    "paperId": "10.1101/2022.09.30.510175",
+    "doi": "10.1101/2022.09.30.510175",
+    "title": "Stacked binding of a small molecule PET tracer to Alzheimer's tau paired helical filaments",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Merz, G. E.; Chalkley, M. J.; Tan, S. K.; Tse, E.; Lee, J.; Prusiner, S. B.; Paras, N. A.; DeGrado, W. F.; Southworth, D. R."
+  },
+  {
+    "paperId": "10.1101/2022.10.04.22280712",
+    "doi": "10.1101/2022.10.04.22280712",
+    "title": "Using Deep Learning to Determine Amyloid Deposition through PET and Clinical Data for Alzheimer's Prognosis",
+    "journal": "medrxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Maddury, S. M.; Desai, K. S."
+  },
+  {
+    "paperId": "10.1101/2022.10.04.22280712",
+    "doi": "10.1101/2022.10.04.22280712",
+    "title": "Using Deep Learning to Determine Amyloid Deposition through PET and Clinical Data for Alzheimer's Prognosis",
+    "journal": "medrxiv",
+    "date": "2022-10-06T00:00:00.000Z",
+    "brief": null,
+    "authors": "Maddury, S. M.; Desai, K. S."
+  },
+  {
+    "paperId": "10.1101/2022.10.19.512949",
+    "doi": "10.1101/2022.10.19.512949",
+    "title": "Predictive Network Analysis Identifies JMJD6 and Other Novel Key Drivers in Alzheimer Disease",
+    "journal": "biorxiv",
+    "date": "2022-10-22T00:00:00.000Z",
+    "brief": null,
+    "authors": "Merchant, J. P.; Zhu, K.; Henrion, M. Y. R.; Zaidi, S. S. A.; Branden, L.; Moein, S.; Alamprese, M. L.; Pearse, R. V.; Bennett, D. A.; Ertekin-Taner, N.; Young-Pearse, T. L.; Chang, R."
+  },
+  {
+    "paperId": "10.1101/2022.10.19.512953",
+    "doi": "10.1101/2022.10.19.512953",
+    "title": "Novel Master Regulators of Microglial Phagocytosis and Repurposed FDA-approved Drug for Treatment of Alzheimer Disease",
+    "journal": "biorxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Zhu, K.; He, Q.; Tsai, S.-F.; Mudalige, D. M.; Tang, A.; Henrion, M. Y. R.; Liu, Y.; Vijayan, R.; Zaidi, S. S. A.; Branden, L.; Cadiz, M. P.; Hodos-Nkhereanye, R.; Moein, S.; Alamprese, M. L.; Bennett, D. A.; De Jager, P.; Kuo, Y.-M.; Ronaldson, P. T.; Chang, R."
+  },
+  {
+    "paperId": "10.1101/2022.10.04.510701",
+    "doi": "10.1101/2022.10.04.510701",
+    "title": "Prediction of misfolded proteins spreading in Alzheimer's disease using machine learning",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Gherardini, L.; Pestka, A.; Pini, L.; Crimi, A."
+  },
+  {
+    "paperId": "10.1101/2022.06.30.498284",
+    "doi": "10.1101/2022.06.30.498284",
+    "title": "High Frequency Oscillations (250-500Hz) in Animal Models of Alzheimer's Disease and Two Animal Models of Epilepsy",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Lisgaras, C. P.; Scharfman, H. E."
+  },
+  {
+    "paperId": "10.1101/2022.10.04.22280681",
+    "doi": "10.1101/2022.10.04.22280681",
+    "title": "Excitation-inhibition imbalance in Alzheimer's disease using multiscale neural model inversion of resting-state fMRI",
+    "journal": "medrxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Li, G.; Hsu, L.-M.; Wu, Y.; Bozoki, A. C.; Shih, Y.-Y. I.; Yap, P.-T."
+  },
+  {
+    "paperId": "10.1101/2022.10.11.509802",
+    "doi": "10.1101/2022.10.11.509802",
+    "title": "A meta-analysis of genome-wide association studies identifies new genetic loci associated with all-cause and vascular dementia",
+    "journal": "biorxiv",
+    "date": "2022-10-14T00:00:00.000Z",
+    "brief": null,
+    "authors": "Fongang, B.; Sargurupremraj, M.; Jian, X.; Mishra, A.; Damotte, V.; Bis, J. C.; Kang-Hsien, F.; Li, G.; Yang, J.; Hilal, S.; Knol, M. J.; Concas, M. P.; Giorgia, G.; Riaz, M.; Guojunsson, A.; Lacaze, P.; Naj, A. C.; van der Lee, S. J.; Goss, M.; Ngouongo, Y. W.; Skrobot, O.; Guonason, V.; Launer, L.; Oscar, L.; Mary, H.; Bosnes, I.; Dufouil, C.; Ganguli, M.; Cheung, C.-L.; Bennett, D. A.; Chen, C.; Ilyas, K. M.; Satizabal, C.; Ikram, A. M.; Debette, S.; Fornage, M.; Qiong, Y.; Schellenberg, G. D.; Winsvold, B.; Kehoe, P. G.; Ruiz, A.; Lambert, J.-C.; Weinstein, G.; Seshadri, S."
+  },
+  {
+    "paperId": "10.1101/2020.11.13.381756",
+    "doi": "10.1101/2020.11.13.381756",
+    "title": "Alzheimer's-associated upregulation of mitochondria-associated ER membranes after traumatic brain injury",
+    "journal": "biorxiv",
+    "date": "2022-10-01T00:00:00.000Z",
+    "brief": null,
+    "authors": "Agrawal, R. R.; Larrea, D.; Xu, Y.; Shi, L.; Zirpoli, H.; Cummins, L. G.; Emmanuele, V.; Song, D.; Yun, T. D.; Macaluso, F. P.; Min, W.; Kernie, S. G.; Deckelbaum, R. J.; Area-Gomez, E."
+  },
+  {
+    "paperId": "10.1101/2022.09.30.510408",
+    "doi": "10.1101/2022.09.30.510408",
+    "title": "Spatial proteomics and iPSC modeling uncover mechanisms of axonal pathology in Alzheimer's disease",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Cai, Y.; Kanyo, J.; Wilson, R.; Mansuri, M. S.; Cardozo, P. L.; Goshay, D.; Tian, Z.; Braker, A.; Trinh, H. K.; Lam, T.; Brennand, K.; Nairn, A. C.; Grutzendler, J."
+  },
+  {
+    "paperId": "10.1101/2022.10.18.512754",
+    "doi": "10.1101/2022.10.18.512754",
+    "title": "Abundant Aβ fibrils in ultracentrifugal supernatants of aqueous extracts from Alzheimer's disease brains",
+    "journal": "biorxiv",
+    "date": "2022-10-18T00:00:00.000Z",
+    "brief": null,
+    "authors": "Stern, A. M.; Yang, Y.; Meunier, A. L.; Liu, W.; Cai, Y.; Ericsson, M.; Liu, L.; Goedert, M.; Scheres, S. H.; Selkoe, D. J."
+  },
+  {
+    "paperId": "10.1101/2021.07.13.452239",
+    "doi": "10.1101/2021.07.13.452239",
+    "title": "Co-aggregation with Apolipoprotein E modulates the function of Amyloid-β in Alzheimer's disease",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Xia, Z.; Prescott, E.; Wareing, H. E.; Matuszyk, M. M.; Dakin, H.; Dimou, E.; Zuo, E.; Zhang, Y. P.; Lam, J. Y. L.; Danial, J. S. H.; Leah, T.; Barnes, K. M.; Strickland, M.; Jiang, H.; Thornton, P.; Crowther, D. C.; Holtzman, D. M.; Bell, S. M.; Higginbottom, A.; Ferraiuolo, L.; Mortiboys, H. J.; Wharton, S. B.; Ranasinghe, R. T.; Klenerman, D.; De, S."
+  },
+  {
+    "paperId": "10.1101/2022.10.09.511430",
+    "doi": "10.1101/2022.10.09.511430",
+    "title": "Proteomics of resilience to Alzheimer's disease identifies brain regional soluble Aβ levels, actin filament processes, and response to injury",
+    "journal": "biorxiv",
+    "date": "2022-10-09T00:00:00.000Z",
+    "brief": null,
+    "authors": "Huang, Z.; Merrihew, G. E.; Larson, E. B.; Park, J.; Plubell, D.; Fox, E. J.; Montine, K. S.; Keene, C. D.; Zou, J.; MacCoss, M. J.; Montine, T. J."
+  },
+  {
+    "paperId": "10.1101/2022.09.27.22280385",
+    "doi": "10.1101/2022.09.27.22280385",
+    "title": "A multimodal intervention for Alzheimer's disease results in multifaceted systemic effects reflected in blood and ameliorates functional and cognitive outcomes",
+    "journal": "medrxiv",
+    "date": "2022-10-11T00:00:00.000Z",
+    "brief": null,
+    "authors": "Roach, J. C.; Edens, L. E.; Markewych, D. R.; Rapozo, M. K.; Hara, J.; Glusman, G.; Funk, C. C.; Bramen, J. E.; Baloni, P.; Shankle, W. R.; Hood, L."
+  },
+  {
+    "paperId": "10.1101/2022.09.30.510301",
+    "doi": "10.1101/2022.09.30.510301",
+    "title": "Neurodegenerative disease associated pathways in brain of the triple transgenic Alzheimer's model are reversed in vivo following two weeks peripheral administration of fasudil",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Killick, R.; Elliott, C.; Ribe, E.; Broadstock, M.; Ballard, C.; Aarsland, D.; Williams, G."
+  },
+  {
+    "paperId": "10.1101/2022.04.06.487208",
+    "doi": "10.1101/2022.04.06.487208",
+    "title": "A genetic variant of the Wnt receptor LRP6 accelerates synapse degeneration during ageing and in Alzheimer's disease",
+    "journal": "biorxiv",
+    "date": "2022-10-13T00:00:00.000Z",
+    "brief": null,
+    "authors": "Jones, M. E.; Buechler, J.; Dufor, T.; Palomer, E.; Teo, S.; Martin, N.; Boroviak, K.; Metzakopian, E.; Gibb, A.; Salinas, P. C."
+  },
+  {
+    "paperId": "10.1101/2022.10.07.511346",
+    "doi": "10.1101/2022.10.07.511346",
+    "title": "Circadian modulation by time-restricted feeding restores brain transcription and slows amyloid deposition in a mouse model of Alzheimer's disease.",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Whittaker, D. S.; Akhmetova, L.; Romero, H.; Welsh, D. K.; Colwell, C. S.; Desplats, P."
+  },
+  {
+    "paperId": "10.1101/2022.10.26.513832",
+    "doi": "10.1101/2022.10.26.513832",
+    "title": "A non-human primate model with Alzheimer's disease-like pathology induced by hippocampal overexpression of human tau",
+    "journal": "biorxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Jiang, Z.; Wang, J.; Luo, B.; Bai, F.; Qin, Y.; Wei, H.; Zhang, S.; Wei, J.; Ding, G.; Ma, L.; He, S.; Chen, R.; Wang, L.; Xu, H.; Wang, X.; Chen, G.; Lei, W."
+  },
+  {
+    "paperId": "10.1101/2022.10.26.513832",
+    "doi": "10.1101/2022.10.26.513832",
+    "title": "A non-human primate model with Alzheimer's disease-like pathology induced by hippocampal overexpression of human tau",
+    "journal": "biorxiv",
+    "date": "2022-10-30T00:00:00.000Z",
+    "brief": null,
+    "authors": "Jiang, Z.; Wang, J.; Luo, B.; Bai, F.; Qin, Y.; Wei, H.; Zhang, S.; Wei, J.; Ding, G.; Ma, L.; He, S.; Chen, R.; Wang, L.; Xu, H.; Wang, X.; Chen, G.; Lei, W."
+  },
+  {
+    "paperId": "10.1101/2022.10.09.511473",
+    "doi": "10.1101/2022.10.09.511473",
+    "title": "Domino-like Effect of C112R Mutation on APOE4 Aggregation and Its Suppression by Alzheimer's Disease Drug Candidate",
+    "journal": "biorxiv",
+    "date": "2022-10-09T00:00:00.000Z",
+    "brief": null,
+    "authors": "Nemergut, M.; Marques, S. M.; Uhrik, L.; Vanova, T.; Nezvedova, M.; Gadara, D. C.; Jha, D.; Tulis, J.; Novakova, V.; Iglesias-Planas, J.; Kunka, A.; Legrand, A.; Hribkova, H.; Pospisilova, V.; Sedmik, J.; Raska, J.; Prokop, Z.; Damborsky, J.; Bohaciakova, D.; Spacil, Z.; Hernychova, L.; Bednar, D.; Marek, M."
+  },
+  {
+    "paperId": "10.1101/2022.09.29.510171",
+    "doi": "10.1101/2022.09.29.510171",
+    "title": "Altered CD8+ T cell associated aging gene signature in the peripheral blood of patients with Alzheimer's disease.",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Young, J. J.; Park, H.-J.; Kim, M.; Par-Young, J.; Bartlett, H. H.; Kim, H. S.; Shin, M. S.; Unlu, S.; Bucala, R. J.; Van Dyck, C. H.; Allore, H. G.; Mecca, A. P.; You, S.; Kang, I."
+  },
+  {
+    "paperId": "10.1101/2022.10.25.513783",
+    "doi": "10.1101/2022.10.25.513783",
+    "title": "Gradual cerebral hypoperfusion in a knock-in mouse model of Alzheimer's disease triggers cortical network dysfunctions",
+    "journal": "biorxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Singh, S.; Lacoursiere, S. G.; Mehla, J.; Nazari, M.; Sutherland, R. J.; McDonald, R. J.; Mohajerani, M. H."
+  },
+  {
+    "paperId": "10.1101/2022.10.12.22280971",
+    "doi": "10.1101/2022.10.12.22280971",
+    "title": "Global neuropathologic severity of Alzheimer's disease and locus coeruleus vulnerability influences plasma phosphorylated tau levels",
+    "journal": "medrxiv",
+    "date": "2022-10-13T00:00:00.000Z",
+    "brief": null,
+    "authors": "Murray, M. E.; Moloney, C. M.; Kouri, N.; Syrjanen, J. A.; Matchett, B. J.; Rothberg, D. M.; Tranovich, J. F.; Hicks Sirmans, T. N.; Wiste, H. J.; Boon, B. D.; Nguyen, A. T.; Reichard, R. R.; Dickson, D. W.; Lowe, V. J.; Dage, J. L.; Petersen, R. C.; Jack, C. R.; Knopman, D. S.; Vemuri, P.; Graff-Radford, J.; Mielke, M. M."
+  },
+  {
+    "paperId": "10.1101/2022.10.04.510636",
+    "doi": "10.1101/2022.10.04.510636",
+    "title": "Single nucleus multiomics identifies ZEB1 and MAFB as candidate regulators of Alzheimer's disease-specific cis regulatory elements.",
+    "journal": "biorxiv",
+    "date": "2022-10-04T00:00:00.000Z",
+    "brief": null,
+    "authors": "Anderson, A. G.; Rogers, B. B.; Loupe, J. M.; Rodriguez-Nunez, I.; Roberts, S. C.; White, L. M.; Brazell, J. N.; Bunney, W. E.; Bunney, B. G.; Watson, S.; Cochran, J. N.; Myers, R. M.; Rizzardi, L. F."
+  },
+  {
+    "paperId": "10.1101/2022.10.03.510623",
+    "doi": "10.1101/2022.10.03.510623",
+    "title": "Altered secretion, constitution, and functional properties of the gastrointestinal mucus in a rat model of sporadic Alzheimer's disease",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Homolak, J.; De Busscher, J.; Zambrano Lucio, M.; Joja, M.; Virag, D.; Babic Perhoc, A.; Knezovic, A.; Osmanovic Barilar, J.; Salkovic-Petrisic, M."
+  },
+  {
+    "paperId": "10.1101/2022.10.24.513473",
+    "doi": "10.1101/2022.10.24.513473",
+    "title": "Signal Peptide Peptidase-Like 2b affects APP cleavage and exhibits a biphasic Aβ-mediated expression in Alzheimer's disease.",
+    "journal": "biorxiv",
+    "date": "2022-10-25T00:00:00.000Z",
+    "brief": null,
+    "authors": "Maccioni, R.; Travisan, C.; Zerial, S.; Wagener, A.; Andrade-Talavera, Y.; Picciau, F.; Grassi, C.; Chen, G.; Lemoine, L.; Fisahn, A.; Jiang, R.; Fluhrer, R.; Mentrup, T.; Schröder, B.; Nilsson, P.; Tambaro, S."
+  },
+  {
+    "paperId": "10.1101/2021.09.23.21263703",
+    "doi": "10.1101/2021.09.23.21263703",
+    "title": "AnthropoAge, a novel approach to integrate body composition into the estimation of biological age",
+    "journal": "medrxiv",
+    "date": "2022-10-13T00:00:00.000Z",
+    "brief": null,
+    "authors": "Fermin-Martinez, C. A.; Marquez-Salinas, A.; Canedo Guerra, E.; Zavala-Romero, L.; Antonio-Villa, N. E.; Sandoval-Colin, E.; Fernandez-Chirino, L.; Barquera-Guevara, D. A.; Campos-Munoz, A.; Vargas-Vazquez, A.; Paz-Cabrera, C. D.; Ramirez-Garcia, D.; Gutierrez-Robledo, L. M.; Bello-Chavolla, O. Y."
+  },
+  {
+    "paperId": "10.1101/2022.10.17.512098",
+    "doi": "10.1101/2022.10.17.512098",
+    "title": "Telomere-induced senescence increases aberrant intraneuronal amyloid-β accumulation by impairing autophagy in a mouse model of Alzheimer's disease",
+    "journal": "biorxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Suelves, N.; Saleki, S.; Ibrahim, T.; Palomares, D.; Vrancx, C.; Vadukul, D. M.; Papadopoulos, N.; Viceconte, N.; Claude, E.; Constantinescu, S. N.; Decottignies, A.; Kienlen-Campard, P."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.22280745",
+    "doi": "10.1101/2022.10.05.22280745",
+    "title": "Associations between affective/vegetative neuropsychiatric symptoms and brain morphology in aging people with mild cognitive impairment and Alzheimer's disease.",
+    "journal": "medrxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Cannizzaro, A.; Ronat, L. A.; El Haffaf, L. M.; Hanganu, A."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.22280729",
+    "doi": "10.1101/2022.10.05.22280729",
+    "title": "Reward-related activation of fronto-striatal regions scaled negatively with C-reactive protein but showed no association with anhedonia in depression.",
+    "journal": "medrxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Aruldass, A. R.; Kitzbichler, M. G.; Lim, T. V.; Wellcome Trust Consortium for Neuroimmunology of Mood Disorders and Alzheimer's Disease (NIMA), ; Cavanagh, J.; Cowen, P.; Pariante, C. M.; Bullmore, E. T.; Harrison, N. A."
+  },
+  {
+    "paperId": "10.1101/2020.05.17.100941",
+    "doi": "10.1101/2020.05.17.100941",
+    "title": "Senile plaques in Alzheimer's disease arise from Aβ and Cathepsin D-enriched amyloidogenic mixtures out of intravascular hemolysis and Charcot-Bouchard aneurysm-related vascular degeneration",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Fu, H.; Li, J.; Du, P.; Jin, W.; Gao, G.; Cui, D."
+  },
+  {
+    "paperId": "10.1101/2021.09.22.461338",
+    "doi": "10.1101/2021.09.22.461338",
+    "title": "The impact of genetic risk for Alzheimers disease on the structural brain networks of young adults",
+    "journal": "biorxiv",
+    "date": "2022-10-06T00:00:00.000Z",
+    "brief": null,
+    "authors": "Mirza-Davies, A.; Foley, S.; Caseras, X.; Baker, E.; Holmans, P.; Escott-Price, V.; Jones, D. K.; Harrison, J. R.; Messaritaki, E."
+  },
+  {
+    "paperId": "10.1101/2022.10.24.22281473",
+    "doi": "10.1101/2022.10.24.22281473",
+    "title": "Accelerated MRI using intelligent protocolling and subject-specific denoising applied to Alzheimers disease imaging",
+    "journal": "medrxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Ravi, K. S.; Nandakumar, G.; Thomas, N.; Lim, M.; Qian, E.; Manso Jimeno, M.; Poojar, P.; Jin, Z.; Quarterman, P.; Fung, M.; Srinivasan, G.; Vaughan, J. T.; Geethanath, S."
+  },
+  {
+    "paperId": "10.1101/2022.10.03.22280657",
+    "doi": "10.1101/2022.10.03.22280657",
+    "title": "Unsupervised co-optimization of a graph neural network and a knowledge graph embedding model to prioritize causal genes for Alzheimers Disease",
+    "journal": "medrxiv",
+    "date": "2022-10-06T00:00:00.000Z",
+    "brief": null,
+    "authors": "Liu, K.; Prabhakar, V."
+  },
+  {
+    "paperId": "10.1101/2022.02.02.22270347",
+    "doi": "10.1101/2022.02.02.22270347",
+    "title": "Artificial intelligence-driven meta-analysis of brain gene expression identifies novel gene candidates and a role for mitochondria in Alzheimers Disease",
+    "journal": "medrxiv",
+    "date": "2022-10-12T00:00:00.000Z",
+    "brief": null,
+    "authors": "Finney, C. A.; Delerue, F.; Gold, W. A.; Brown, D. A.; Shvetcov, A."
+  },
+  {
+    "paperId": "10.1101/2022.10.08.511422",
+    "doi": "10.1101/2022.10.08.511422",
+    "title": "2D-QSAR and Molecular Docking based virtual screening of the herbal molecules against Alzheimers Disorder: An approach to predict CNS activity",
+    "journal": "biorxiv",
+    "date": "2022-10-10T00:00:00.000Z",
+    "brief": null,
+    "authors": "Thakur, A.; Parashar, A.; Sharma, V. K.; Kumar, A.; Mehta, V."
+  },
+  {
+    "paperId": "10.1101/2022.03.31.486533",
+    "doi": "10.1101/2022.03.31.486533",
+    "title": "The role of clearance in neurodegenerative diseases",
+    "journal": "biorxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Brennan, G. S.; Thompson, T. B.; Oliveri, H.; Rognes, M. E.; Goriely, A."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.511029",
+    "doi": "10.1101/2022.10.05.511029",
+    "title": "M1 selective muscarinic allosteric modulation enhances cognitive flexibility and effective salience in nonhuman primates",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Hassani, S.-A. A.; Neumann, A.; Russell, J.; Jones, C. K.; Womelsdorf, T."
+  },
+  {
+    "paperId": "10.1101/2022.05.30.22275781",
+    "doi": "10.1101/2022.05.30.22275781",
+    "title": "Local genetic correlations exist among neurodegenerative and neuropsychiatric diseases",
+    "journal": "medrxiv",
+    "date": "2022-10-04T00:00:00.000Z",
+    "brief": null,
+    "authors": "Reynolds, R. H.; Wagen, A. Z.; Lona-Durazo, F.; Scholz, S. W.; Shoai, M.; Hardy, J.; Gagliano Taliun, S. A.; Ryten, M."
+  },
+  {
+    "paperId": "10.1101/2022.10.02.510555",
+    "doi": "10.1101/2022.10.02.510555",
+    "title": "Amyloid beta 42 alters cardiac metabolism and impairs cardiac function in obesity",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Hall, L. G.; Czeczor, J. K.; Connor, T.; Botella, J.; De Jong, K. A.; Renton, M. C.; Genders, A. J.; Venardos, K.; Martin, S. D.; Bond, S. T.; Aston-Mourney, K.; Howlett, K. F.; Campbell, J. A.; Collier, G. R.; Walder, K. R.; McKenzie, M.; Ziemann, M.; McGee, S."
+  },
+  {
+    "paperId": "10.1101/2022.10.03.510632",
+    "doi": "10.1101/2022.10.03.510632",
+    "title": "Apolipoprotein E2 Promotes Melanoma Growth, Metastasis, and Protein Synthesis via the LRP1 Receptor",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Adaku, N.; Ostendorf, B. N.; Tavazoie, S. F."
+  },
+  {
+    "paperId": "10.1101/2022.10.19.22281270",
+    "doi": "10.1101/2022.10.19.22281270",
+    "title": "Real-world observation on response to cholinesterase inhibitors or selective serotonin reuptake inhibitors prescribed to outpatients with dementia using electronic medical records",
+    "journal": "medrxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Chotiyanonta, J. S.; Onda, K.; Nowrangi, M. A.; Li, X.; Xu, X.; Adams, R.; Lyketsos, C. G.; Zandi, P.; Oishi, K."
+  },
+  {
+    "paperId": "10.1101/2022.10.19.22281270",
+    "doi": "10.1101/2022.10.19.22281270",
+    "title": "Real-world observation on response to cholinesterase inhibitors or selective serotonin reuptake inhibitors prescribed to outpatients with dementia using electronic medical records",
+    "journal": "medrxiv",
+    "date": "2022-10-31T00:00:00.000Z",
+    "brief": null,
+    "authors": "Chotiyanonta, J. S.; Onda, K.; Nowrangi, M. A.; Li, X.; Xu, X.; Adams, R.; Lyketsos, C. G.; Zandi, P.; Oishi, K."
+  },
+  {
+    "paperId": "10.1101/2022.07.19.22277546",
+    "doi": "10.1101/2022.07.19.22277546",
+    "title": "Arterial hypertension and β-amyloid accumulation have spatially overlapping effects on posterior white matter hyperintensity volume: A cross-sectional study",
+    "journal": "medrxiv",
+    "date": "2022-10-25T00:00:00.000Z",
+    "brief": null,
+    "authors": "Bernal, J.; Schreiber, S.; Menze, I.; Ostendorf, A.; Pfister, M.; Geisendoerfer, J.; Nemali, A.; Maass, A.; Yakupov, R.; Peters, O.; Preis, L.; Schneider, L.; Herrera, A. L.; Priller, J.; Spruth, E. J.; Altenstein, S.; Schneider, A.; Fliessbach, K.; Wiltfang, J.; Schott, B. H.; Rostamzadeh, A.; Glanz, W.; Buerger, K.; Janowitz, D.; Ewers, M.; Perneczky, R.; Rauchmann, B.-S.; Teipel, S.; Kilimann, I.; Laske, C.; Munk, M. H.; Spottke, A.; Roy, N.; Dobisch, L.; Dechent, P.; Scheffler, K.; Hetzer, S.; Wolfsgruber, S.; Kleineidam, L.; Schmid, M.; Berger, M.; Jessen, F.; Wirth, M.; Duezel, E.; Ziegl"
+  },
+  {
+    "paperId": "10.1101/2022.10.28.514241",
+    "doi": "10.1101/2022.10.28.514241",
+    "title": "The gene expression landscape of the human locus coeruleus revealed by single-nucleus and spatially-resolved transcriptomics",
+    "journal": "biorxiv",
+    "date": "2022-10-28T00:00:00.000Z",
+    "brief": null,
+    "authors": "Weber, L. M.; Divecha, H. R.; Tran, M. N.; Kwon, S. H.; Spangler, A.; Montgomery, K. D.; Tippani, M.; Bharadwaj, R.; Kleinman, J. E.; Page, S. C.; Hyde, T. M.; Collado-Torres, L.; Maynard, K. R.; Martinowich, K.; Hicks, S. C."
+  },
+  {
+    "paperId": "10.1101/2022.10.21.513271",
+    "doi": "10.1101/2022.10.21.513271",
+    "title": "Prediction of amyloid β accumulation from multiple biomarkers using a hierarchical Bayesian model",
+    "journal": "biorxiv",
+    "date": "2022-10-24T00:00:00.000Z",
+    "brief": null,
+    "authors": "Yada, Y.; Naoki, H."
+  },
+  {
+    "paperId": "10.1101/2022.10.07.22280811",
+    "doi": "10.1101/2022.10.07.22280811",
+    "title": "3d virtual histology reveals pathological alterations of cerebellar granule cells in multiple sclerosis",
+    "journal": "medrxiv",
+    "date": "2022-10-10T00:00:00.000Z",
+    "brief": null,
+    "authors": "Frost, J.; Schmitzer, B.; Toepperwien, M.; Eckermann, M.; Franz, J.; Stadelmann, C.; Salditt, T."
+  },
+  {
+    "paperId": "10.1101/2022.10.18.512714",
+    "doi": "10.1101/2022.10.18.512714",
+    "title": "Role of Caveolin 1 in metabolic programming of fetal brain",
+    "journal": "biorxiv",
+    "date": "2022-10-19T00:00:00.000Z",
+    "brief": null,
+    "authors": "Islam, M.; Behura, S. K."
+  },
+  {
+    "paperId": "10.1101/2022.10.22.513345",
+    "doi": "10.1101/2022.10.22.513345",
+    "title": "Structural Basis for Selective Proteolysis of ADAM10 Substrates at Membrane-Proximal Sites",
+    "journal": "biorxiv",
+    "date": "2022-10-23T00:00:00.000Z",
+    "brief": null,
+    "authors": "Lipper, C. H.; Egan, E. D.; Gabriel, K.-H.; Blacklow, S. C."
+  },
+  {
+    "paperId": "10.1101/2022.10.27.513947",
+    "doi": "10.1101/2022.10.27.513947",
+    "title": "Loss of long-range co-expression is a common trait in cancer",
+    "journal": "biorxiv",
+    "date": "2022-10-28T00:00:00.000Z",
+    "brief": null,
+    "authors": "Garcia-Cortes, D.; Hernandez-Lemus, E.; Espinal-Enriquez, J."
+  },
+  {
+    "paperId": "10.1101/2022.10.28.514172",
+    "doi": "10.1101/2022.10.28.514172",
+    "title": "Age-specific activation of microglial genes in a mouse model of AD",
+    "journal": "biorxiv",
+    "date": "2022-10-30T00:00:00.000Z",
+    "brief": null,
+    "authors": "Zhou, H.; Yu, Y."
+  },
+  {
+    "paperId": "10.1101/2022.10.24.513427",
+    "doi": "10.1101/2022.10.24.513427",
+    "title": "Amyloid-β1-42 oligomers enhance mGlu5R-dependent synaptic weakening via NMDAR activation and complement C3aR/C5aR signaling",
+    "journal": "biorxiv",
+    "date": "2022-10-24T00:00:00.000Z",
+    "brief": null,
+    "authors": "Ng, A. N.; Salter, E. W.; Georgiou, J.; Bortolotto, Z. A.; Collingridge, G. L."
+  },
+  {
+    "paperId": "10.1101/2022.10.26.513170",
+    "doi": "10.1101/2022.10.26.513170",
+    "title": "ASO targeting temperature-controlled RBM3 poison exon splicing prevents neurodegeneration in vivo",
+    "journal": "biorxiv",
+    "date": "2022-10-26T00:00:00.000Z",
+    "brief": null,
+    "authors": "Preussner, M.; Smith, H. L.; Zhang, M.; Hughes, D.; Emmerichs, A.-K.; Scalzitti, S.; Peretti, D. A.; Swinden, D.; Neumann, A.; Haltenhof, T.; Mallucci, G. R.; Heyd, F."
+  },
+  {
+    "paperId": "10.1101/2022.10.26.513170",
+    "doi": "10.1101/2022.10.26.513170",
+    "title": "ASO targeting temperature-controlled RBM3 poison exon splicing prevents neurodegeneration in vivo",
+    "journal": "biorxiv",
+    "date": "2022-10-29T00:00:00.000Z",
+    "brief": null,
+    "authors": "Preussner, M.; Smith, H. L.; Zhang, M.; Hughes, D.; Emmerichs, A.-K.; Scalzitti, S.; Peretti, D.; Swinden, D.; Neumann, A.; Haltenhof, T.; Mallucci, G. R.; Heyd, F."
+  },
+  {
+    "paperId": "10.1101/2022.10.13.510564",
+    "doi": "10.1101/2022.10.13.510564",
+    "title": "Therapeutic modulation of the blood-brain barrier and ischemic stroke by a bioengineered FZD4-selective WNT surrogate",
+    "journal": "biorxiv",
+    "date": "2022-10-14T00:00:00.000Z",
+    "brief": null,
+    "authors": "Ding, J.; Lee, S.-J.; Vlahos, L.; Yuki, K.; Rada, C.; van Unen, V.; Vuppalapaty, M.; Chen, H.; Sura, A.; McCormick, A.; Tomaske, M.; Alwahabi, S.; Nguyen, H.; Nowatzke, W.; Kim, L.; Kelly, L.; Vollrath, D.; Califano, A.; Yeh, W.-C.; Li, Y.; Kuo, C."
+  },
+  {
+    "paperId": "10.1101/2022.10.28.22281661",
+    "doi": "10.1101/2022.10.28.22281661",
+    "title": "Diencephalic or hippocampal amnesia: different etiologies, common mechanisms.",
+    "journal": "medrxiv",
+    "date": "2022-10-30T00:00:00.000Z",
+    "brief": null,
+    "authors": "Segobin, S.; Ambler, M.; Laniepce, A.; Platel, H.; Chetelat, G.; Groussard, M.; Pitel, A.-L."
+  },
+  {
+    "paperId": "10.1101/2022.10.07.511363",
+    "doi": "10.1101/2022.10.07.511363",
+    "title": "Tight control of the APP-Mint1 interaction in regulating amyloid production",
+    "journal": "biorxiv",
+    "date": "2022-10-08T00:00:00.000Z",
+    "brief": null,
+    "authors": "Henry, S. M.; Bartling, C. R. O.; Stromgaard, K.; Beffert, U.; Ho, A."
+  },
+  {
+    "paperId": "10.1101/2022.10.03.510063",
+    "doi": "10.1101/2022.10.03.510063",
+    "title": "Visual evoked potentials as an early-stage biomarker in the rTg4510 tauopathy mouse model",
+    "journal": "biorxiv",
+    "date": "2022-10-04T00:00:00.000Z",
+    "brief": null,
+    "authors": "Parka, A.; Volbracht, C.; Hall, B.; Bastlund, J. F.; Nedergaard, M.; Laursen, B.; Botta, P.; Sotty, F."
+  },
+  {
+    "paperId": "10.1101/2022.10.13.512017",
+    "doi": "10.1101/2022.10.13.512017",
+    "title": "Early impairments of visually-driven neuronal ensemble dynamics in the rTg4510 tauopathy mouse model",
+    "journal": "biorxiv",
+    "date": "2022-10-17T00:00:00.000Z",
+    "brief": null,
+    "authors": "Parka, A.; Degel, C.; Dreyer, J.; Richter, U.; Hall, B.; Bastlund, J. F.; Laursen, B.; Nedergaard, M.; Sotty, F.; Botta, P."
+  },
+  {
+    "paperId": "10.1101/2022.10.13.512023",
+    "doi": "10.1101/2022.10.13.512023",
+    "title": "Mitochondrial complex I controls blood brain barrier permeability",
+    "journal": "biorxiv",
+    "date": "2022-10-17T00:00:00.000Z",
+    "brief": null,
+    "authors": "Davis, G. M.; Juere, E.; Hayes, J. M.; Davey, G. P."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.511003",
+    "doi": "10.1101/2022.10.05.511003",
+    "title": "Distinct effects of disease-associated TREM2 R47H/+ and T66M mutations on iPSC-derived microglia.",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Penney, J.; Ralvenius, W. T.; Loon, A. R.; Cerit, O.; Dileep, V.; Milo, B.; Woolf, H.; Tsai, L.-H."
+  },
+  {
+    "paperId": "10.1101/2022.10.27.513950",
+    "doi": "10.1101/2022.10.27.513950",
+    "title": "Overcoming the Blood-Brain Barrier for Gene Therapy via Systemic Administration of GSH-Responsive Silica Nanocapsules",
+    "journal": "biorxiv",
+    "date": "2022-10-28T00:00:00.000Z",
+    "brief": null,
+    "authors": "Wang, Y.; Wang, X.; Xie, R.; Burger, J. C.; Tong, Y.; Gong, S."
+  },
+  {
+    "paperId": "10.1101/2022.10.07.511349",
+    "doi": "10.1101/2022.10.07.511349",
+    "title": "Loss of GABA co-transmission from cholinergic neurons impairs behaviors related to hippocampal, striatal, and medial prefrontal cortex functions",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Goral, R. O.; Harper, K. M.; Bernstein, B. J.; Fry, S. A.; Lamb, P. W.; Moy, S. S.; Cushman, J. D.; Yakel, J. L."
+  },
+  {
+    "paperId": "10.1101/2022.10.22.513060",
+    "doi": "10.1101/2022.10.22.513060",
+    "title": "A peptide strategy for inhibiting different protein aggregation pathways in disease",
+    "journal": "biorxiv",
+    "date": "2022-10-22T00:00:00.000Z",
+    "brief": null,
+    "authors": "Garfagnini, T.; Ferrari, L.; Koopman, M.; Halters, S.; Van Kappel, E.; Mayer, G.; Maurice, M.; Rudiger, S.; Friedler, A."
+  },
+  {
+    "paperId": "10.1101/2022.09.06.22279660",
+    "doi": "10.1101/2022.09.06.22279660",
+    "title": "Using genome-wide association results to identify drug repurposing candidates",
+    "journal": "medrxiv",
+    "date": "2022-10-17T00:00:00.000Z",
+    "brief": null,
+    "authors": "Bell, N. Y.; Uffelmann, E.; van Walree, E.; de Leeuw, C.; Posthuma, D."
+  },
+  {
+    "paperId": "10.1101/2022.10.01.509820",
+    "doi": "10.1101/2022.10.01.509820",
+    "title": "A comprehensive view of cell-type-specific temporal dynamics in human and mouse brains",
+    "journal": "biorxiv",
+    "date": "2022-10-05T00:00:00.000Z",
+    "brief": null,
+    "authors": "Lu, Z.; Zhang, M.; Lee, J.; Sziraki, A.; Anderson, S.; Ge, S.; Nelson, P. T.; Zhou, W.; Cao, J."
+  },
+  {
+    "paperId": "10.1101/2022.09.30.510293",
+    "doi": "10.1101/2022.09.30.510293",
+    "title": "Novel inductively-coupled ear-bars (ICEs) for fMRI signal enhancement in rat entorhinal cortex",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Chen, Y.; Fernandez, Z.; Zhu, D. C.; Counts, S. E.; Dorrance, A. M.; Yu, X.; Scheel, N.; Qian, W.; Gifani, M.; Qian, C."
+  },
+  {
+    "paperId": "10.1101/2022.10.20.22281285",
+    "doi": "10.1101/2022.10.20.22281285",
+    "title": "Association between cancer and dementia risk in the UK Biobank: evidence of diagnostic bias",
+    "journal": "medrxiv",
+    "date": "2022-10-21T00:00:00.000Z",
+    "brief": null,
+    "authors": "Wang, J.; Buto, P.; Ackley, S. F.; Kobayashi, L. C.; Graff, R. E.; Zimmerman, S. C.; Asiimwe, S. B.; Calmasini, C.; Glymour, M. M."
+  },
+  {
+    "paperId": "10.1101/2022.10.24.513188",
+    "doi": "10.1101/2022.10.24.513188",
+    "title": "Localized APP pathology in the hippocampus is sufficient to result in progressive disorganization of the timing of neuronal firing patterns",
+    "journal": "biorxiv",
+    "date": "2022-10-25T00:00:00.000Z",
+    "brief": null,
+    "authors": "Viana da Silva, S.; Haberl, M. G.; Gaur, K.; Patel, R.; Narayan, G.; Ledakis, M.; Fu, M. L.; Koo, E. H.; Leutgeb, J. K.; Leutgeb, S."
+  },
+  {
+    "paperId": "10.1101/2022.05.10.491289",
+    "doi": "10.1101/2022.05.10.491289",
+    "title": "Genetic architecture of the white matter connectome of the human brain",
+    "journal": "biorxiv",
+    "date": "2022-10-29T00:00:00.000Z",
+    "brief": null,
+    "authors": "Sha, Z.; Schijven, D.; Fisher, S. E.; Francks, C."
+  },
+  {
+    "paperId": "10.1101/2022.10.27.513914",
+    "doi": "10.1101/2022.10.27.513914",
+    "title": "Neurotrophic and immunomodulatory lanostane triterpenoids from wood-inhabiting Basidiomycota",
+    "journal": "biorxiv",
+    "date": "2022-10-27T00:00:00.000Z",
+    "brief": null,
+    "authors": "Hassan, K.; Kemkuignou, B. M.; Kirchenwitz, M.; Wittstein, K.; Rascher, M.; Chepkirui, C.; Matasyoh, J. C.; Decock, C.; Koester, R.; Stradal, T. E. B.; Stadler, M."
+  },
+  {
+    "paperId": "10.1101/2022.07.19.500681",
+    "doi": "10.1101/2022.07.19.500681",
+    "title": "FDA-approved carbonic anhydrase inhibitors reduce Amyloid beta pathology and improve cognition, by ameliorating cerebrovascular health and glial fitness",
+    "journal": "biorxiv",
+    "date": "2022-10-19T00:00:00.000Z",
+    "brief": null,
+    "authors": "Canepa, E.; Parodi-Rullan, R.; Vazquez-Torres, R.; Gamallo-Lana, B.; Guzman-Hernandez, R.; Lemon, N. L.; Angiulli, F.; Debure, L.; Ilies, M.; Ostergaard, L.; Wisniewski, T.; Gutierrez-Jimenez, E.; Mar, A.; Fossati, S."
+  },
+  {
+    "paperId": "10.1101/2022.10.10.511662",
+    "doi": "10.1101/2022.10.10.511662",
+    "title": "A TMT-based quantitative proteomics approach toward α-syn PFF associated Lewy Body Dementia (LBD) using α-syn PFF-injected mouse brain tissues",
+    "journal": "biorxiv",
+    "date": "2022-10-11T00:00:00.000Z",
+    "brief": null,
+    "authors": "Akkentli, F.; Jang, I. k.; Choi, Y.; Yoo, D.; Oh, E. J.-H.; Na, C. H.; Ha, S.; Kang, S.-U."
+  },
+  {
+    "paperId": "10.1101/2022.09.13.22279818",
+    "doi": "10.1101/2022.09.13.22279818",
+    "title": "Plasma phosphorylated tau 181 predicts amyloid status and conversion from mild cognitive impairment to dementia stage but renal function must be taken into consideration",
+    "journal": "medrxiv",
+    "date": "2022-10-11T00:00:00.000Z",
+    "brief": null,
+    "authors": "Lehmann, S.; Schraen-Maschke, S.; Vidal, J.-S.; Delaby, C.; Blanc, F.; Paquet, C.; Allinquant, B.; Bombois, S.; Gabelle, A.; Hanon, O."
+  },
+  {
+    "paperId": "10.1101/2022.09.30.510361",
+    "doi": "10.1101/2022.09.30.510361",
+    "title": "Positive allosteric modulation of α5-GABA A Receptor in the 5XFAD mouse model has cognitive and neurotrophic benefits",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Bernardo, A. M.; Marcotte, M.; Wong, K.; Sharmin, D.; Prandey, K.; Cook, J. M.; Sibille, E.; Prevot, T. D."
+  },
+  {
+    "paperId": "10.1101/2022.10.21.513088",
+    "doi": "10.1101/2022.10.21.513088",
+    "title": "Brain DNA methylomic analysis of frontotemporal lobar degeneration reveals OTUD4 and CEBPZ in shared dysregulated signatures across pathological subtypes",
+    "journal": "biorxiv",
+    "date": "2022-10-22T00:00:00.000Z",
+    "brief": null,
+    "authors": "Fodder, K.; Murthy, M.; Rizzu, P.; Toomey, C. E.; Hasan, R.; Humphrey, J.; Raj, T.; Lunnon, K.; Mill, J.; Heutink, P.; Lashley, T.; Bettencourt, C."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.511032",
+    "doi": "10.1101/2022.10.05.511032",
+    "title": "Ketone body metabolism declines with age in mice in a sex-dependent manner",
+    "journal": "biorxiv",
+    "date": "2022-10-07T00:00:00.000Z",
+    "brief": null,
+    "authors": "Eap, B.; Nomura, M.; Panda, O.; Garcia, T. Y.; King, C. D.; Rose, J. P.; Leone, T. C.; Kelly, D. P.; Schilling, B.; Newman, J. C."
+  },
+  {
+    "paperId": "10.1101/2022.10.05.511032",
+    "doi": "10.1101/2022.10.05.511032",
+    "title": "Ketone body metabolism declines with age in mice in a sex-dependent manner",
+    "journal": "biorxiv",
+    "date": "2022-10-08T00:00:00.000Z",
+    "brief": null,
+    "authors": "Eap, B.; Nomura, M.; Panda, O.; Garcia, T. Y.; King, C. D.; Rose, J. P.; Leone, T. C.; Kelly, D. P.; Schilling, B.; Newman, J. C."
+  },
+  {
+    "paperId": "10.1101/2022.09.30.510413",
+    "doi": "10.1101/2022.09.30.510413",
+    "title": "A minimally-invasive method for serial cerebrospinal fluid collection and injection in rodents with high survival rates",
+    "journal": "biorxiv",
+    "date": "2022-10-03T00:00:00.000Z",
+    "brief": null,
+    "authors": "Zou, Y.; Han, J. R.; Yang, Y.; Wu, T. W.; Shi, T.-T.; Li, W."
+  },
+  {
+    "paperId": "10.1101/2022.10.12.511871",
+    "doi": "10.1101/2022.10.12.511871",
+    "title": "Exome-wide analysis reveals role of LRP1 and additional novel loci in cognition",
+    "journal": "biorxiv",
+    "date": "2022-10-14T00:00:00.000Z",
+    "brief": null,
+    "authors": "Chakraborty, S.; Kahali, B."
+  },
+  {
+    "paperId": "10.1101/2022.10.26.513964",
+    "doi": "10.1101/2022.10.26.513964",
+    "title": "Chronic intermittent propofol attenuates surgery-induced neuroinflammation, apoptosis, and cognitive impairment in aged mice",
+    "journal": "biorxiv",
+    "date": "2022-10-28T00:00:00.000Z",
+    "brief": null,
+    "authors": "Nagarajan, R.; Lyu, J.; Kambali, M.; Wang, M.; Pearce, R. A.; Rudolph, U."
+  }
+]
