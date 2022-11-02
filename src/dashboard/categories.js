@@ -20,7 +20,7 @@ export const categories = [
   }
 ];
 
-export const getPapers = ({ id, limit = 10 }) => {
+export const getPapers = ({ id, limit = 20 }) => {
   let papers;
 
   switch (id) {
