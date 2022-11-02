@@ -23,9 +23,9 @@ export default function CategoryResultsScreen ({ store }) {
     h('div', { class: 'category-results-info' }, [ // TODO: better css for mobile
       CategoryCard({ category: selectedCategory, store, selectable: false, includeName: false }),
       h('div', { class: 'category-results-details' }, [
-        h('div', { class: 'category-results-title' }, `New papers in ${selectedCategory.name}`),
+        h('div', { class: 'category-results-title' }, `${selectedCategory.name}`),
         h('div', { class: 'category-results-date' }, 'Updated yesterday'),
-        h('div', { class: 'category-results-description' }, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+        h('div', { class: 'category-results-description' }, selectedCategory.description)
       ])
     ]),
     h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))

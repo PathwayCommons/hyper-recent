@@ -12,11 +12,13 @@ const byDate = (a, b) => { return b.date - a.date; };
 export const categories = [
   {
     id: ALZHEIMERS_DISEASE_ID,
-    name: 'Alzheimer\'s Disease'
+    name: 'Alzheimer\'s Disease',
+    description: 'Latest research reports about AD in the clinic and at the bench.'
   },
   {
     id: ALZHEIMERS_DIAGNOSIS_ID,
-    name: 'Alzheimer\'s Disease: Diagnosis'
+    name: 'Alzheimer\'s Disease: Diagnosis',
+    description: 'Diagnostics, biomarkers and phenotypes related to the progression of AD.'
   }
 ];
 
