@@ -2,7 +2,10 @@
   position: relative;
   width: 20em;
   height: 20em;
+  border: solid;
   border-radius: 1em;
+  border-color: #b1b1cd;
+  border-width: 1px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
