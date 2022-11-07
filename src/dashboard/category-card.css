@@ -1,0 +1,81 @@
+.category {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  border: solid;
+  border-radius: 1em;
+  border-color: #b1b1cd;
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.category-link {
+  text-decoration: none;
+}
+
+.category-selectable-true {
+  cursor: pointer;
+}
+
+.category:hover,
+.category:active {
+
+}
+
+.category-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 1.5em;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 60%, rgba(251,251,251,0) 100%);
+  z-index: -1;
+}
+
+.category-name {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  height: 3em;
+  color: #fff;
+}
+
+.category-bg-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-size: cover;
+  z-index: -2;
+}
+
+.category-breast-cancer {
+  filter: hue-rotate(100deg);
+}
+
+.category-digestive-diseases {
+  filter: hue-rotate(0deg);
+}
+
+.category-cardiology {
+  filter: hue-rotate(125deg);
+}
+
+.category-diabetes {
+  filter: hue-rotate(45deg);
+}
+
+.category-lung-cancer {
+  filter: hue-rotate(230deg);
+}
+
+.category-alzheimers {
+  filter: hue-rotate(320deg);
+}
