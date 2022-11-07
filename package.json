@@ -8,7 +8,7 @@
     "hyper-recent": "hyper-recent.js"
   },
   "scripts": {
-    "start": "echo Nothing to start yet",
+    "start": "http-server -p 3000 --proxy http://localhost:3000? dist",
     "build:data": "cd ./scripts && ./search.sh && ./recommendations.sh",
     "build:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl",
     "watch:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl --watch --sourcemap",
