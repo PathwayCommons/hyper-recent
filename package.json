@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "echo Nothing to start yet",
+    "build:data": "cd ./scripts && ./search.sh && ./recommendations.sh",
     "build:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl",
     "watch:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl --watch --sourcemap",
     "build:js": "esbuild src/dashboard/index.js --bundle --outfile=src/dashboard/build/bundle.js",
