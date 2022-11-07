@@ -1,0 +1,1 @@
+../src/dashboard/build/bundle.js
