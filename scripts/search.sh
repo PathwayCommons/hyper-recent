@@ -20,12 +20,12 @@ numPapersRawMedrxiv=$(echo ${medrxivPapers} | jq 'length')
 echo "numPapersRawMedrxiv: ${numPapersRawMedrxiv}"
 
 echo "Combining results..."
-combined=$(jq -s add ${DATA_DIRECTORY}/${END_DATE}_*.json)
-rm "${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json"
-rm "${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json"
+combined=$(jq --slurp '[.[][]]' ${DATA_DIRECTORY}/${END_DATE}_*.json)
+# rm "${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json"
+# rm "${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json"
 
 DATA_FILE="${DATA_DIRECTORY}/${END_DATE}.json"
-echo ${combined} | jq >> ${DATA_FILE}
+echo ${combined} | jq > ${DATA_FILE}
 
 
 QUERY="alzheimer"
@@ -48,5 +48,5 @@ collection=$(
     }]'
   )
 
-echo ${collection} | jq >> ${OUTPUT_FILE}
-rm "${DATA_FILE}"
+echo ${collection} | jq > ${OUTPUT_FILE}
+# rm "${DATA_FILE}"
