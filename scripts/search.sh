@@ -5,27 +5,27 @@ DATA_DIRECTORY="../example-data"
 
 MEDRXIV_SOURCE="medrxiv"
 BIORXIV_SOURCE="biorxiv"
-DATE_PREFIX="2022-10"
-START_DATE="${DATE_PREFIX}-01"
-END_DATE="${DATE_PREFIX}-31"
+
+START_DATE=$(date -v -1m +%Y-%m-%d)
+END_DATE=$(date +%Y-%m-%d)
 
 echo "Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}"
-biorxivPapers=$(node ../src/cli.js download --output="${DATA_DIRECTORY}/${DATE_PREFIX}_${BIORXIV_SOURCE}.json" --source=${BIORXIV_SOURCE} ${START_DATE} ${END_DATE})
+biorxivPapers=$(node ../src/cli.js download --output="${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json" --source=${BIORXIV_SOURCE} ${START_DATE} ${END_DATE})
 numPapersRawBiorxiv=$(echo ${biorxivPapers} | jq 'length')
 echo "numPapersRawBiorxiv: ${numPapersRawBiorxiv}"
 
 echo "Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}"
-medrxivPapers=$(node ../src/cli.js download --output="${DATA_DIRECTORY}/${DATE_PREFIX}_${MEDRXIV_SOURCE}.json" --source=${MEDRXIV_SOURCE} ${START_DATE} ${END_DATE})
+medrxivPapers=$(node ../src/cli.js download --output="${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json" --source=${MEDRXIV_SOURCE} ${START_DATE} ${END_DATE})
 numPapersRawMedrxiv=$(echo ${medrxivPapers} | jq 'length')
 echo "numPapersRawMedrxiv: ${numPapersRawMedrxiv}"
 
 echo "Combining results..."
-combined=$(jq -s add ${DATA_DIRECTORY}/${DATE_PREFIX}_*.json)
-rm "${DATA_DIRECTORY}/${DATE_PREFIX}_${BIORXIV_SOURCE}.json"
-rm "${DATA_DIRECTORY}/${DATE_PREFIX}_${MEDRXIV_SOURCE}.json"
+combined=$(jq --slurp '[.[][]]' ${DATA_DIRECTORY}/${END_DATE}_*.json)
+# rm "${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json"
+# rm "${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json"
 
-DATA_FILE="${DATA_DIRECTORY}/2022-10.json"
-echo ${combined} | jq >> ${DATA_FILE}
+DATA_FILE="${DATA_DIRECTORY}/${END_DATE}.json"
+echo ${combined} | jq > ${DATA_FILE}
 
 
 QUERY="alzheimer"
@@ -48,5 +48,5 @@ collection=$(
     }]'
   )
 
-echo ${collection} | jq >> ${OUTPUT_FILE}
-
+echo ${collection} | jq > ${OUTPUT_FILE}
+# rm "${DATA_FILE}"
