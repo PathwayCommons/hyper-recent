@@ -6,8 +6,8 @@ DATA_DIRECTORY="../example-data"
 MEDRXIV_SOURCE="medrxiv"
 BIORXIV_SOURCE="biorxiv"
 
-START_DATE=$(date -v -1m +%Y-%m-%d)
-END_DATE=$(date +%Y-%m-%d)
+START_DATE=$(node date.js start)
+END_DATE=$(node date.js end)
 
 echo "Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}"
 biorxivPapers=$(node ../src/cli.js download --output="${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json" --source=${BIORXIV_SOURCE} ${START_DATE} ${END_DATE})
