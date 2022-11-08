@@ -50,9 +50,9 @@ export const getPapers = ({ id, limit = 20 }) => {
     case ALZHEIMERS_NEUROINFLAMMATION_ID:
       papers = alzheimersNeuroinflammation;
       break;
-    case ALZHEIMERS_THERAPEUTICS:
-      papers = alzheimersTherapeutics;
-      break;
+    // case ALZHEIMERS_THERAPEUTICS:
+    //   papers = alzheimersTherapeutics;
+    //   break;
     default:
       console.error(`Unable to load ${id}.`);
   }
