@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PAPER_IDS=("PMID:33933186" "PMID:33318676" "PMID:32165850")
-CATEGORY_IDS=("alzheimers-diagnosis" "alzheimers-neuroinflammation" "alzheimers-therapeutics")
+PAPER_IDS=("PMID:33933186" "PMID:33318676")
+CATEGORY_IDS=("alzheimers-diagnosis" "alzheimers-neuroinflammation")
 
 DATA_DIRECTORY="../example-data"
 MAX_PAPERS=50
