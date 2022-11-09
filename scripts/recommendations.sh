@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 PAPER_IDS=("PMID:33933186" "PMID:33318676")
 CATEGORY_IDS=("alzheimers-diagnosis" "alzheimers-neuroinflammation")
@@ -17,6 +18,8 @@ PAPER_RECOMMENDATIONS_API_PATH=recommendations/
 PAPER_RECOMMENDATIONS_PATH=papers/forpaper/
 PAPER_RECOMMENDATIONS_LIMIT=500
 PAPER_RECOMMENDATIONS_FIELDS=title,year,externalIds,venue,authors,abstract
+
+printf "START: recommendations \n\n"
 
 for i in ${!CATEGORY_IDS[@]}; do
   CATEGORY_ID=${CATEGORY_IDS[$i]}
@@ -84,3 +87,4 @@ for i in ${!CATEGORY_IDS[@]}; do
   echo ']' >> ${DATA_DIRECTORY}/${CATEGORY_ID}.json
 done
 
+printf "END: recommendations \n\n"

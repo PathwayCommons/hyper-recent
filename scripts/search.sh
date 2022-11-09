@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 CATEGORY_ID="alzheimers-disease"
 DATA_DIRECTORY="../example-data"
@@ -8,6 +9,8 @@ BIORXIV_SOURCE="biorxiv"
 
 START_DATE=$(node date.js start)
 END_DATE=$(node date.js end)
+
+printf "START: search \n\n"
 
 echo "Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}"
 node ../src/cli.js download --output="${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json" --source=${BIORXIV_SOURCE} ${START_DATE} ${END_DATE}
@@ -21,7 +24,7 @@ jq --slurp '[.[][]]' ${DATA_DIRECTORY}/${END_DATE}_*.json > ${DATA_FILE}
 
 QUERY="alzheimer"
 OUTPUT_FILE="${DATA_DIRECTORY}/${CATEGORY_ID}.json"
-echo "Searching for ${CATEGORY_ID}"
+echo "Searching for ${QUERY}"
 searchHits=$(node ../src/cli.js search --strict --input=${DATA_FILE} ${QUERY})
 numSearchHits=$(echo ${searchHits} | jq 'length')
 echo "Found ${numSearchHits} hits"
@@ -40,3 +43,5 @@ collection=$(
   )
 
 echo ${collection} | jq '.' > ${OUTPUT_FILE}
+
+printf "END: search \n\n"
