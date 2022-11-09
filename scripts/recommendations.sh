@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 PAPER_IDS=("PMID:33933186" "PMID:33318676")
 CATEGORY_IDS=("alzheimers-diagnosis" "alzheimers-neuroinflammation")
