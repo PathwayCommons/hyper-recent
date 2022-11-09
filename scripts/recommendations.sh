@@ -18,12 +18,14 @@ PAPER_RECOMMENDATIONS_PATH=papers/forpaper/
 PAPER_RECOMMENDATIONS_LIMIT=500
 PAPER_RECOMMENDATIONS_FIELDS=title,year,externalIds,venue,authors,abstract
 
+printf "START: recommendations \n\n"
+
 for i in ${!CATEGORY_IDS[@]}; do
   CATEGORY_ID=${CATEGORY_IDS[$i]}
   PAPER_ID=${PAPER_IDS[$i]}
   RECOMMENDATION_URL="${API_BASE_URL}${PAPER_RECOMMENDATIONS_API_PATH}${API_VERSION_PATH}${PAPER_RECOMMENDATIONS_PATH}${PAPER_ID}?limit=${PAPER_RECOMMENDATIONS_LIMIT}&fields=${PAPER_RECOMMENDATIONS_FIELDS}"
 
-  echo "Fetching from Semantic Scholar ${RECOMMENDATIONS_API_PATH}"
+  echo "Fetching from Semantic Scholar ${RECOMMENDATION_URL}"
   echo "Paper: ${PAPER_ID}"
   echo "CATEGORY_ID: ${CATEGORY_ID}"
 
@@ -35,7 +37,7 @@ for i in ${!CATEGORY_IDS[@]}; do
 
   selectedPapers=$(
     echo ${recommendedPapers} | jq '[ .[] |
-    select((.venue == "bioRxiv" or (.venue == "medRxiv")) and (.year == 2022)) |
+    select((.venue == "bioRxiv" or (.venue == "medRxiv")) and (.year >= 2022)) |
     .paperId
     ] |
     .[0:'${MAX_PAPERS}']'
@@ -84,3 +86,4 @@ for i in ${!CATEGORY_IDS[@]}; do
   echo ']' >> ${DATA_DIRECTORY}/${CATEGORY_ID}.json
 done
 
+printf "END: recommendations \n\n"
