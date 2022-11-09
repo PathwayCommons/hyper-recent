@@ -37,7 +37,7 @@ for i in ${!CATEGORY_IDS[@]}; do
 
   selectedPapers=$(
     echo ${recommendedPapers} | jq '[ .[] |
-    select((.venue == "bioRxiv" or (.venue == "medRxiv")) and (.year == 2022)) |
+    select((.venue == "bioRxiv" or (.venue == "medRxiv")) and (.year >= 2022)) |
     .paperId
     ] |
     .[0:'${MAX_PAPERS}']'
