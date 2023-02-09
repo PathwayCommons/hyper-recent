@@ -16,5 +16,9 @@ const startOffset = { months: 1 };
 const START_DATE = format(sub(now, startOffset), 'yyyy-MM-dd');
 const END_DATE = format(now, 'yyyy-MM-dd');
 
+console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
+download(START_DATE, END_DATE, BIORXIV_SOURCE);
+
+console.log('Combining results...');
 const DATA_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
 const dataFile = fs.openSync(DATA_FILE, 'w');
