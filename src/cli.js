@@ -17,7 +17,7 @@ const writeText = async (text, file) => await writeFile(file, text);
 const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
-async function search (queryString, options) {
+export async function search (queryString, options) {
   const searcher = new Search();
 
   const articles = await getInput(options);
@@ -31,7 +31,7 @@ async function search (queryString, options) {
   await sendOutput(res, options, queryString);
 }
 
-async function download (startDate, endDate, options) {
+export async function download (startDate, endDate, options) {
   const source = options.source ?? 'biorxiv';
 
   const res = await performDownload(source, startDate, endDate);
@@ -103,4 +103,4 @@ async function main () {
   await program.parseAsync();
 }
 
-main();
+// main();
