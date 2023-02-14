@@ -2,12 +2,11 @@
 
 // here we will convert the search.sh script into JS
 import { format, sub } from 'date-fns';
-// import fs from 'fs';
-import { options } from 'preact';
+import fs from 'fs';
 import { download } from './cli.js';
 
 const CATEGORY_ID = 'alzheimers-disease';
-const DATA_DIRECTORY = '../example-data';
+const DATA_DIRECTORY = 'example-data';
 
 const MEDRXIV_SOURCE = 'medrxiv';
 const BIORXIV_SOURCE = 'biorxiv';
@@ -17,17 +16,31 @@ const startOffset = { days: 1 };
 const START_DATE = format(sub(now, startOffset), 'yyyy-MM-dd');
 const END_DATE = format(now, 'yyyy-MM-dd');
 
+// Getting latest articles from BiorXiv
 console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-download(START_DATE, END_DATE, BIORXIV_SOURCE); // not sure if the 3rd param is correct here
-// // is just calling the download function enough? do we add something to account for the --output part in the script
+const options = {
+  source: 'biorxiv',
+  output: `${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json`
+};
+fs.open(options.output, 'w', function (err, file) { // consider changing the callback function if needed
+  if (err) throw err;
+  console.log('Saved!');
+});
+download(START_DATE, END_DATE, options);
 
+// Getting latest articles from MedrXiv
+options.source = 'medrxiv';
+options.output = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
 console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-// download(START_DATE, END_DATE, MEDRXIV_SOURCE); // not sure if the 3rd param is correct here
-// // is just calling the download function enough? do we add something to account for the --output part in the script
+fs.open(options.output, 'w', function (err, file) { // consider changing the callback function if needed
+  if (err) throw err;
+  console.log('Saved!');
+});
+download(START_DATE, END_DATE, options);
 
 // console.log('Combining results...');
 // const DATA_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
-// const dataFile = fs.openSync(DATA_FILE, 'w'); // unsure about this solution as well to create a new file
+// const dataFile = fs.openSync(DATA_FILE, 'w');
 
 // const QUERY = 'alzheimer';
 // const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
