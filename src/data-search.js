@@ -16,29 +16,34 @@ const startOffset = { days: 1 };
 const START_DATE = format(sub(now, startOffset), 'yyyy-MM-dd');
 const END_DATE = format(now, 'yyyy-MM-dd');
 
+const BIORXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json`;
+const MEDRXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
+
+// Creating files for each data source
+fs.open(BIORXIV_FILE, 'w', function (err, file) { // consider changing the callback function if needed
+  if (err) throw err;
+  console.log('Saved!');
+});
+fs.open(MEDRXIV_FILE, 'w', function (err, file) { // consider changing the callback function if needed
+  if (err) throw err;
+  console.log('Saved!');
+});
+
 // Getting latest articles from BiorXiv
 console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
 const options = {
-  source: 'biorxiv',
-  output: `${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json`
+  source: BIORXIV_SOURCE,
+  output: BIORXIV_FILE
 };
-fs.open(options.output, 'w', function (err, file) { // consider changing the callback function if needed
-  if (err) throw err;
-  console.log('Saved!');
-});
-download(START_DATE, END_DATE, options);
+await download(START_DATE, END_DATE, options);
 
 // Getting latest articles from MedrXiv
-options.source = 'medrxiv';
-options.output = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
+options.source = MEDRXIV_SOURCE;
+options.output = MEDRXIV_FILE;
 console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-fs.open(options.output, 'w', function (err, file) { // consider changing the callback function if needed
-  if (err) throw err;
-  console.log('Saved!');
-});
-download(START_DATE, END_DATE, options);
+await download(START_DATE, END_DATE, options);
 
-// console.log('Combining results...');
+console.log('Combining results...');
 // const DATA_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
 // const dataFile = fs.openSync(DATA_FILE, 'w');
 
