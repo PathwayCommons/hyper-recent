@@ -18,38 +18,47 @@ const END_DATE = format(now, 'yyyy-MM-dd');
 
 const BIORXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json`;
 const MEDRXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
+const COMBINED_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
+const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
 
-// Creating files for each data source
+// Getting all latest articles from BiorXiv
+console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
 fs.open(BIORXIV_FILE, 'w', function (err, file) { // consider changing the callback function if needed
   if (err) throw err;
   console.log('Saved!');
 });
-fs.open(MEDRXIV_FILE, 'w', function (err, file) { // consider changing the callback function if needed
+const bioInfo = {
+  source: BIORXIV_SOURCE,
+  output: BIORXIV_FILE
+};
+download(START_DATE, END_DATE, bioInfo);
+
+// Getting all latest articles from MedrXiv
+console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
+fs.open(MEDRXIV_FILE, 'w', function (err, file) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+const medInfo = {
+  source: MEDRXIV_SOURCE,
+  output: MEDRXIV_FILE
+};
+download(START_DATE, END_DATE, medInfo);
+
+// Creating a JSON with all the results, both sources combined
+console.log('Combining results...');
+fs.open(COMBINED_FILE, 'w', function (err, file) {
   if (err) throw err;
   console.log('Saved!');
 });
 
-// Getting latest articles from BiorXiv
-console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-const options = {
-  source: BIORXIV_SOURCE,
-  output: BIORXIV_FILE
-};
-await download(START_DATE, END_DATE, options);
-
-// Getting latest articles from MedrXiv
-options.source = MEDRXIV_SOURCE;
-options.output = MEDRXIV_FILE;
-console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-await download(START_DATE, END_DATE, options);
-
-console.log('Combining results...');
-// const DATA_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
-// const dataFile = fs.openSync(DATA_FILE, 'w');
-
+// Search for the QUERY keyword in all the downloaded articles & compile the related articles
 // const QUERY = 'alzheimer';
-// const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
 // console.log(`Searching for ${QUERY}`);
 // const searchHits = search(QUERY, true); // also unsure about param 2
 // const numSearchHits = Object.keys(searchHits).length;
 // console.log(`Found ${numSearchHits} hits`);
+fs.open(OUTPUT_FILE, 'w', function (err, file) {
+  if (err) throw err;
+  console.log('Saved!');
+});
