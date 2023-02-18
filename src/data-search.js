@@ -3,7 +3,7 @@
 // here we will convert the search.sh script into JS
 import { format, sub } from 'date-fns';
 import fs from 'fs';
-import { download } from './cli.js';
+import { download, sendOutput } from './cli.js';
 
 const CATEGORY_ID = 'alzheimers-disease';
 const DATA_DIRECTORY = 'example-data';
@@ -31,7 +31,7 @@ const bioInfo = {
   source: BIORXIV_SOURCE,
   output: BIORXIV_FILE
 };
-download(START_DATE, END_DATE, bioInfo);
+const bioData = await download(START_DATE, END_DATE, bioInfo);
 
 // Getting all latest articles from MedrXiv
 console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
@@ -43,7 +43,7 @@ const medInfo = {
   source: MEDRXIV_SOURCE,
   output: MEDRXIV_FILE
 };
-download(START_DATE, END_DATE, medInfo);
+const medData = await download(START_DATE, END_DATE, medInfo);
 
 // Creating a JSON with all the results, both sources combined
 console.log('Combining results...');
@@ -51,6 +51,14 @@ fs.open(COMBINED_FILE, 'w', function (err, file) {
   if (err) throw err;
   console.log('Saved!');
 });
+const combinedData = {
+  ...bioData,
+  ...medData
+};
+const combinedInfo = {
+  output: COMBINED_FILE
+};
+sendOutput(combinedData, combinedInfo);
 
 // Search for the QUERY keyword in all the downloaded articles & compile the related articles
 // const QUERY = 'alzheimer';
@@ -58,7 +66,7 @@ fs.open(COMBINED_FILE, 'w', function (err, file) {
 // const searchHits = search(QUERY, true); // also unsure about param 2
 // const numSearchHits = Object.keys(searchHits).length;
 // console.log(`Found ${numSearchHits} hits`);
-fs.open(OUTPUT_FILE, 'w', function (err, file) {
-  if (err) throw err;
-  console.log('Saved!');
-});
+// fs.open(OUTPUT_FILE, 'w', function (err, file) {
+//   if (err) throw err;
+//   console.log('Saved!');
+// });

@@ -39,7 +39,7 @@ export async function download (startDate, endDate, options) {
   await sendOutput(res, options);
 }
 
-async function sendOutput (res, options, queryString) {
+export async function sendOutput (res, options, queryString) {
   if (options.reverse) {
     res = res.reverse();
   }
