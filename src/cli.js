@@ -32,11 +32,18 @@ export async function search (queryString, options) {
 }
 
 export async function download (startDate, endDate, options) {
-  const source = options.source ?? 'biorxiv';
+  try {
+    const source = options.source ?? 'biorxiv';
 
-  const res = await performDownload(source, startDate, endDate);
+    const res = await performDownload(source, startDate, endDate);
 
-  await sendOutput(res, options);
+    await sendOutput(res, options);
+
+    return res;
+  } catch (err) {
+    console.error(`Error in download: ${err}`);
+    throw err;
+  }
 }
 
 export async function sendOutput (res, options, queryString) {
