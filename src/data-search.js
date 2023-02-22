@@ -3,7 +3,7 @@
 // here we will convert the search.sh script into JS
 import { format, sub } from 'date-fns';
 import fs from 'fs';
-import { download, sendOutput } from './cli.js';
+import { download, search, sendOutput } from './cli.js';
 
 const CATEGORY_ID = 'alzheimers-disease';
 const DATA_DIRECTORY = 'example-data';
@@ -27,11 +27,11 @@ fs.open(BIORXIV_FILE, 'w', function (err, file) { // consider changing the callb
   if (err) throw err;
   console.log('Saved!');
 });
-const bioInfo = {
+const bioOptions = {
   source: BIORXIV_SOURCE,
   output: BIORXIV_FILE
 };
-const bioData = await download(START_DATE, END_DATE, bioInfo);
+const bioData = await download(START_DATE, END_DATE, bioOptions);
 
 // Getting all latest articles from MedrXiv
 console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
@@ -39,11 +39,11 @@ fs.open(MEDRXIV_FILE, 'w', function (err, file) {
   if (err) throw err;
   console.log('Saved!');
 });
-const medInfo = {
+const medOptions = {
   source: MEDRXIV_SOURCE,
   output: MEDRXIV_FILE
 };
-const medData = await download(START_DATE, END_DATE, medInfo);
+const medData = await download(START_DATE, END_DATE, medOptions);
 
 // Creating a JSON with all the results, both sources combined
 console.log('Combining results...');
@@ -55,18 +55,22 @@ const combinedData = {
   ...bioData,
   ...medData
 };
-const combinedInfo = {
+const combinedOptions = {
   output: COMBINED_FILE
 };
-sendOutput(combinedData, combinedInfo);
+sendOutput(combinedData, combinedOptions);
 
 // Search for the QUERY keyword in all the downloaded articles & compile the related articles
-// const QUERY = 'alzheimer';
-// console.log(`Searching for ${QUERY}`);
-// const searchHits = search(QUERY, true); // also unsure about param 2
-// const numSearchHits = Object.keys(searchHits).length;
-// console.log(`Found ${numSearchHits} hits`);
-// fs.open(OUTPUT_FILE, 'w', function (err, file) {
-//   if (err) throw err;
-//   console.log('Saved!');
-// });
+const QUERY = 'alzheimer';
+fs.open(OUTPUT_FILE, 'w', function (err, file) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+const outputOptions = {
+  input: COMBINED_FILE,
+  output: OUTPUT_FILE
+};
+console.log(`Searching for ${QUERY}`);
+const searchHits = await search(QUERY, outputOptions);
+const numSearchHits = Object.keys(searchHits).length;
+console.log(`Found ${numSearchHits} hits`);
