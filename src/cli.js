@@ -18,17 +18,24 @@ const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
 export async function search (queryString, options) {
-  const searcher = new Search();
+  try {
+    const searcher = new Search();
 
-  const articles = await getInput(options);
+    const articles = await getInput(options);
 
-  await searcher.articles(articles);
+    await searcher.articles(articles);
 
-  const res = await searcher.search(queryString, {
-    combineWith: options.strict ? 'AND' : 'OR'
-  });
+    const res = await searcher.search(queryString, {
+      combineWith: options.strict ? 'AND' : 'OR'
+    });
 
-  await sendOutput(res, options, queryString);
+    await sendOutput(res, options, queryString);
+
+    return res;
+  } catch (err) {
+    console.error(`Error in search: ${err}`);
+    throw err;
+  }
 }
 
 export async function download (startDate, endDate, options) {

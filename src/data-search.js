@@ -51,10 +51,7 @@ fs.open(COMBINED_FILE, 'w', function (err, file) {
   if (err) throw err;
   console.log('Saved!');
 });
-const combinedData = {
-  ...bioData,
-  ...medData
-};
+const combinedData = bioData.concat(medData);
 const combinedOptions = {
   output: COMBINED_FILE
 };
@@ -72,5 +69,5 @@ const outputOptions = {
 };
 console.log(`Searching for ${QUERY}`);
 const searchHits = await search(QUERY, outputOptions);
-const numSearchHits = Object.keys(searchHits).length;
+const numSearchHits = searchHits.length;
 console.log(`Found ${numSearchHits} hits`);
