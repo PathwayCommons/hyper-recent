@@ -58,7 +58,7 @@ const combinedData = {
 const combinedOptions = {
   output: COMBINED_FILE
 };
-sendOutput(combinedData, combinedOptions);
+await sendOutput(combinedData, combinedOptions);
 
 // Search for the QUERY keyword in all the downloaded articles & compile the related articles
 const QUERY = 'alzheimer';
