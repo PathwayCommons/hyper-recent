@@ -1,6 +1,6 @@
 import { format, sub } from 'date-fns';
 
-const startOffset = { months: 1 };
+const startOffset = { days: 1 };
 const arg = process.argv[2];
 const now = new Date();
 

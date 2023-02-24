@@ -52,6 +52,16 @@
         "--pretty"
       ],
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DataSearch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/data-search.js",
+      "console": "integratedTerminal"
     }
   ]
 }

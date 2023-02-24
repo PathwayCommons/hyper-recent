@@ -17,29 +17,43 @@ const writeText = async (text, file) => await writeFile(file, text);
 const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
-async function search (queryString, options) {
-  const searcher = new Search();
+export async function search (queryString, options) {
+  try {
+    const searcher = new Search();
 
-  const articles = await getInput(options);
+    const articles = await getInput(options);
 
-  await searcher.articles(articles);
+    await searcher.articles(articles);
 
-  const res = await searcher.search(queryString, {
-    combineWith: options.strict ? 'AND' : 'OR'
-  });
+    const res = await searcher.search(queryString, {
+      combineWith: options.strict ? 'AND' : 'OR'
+    });
 
-  await sendOutput(res, options, queryString);
+    await sendOutput(res, options, queryString);
+
+    return res;
+  } catch (err) {
+    console.error(`Error in search: ${err}`);
+    throw err;
+  }
 }
 
-async function download (startDate, endDate, options) {
-  const source = options.source ?? 'biorxiv';
+export async function download (startDate, endDate, options) {
+  try {
+    const source = options.source ?? 'biorxiv';
 
-  const res = await performDownload(source, startDate, endDate);
+    const res = await performDownload(source, startDate, endDate);
 
-  await sendOutput(res, options);
+    await sendOutput(res, options);
+
+    return res;
+  } catch (err) {
+    console.error(`Error in download: ${err}`);
+    throw err;
+  }
 }
 
-async function sendOutput (res, options, queryString) {
+export async function sendOutput (res, options, queryString) {
   if (options.reverse) {
     res = res.reverse();
   }
@@ -103,4 +117,4 @@ async function main () {
   await program.parseAsync();
 }
 
-main();
+// main();
