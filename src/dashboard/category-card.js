@@ -8,7 +8,7 @@ export default function CategoryCard ({ category, store, selectable = true, incl
     h('div', {
       class: 'category-bg-img',
       style: {
-        'background-image': `url("img/${category.id}.jpg")`
+        'background-image': `url("${category.img}")`
       }
     }),
     includeName
