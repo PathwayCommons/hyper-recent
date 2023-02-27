@@ -29,9 +29,20 @@ export async function search (queryString, options) {
       combineWith: options.strict ? 'AND' : 'OR'
     });
 
-    await sendOutput(res, options, queryString);
+    // format res before giving final output JSON
+    const formattedRes = res.map(article => ({
+      title: article.title,
+      paperId: article.doi,
+      doi: article.doi,
+      journal: article.server,
+      date: article.date,
+      brief: null,
+      authors: article.authors
+    }));
 
-    return res;
+    await sendOutput(formattedRes, options, queryString);
+
+    return formattedRes;
   } catch (err) {
     console.error(`Error in search: ${err}`);
     throw err;
