@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 
-// here we will convert the search.sh script into JS
 import { format, sub } from 'date-fns';
 import fs from 'fs/promises';
 import { download, search, sendOutput } from './cli.js';
@@ -21,41 +20,56 @@ const MEDRXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
 const COMBINED_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
 const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
 
+async function getArticles (articleSource, startDate, endDate, fileName, optionsName) {
+  try {
+    console.log(`Fetching from ${articleSource} between ${startDate} and ${endDate}`);
+    fs.open(fileName, 'w');
+    optionsName = {
+      source: articleSource,
+      output: fileName
+    };
+    const data = await download(startDate, endDate, optionsName);
+    return data;
+  } catch (err) {
+    console.error(`Error in download: ${err}`);
+    throw err;
+  }
+}
+
+async function combineArticles (fileName, dataArray1, dataArray2) {
+  console.log('Combining results...');
+  fs.open(fileName, 'w');
+  const combinedData = dataArray1.concat(dataArray2);
+  const combinedOptions = {
+    output: fileName
+  };
+  await sendOutput(combinedData, combinedOptions);
+}
+
+async function keywordSearch (query, searchFile, outputFile, options) {
+  fs.open(outputFile, 'w');
+  options = {
+    input: searchFile,
+    output: outputFile
+  };
+  console.log(`Searching for ${query}`);
+  const searchHits = await search(query, options);
+  const numSearchHits = searchHits.length;
+  console.log(`Found ${numSearchHits} hits`);
+}
+
 // Getting all latest articles from BiorXiv
-console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-fs.open(BIORXIV_FILE, 'w');
-const bioOptions = {
-  source: BIORXIV_SOURCE,
-  output: BIORXIV_FILE
-};
-const bioData = await download(START_DATE, END_DATE, bioOptions);
+let bioOptions;
+const bioData = await getArticles(BIORXIV_SOURCE, START_DATE, END_DATE, BIORXIV_FILE, bioOptions);
 
 // Getting all latest articles from MedrXiv
-console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-fs.open(MEDRXIV_FILE, 'w');
-const medOptions = {
-  source: MEDRXIV_SOURCE,
-  output: MEDRXIV_FILE
-};
-const medData = await download(START_DATE, END_DATE, medOptions);
+let medOptions;
+const medData = await getArticles(MEDRXIV_SOURCE, START_DATE, END_DATE, MEDRXIV_FILE, medOptions);
 
 // Creating a JSON with all the results, both sources combined
-console.log('Combining results...');
-fs.open(COMBINED_FILE, 'w');
-const combinedData = bioData.concat(medData);
-const combinedOptions = {
-  output: COMBINED_FILE
-};
-await sendOutput(combinedData, combinedOptions);
+await combineArticles(COMBINED_FILE, bioData, medData);
 
 // Search for the QUERY keyword in all the downloaded articles & compile the related articles
 const QUERY = 'alzheimer';
-fs.open(OUTPUT_FILE, 'w');
-const outputOptions = {
-  input: COMBINED_FILE,
-  output: OUTPUT_FILE
-};
-console.log(`Searching for ${QUERY}`);
-const searchHits = await search(QUERY, outputOptions);
-const numSearchHits = searchHits.length;
-console.log(`Found ${numSearchHits} hits`);
+let outputOptions;
+await keywordSearch(QUERY, COMBINED_FILE, OUTPUT_FILE, outputOptions);
