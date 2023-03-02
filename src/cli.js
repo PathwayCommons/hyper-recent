@@ -18,34 +18,35 @@ const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
 export async function search (queryString, options) {
-  try {
-    const searcher = new Search();
+  const searcher = new Search();
 
-    const articles = await getInput(options);
+  const articles = await getInput(options);
 
-    await searcher.articles(articles);
+  await searcher.articles(articles);
 
-    const res = await searcher.search(queryString, {
-      combineWith: options.strict ? 'AND' : 'OR'
-    });
+  const res = await searcher.search(queryString, {
+    combineWith: options.strict ? 'AND' : 'OR'
+  });
 
-    // format res before giving final output JSON
-    const formattedRes = res.map(article => ({
-      title: article.title,
-      paperId: article.doi,
-      doi: article.doi,
-      journal: article.server,
-      date: article.date,
-      brief: null,
-      authors: article.authors
-    }));
+  const source = options.source ?? 'biorxiv';
 
-    await sendOutput(formattedRes, options, queryString);
-
-    return formattedRes;
-  } catch (err) {
-    console.error(`Error in search: ${err}`);
-    throw err;
+  if (source === 'biorxiv' || source === 'medrxiv') {
+    try {
+      const formattedRes = await formatData(res);
+      await sendOutput(formattedRes, options, queryString);
+      return formattedRes;
+    } catch (err) {
+      console.error(`Error in search: ${err}`);
+      throw err;
+    }
+  } else {
+    try {
+      await sendOutput(res, options, queryString);
+      return res;
+    } catch (err) {
+      console.error(`Error in search: ${err}`);
+      throw err;
+    }
   }
 }
 
@@ -94,6 +95,24 @@ async function getInput (options) {
     const fileData = await getStdin();
 
     return JSON.parse(fileData);
+  }
+}
+
+async function formatData (dataArray) {
+  try {
+    const formattedData = dataArray.map(article => ({
+      paperId: article.doi,
+      doi: article.doi,
+      title: article.title,
+      journal: article.server,
+      date: article.date,
+      brief: null,
+      authors: article.authors
+    }));
+    return formattedData;
+  } catch (err) {
+    console.error(`Error in formatting data: ${err}`);
+    throw err;
   }
 }
 

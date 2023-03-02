@@ -20,7 +20,7 @@ const MEDRXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
 const COMBINED_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
 const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
 
-async function getArticles (articleSource, startDate, endDate, fileName, optionsName) {
+async function getArticles (articleSource, startDate, endDate, optionsName, fileName) {
   try {
     console.log(`Fetching from ${articleSource} between ${startDate} and ${endDate}`);
     fs.open(fileName, 'w');
@@ -36,40 +36,53 @@ async function getArticles (articleSource, startDate, endDate, fileName, options
   }
 }
 
-async function combineArticles (fileName, dataArray1, dataArray2) {
-  console.log('Combining results...');
-  fs.open(fileName, 'w');
-  const combinedData = dataArray1.concat(dataArray2);
-  const combinedOptions = {
-    output: fileName
-  };
-  await sendOutput(combinedData, combinedOptions);
+async function combineArticles (dataArray1, dataArray2, fileName) {
+  try {
+    console.log('Combining results...');
+    fs.open(fileName, 'w');
+    const combinedData = dataArray1.concat(dataArray2);
+    const combinedOptions = {
+      output: fileName
+    };
+    await sendOutput(combinedData, combinedOptions);
+    return combinedData;
+  } catch (err) {
+    console.error(`Error in combining articles: ${err}`);
+    throw err;
+  }
 }
 
-async function keywordSearch (query, searchFile, outputFile, options) {
-  fs.open(outputFile, 'w');
-  options = {
-    input: searchFile,
-    output: outputFile
-  };
-  console.log(`Searching for ${query}`);
-  const searchHits = await search(query, options);
-  const numSearchHits = searchHits.length;
-  console.log(`Found ${numSearchHits} hits`);
+async function keywordSearch (query, options, searchFile, outputFile, source) {
+  try {
+    fs.open(outputFile, 'w');
+    options = {
+      input: searchFile,
+      output: outputFile,
+      dataSource: source
+    };
+    console.log(`Searching for ${query}`);
+    const searchHits = await search(query, options);
+    const numSearchHits = searchHits.length;
+    console.log(`Found ${numSearchHits} hits`);
+    return searchHits;
+  } catch (err) {
+    console.error(`Error in search output: ${err}`);
+    throw err;
+  }
 }
 
 // Getting all latest articles from BiorXiv
 let bioOptions;
-const bioData = await getArticles(BIORXIV_SOURCE, START_DATE, END_DATE, BIORXIV_FILE, bioOptions);
+const bioData = await getArticles(BIORXIV_SOURCE, START_DATE, END_DATE, bioOptions, BIORXIV_FILE);
 
 // Getting all latest articles from MedrXiv
 let medOptions;
-const medData = await getArticles(MEDRXIV_SOURCE, START_DATE, END_DATE, MEDRXIV_FILE, medOptions);
+const medData = await getArticles(MEDRXIV_SOURCE, START_DATE, END_DATE, medOptions, MEDRXIV_FILE);
 
 // Creating a JSON with all the results, both sources combined
-await combineArticles(COMBINED_FILE, bioData, medData);
+await combineArticles(bioData, medData, COMBINED_FILE);
 
 // Search for the QUERY keyword in all the downloaded articles & compile the related articles
 const QUERY = 'alzheimer';
 let outputOptions;
-await keywordSearch(QUERY, COMBINED_FILE, OUTPUT_FILE, outputOptions);
+await keywordSearch(QUERY, outputOptions, COMBINED_FILE, OUTPUT_FILE);
