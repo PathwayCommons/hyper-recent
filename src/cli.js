@@ -20,9 +20,13 @@ const getPrettyText = (articles, queryString, options) => prettyArticles(article
 export async function search (queryString, options) {
   const searcher = new Search();
 
-  const articles = await getInput(options);
-
-  await searcher.articles(articles);
+  if (options.array) {
+    const articles = options.array;
+    await searcher.articles(articles);
+  } else {
+    const articles = await getInput(options);
+    await searcher.articles(articles);
+  }
 
   const res = await searcher.search(queryString, {
     combineWith: options.strict ? 'AND' : 'OR'

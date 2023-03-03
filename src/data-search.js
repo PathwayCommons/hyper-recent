@@ -56,10 +56,11 @@ async function combineArticles (dataArray1, dataArray2, fileName) {
   }
 }
 
-async function keywordSearch (query, options, searchFile, outputFile, source) {
+async function keywordSearch (query, options, dataArray, searchFile, outputFile, source) {
   const fileHandle = await fs.open(outputFile, 'w');
   try {
     options = {
+      array: dataArray,
       input: searchFile,
       output: outputFile,
       dataSource: source
@@ -86,9 +87,9 @@ let medOptions;
 const medData = await getArticles(MEDRXIV_SOURCE, START_DATE, END_DATE, medOptions, MEDRXIV_FILE);
 
 // Creating a JSON with all the results, both sources combined
-await combineArticles(bioData, medData, COMBINED_FILE);
+const combinedData = await combineArticles(bioData, medData, COMBINED_FILE);
 
 // Search for the QUERY keyword in all the downloaded articles & compile the related articles
 const QUERY = 'alzheimer';
 let outputOptions;
-await keywordSearch(QUERY, outputOptions, COMBINED_FILE, OUTPUT_FILE);
+await keywordSearch(QUERY, outputOptions, combinedData, COMBINED_FILE, OUTPUT_FILE);
