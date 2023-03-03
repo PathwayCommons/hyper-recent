@@ -21,9 +21,9 @@ const COMBINED_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
 const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
 
 async function getArticles (articleSource, startDate, endDate, optionsName, fileName) {
+  console.log(`Fetching from ${articleSource} between ${startDate} and ${endDate}`);
+  const fileHandle = await fs.open(fileName, 'w');
   try {
-    console.log(`Fetching from ${articleSource} between ${startDate} and ${endDate}`);
-    fs.open(fileName, 'w');
     optionsName = {
       source: articleSource,
       output: fileName
@@ -33,13 +33,15 @@ async function getArticles (articleSource, startDate, endDate, optionsName, file
   } catch (err) {
     console.error(`Error in download: ${err}`);
     throw err;
+  } finally {
+    await fileHandle.close();
   }
 }
 
 async function combineArticles (dataArray1, dataArray2, fileName) {
+  console.log('Combining results...');
+  const fileHandle = await fs.open(fileName, 'w');
   try {
-    console.log('Combining results...');
-    fs.open(fileName, 'w');
     const combinedData = dataArray1.concat(dataArray2);
     const combinedOptions = {
       output: fileName
@@ -49,12 +51,14 @@ async function combineArticles (dataArray1, dataArray2, fileName) {
   } catch (err) {
     console.error(`Error in combining articles: ${err}`);
     throw err;
+  } finally {
+    await fileHandle.close();
   }
 }
 
 async function keywordSearch (query, options, searchFile, outputFile, source) {
+  const fileHandle = await fs.open(outputFile, 'w');
   try {
-    fs.open(outputFile, 'w');
     options = {
       input: searchFile,
       output: outputFile,
@@ -68,6 +72,8 @@ async function keywordSearch (query, options, searchFile, outputFile, source) {
   } catch (err) {
     console.error(`Error in search output: ${err}`);
     throw err;
+  } finally {
+    await fileHandle.close();
   }
 }
 
