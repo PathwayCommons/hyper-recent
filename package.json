@@ -27,8 +27,7 @@
     "fix": "eslint ./src --fix",
     "lint": "eslint ./src",
     "clean": "rimraf dist src/dashboard/build",
-    "data:search": "echo \"Hello World!\"",
-    "data": "run-s data:*"
+    "data": "echo \"Hello World!\""
   },
   "author": "Pathway Commons",
   "license": "MIT",
