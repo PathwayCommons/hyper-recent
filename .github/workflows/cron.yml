@@ -1,33 +1,25 @@
-# name: Data release cron job
-# on:
-#   schedule:
-#     # * is a special character in YAML so you have to quote this string
-#     # (every day at 1am)
-#     - cron:  '0 1 * * *'
+name: Data release cron job
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # (every day at 1am)
+    - cron:  '0 1 * * *'
 
-# permissions:
-#   contents: read
+permissions:
+  contents: read
 
-# jobs:
-#   ci:
-#     runs-on: ubuntu-latest
-#     container: node:16
-#     environment: cron
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    container: node:16
+    environment: cron
 
-#     steps:
-#       - name: Check out repository code
-#         uses: actions/checkout@v3
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
 
-#       - name: Install dependencies
-#         run: npm install
+      - name: Install dependencies
+        run: npm install
 
-#       - name: Run tweet script
-#         run: npm start
-#         env:
-#           TIME_SPAN: ${{ vars.TIME_SPAN }}
-#           PACKAGES: ${{ vars.PACKAGES }}
-#           TWEET: ${{ vars.TWEET }}
-#           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
-#           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
-#           ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
-#           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+      - name: Run tweet script
+        run: npm run data
