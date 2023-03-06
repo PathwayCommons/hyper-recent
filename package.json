@@ -26,7 +26,9 @@
     "coverage": "nyc mocha",
     "fix": "eslint ./src --fix",
     "lint": "eslint ./src",
-    "clean": "rimraf dist src/dashboard/build"
+    "clean": "rimraf dist src/dashboard/build",
+    "data:search": "echo \"Hello World!\"",
+    "data": "run-s data:*"
   },
   "author": "Pathway Commons",
   "license": "MIT",
