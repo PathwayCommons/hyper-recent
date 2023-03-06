@@ -27,7 +27,7 @@
     "fix": "eslint ./src --fix",
     "lint": "eslint ./src",
     "clean": "rimraf dist src/dashboard/build",
-    "data": "echo \"Hello World!\""
+    "data": "node src/data-search.js"
   },
   "author": "Pathway Commons",
   "license": "MIT",
@@ -55,6 +55,7 @@
     "date-fns": "^2.29.3",
     "eventemitter3": "^4.0.7",
     "get-stdin": "^9.0.0",
+    "lodash": "^4.17.21",
     "minisearch": "^5.0.0",
     "node-fetch": "^3.2.6",
     "preact": "^10.11.0",
