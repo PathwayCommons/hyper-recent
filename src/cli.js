@@ -12,7 +12,7 @@ import { prettyArticles } from './pretty.js';
 const readFile = promisify(fs.readFile);
 const formatJSON = obj => JSON.stringify(obj, null, 2);
 const printFormattedJSON = obj => console.log(formatJSON(obj));
-const writeFormattedJSON = async (obj, file) => await writeFile(file, formatJSON(obj));
+export const writeFormattedJSON = async (obj, file) => await writeFile(file, formatJSON(obj));
 const writeText = async (text, file) => await writeFile(file, text);
 const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
