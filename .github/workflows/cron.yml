@@ -1,8 +1,7 @@
 name: Data release cron job
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    # (every day at 1am)
+    # POSIX syntax: Minute [0,59] Hour [0,23] Day [1,31] Month [1,12] Day of week [0 (Sunday),6]
     - cron:  '0 1 * * *'
 
 permissions:
@@ -21,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tweet script
+      - name: Run data script
         run: npm run data
