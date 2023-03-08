@@ -42,11 +42,7 @@ export async function getData () {
   const collection = await Promise.all(config.map(doSearches));
 
   // Output all search result papers into data.json
-  const fileHandle = await fs.openSync('example-data/data.json', 'w');
   await writeFormattedJSON(collection, 'example-data/data.json');
-  fs.closeSync(fileHandle);
-
-  // return collection;
 }
 
-await getData();
+getData();
