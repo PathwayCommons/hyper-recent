@@ -12,29 +12,45 @@ import { prettyArticles } from './pretty.js';
 const readFile = promisify(fs.readFile);
 const formatJSON = obj => JSON.stringify(obj, null, 2);
 const printFormattedJSON = obj => console.log(formatJSON(obj));
-const writeFormattedJSON = async (obj, file) => await writeFile(file, formatJSON(obj));
+export const writeFormattedJSON = async (obj, file) => await writeFile(file, formatJSON(obj));
 const writeText = async (text, file) => await writeFile(file, text);
 const printText = text => console.log(text);
 const getPrettyText = (articles, queryString, options) => prettyArticles(articles, queryString, options);
 
 export async function search (queryString, options) {
-  try {
-    const searcher = new Search();
+  const searcher = new Search();
 
-    const articles = await getInput(options);
-
+  if (options.array) {
+    const articles = options.array;
     await searcher.articles(articles);
+  } else {
+    const articles = await getInput(options);
+    await searcher.articles(articles);
+  }
 
-    const res = await searcher.search(queryString, {
-      combineWith: options.strict ? 'AND' : 'OR'
-    });
+  const res = await searcher.search(queryString, {
+    combineWith: options.strict ? 'AND' : 'OR'
+  });
 
-    await sendOutput(res, options, queryString);
+  const source = options.source ?? 'biorxiv';
 
-    return res;
-  } catch (err) {
-    console.error(`Error in search: ${err}`);
-    throw err;
+  if (source === 'biorxiv' || source === 'medrxiv') {
+    try {
+      const formattedRes = await formatData(res);
+      await sendOutput(formattedRes, options, queryString);
+      return formattedRes;
+    } catch (err) {
+      console.error(`Error in search: ${err}`);
+      throw err;
+    }
+  } else {
+    try {
+      await sendOutput(res, options, queryString);
+      return res;
+    } catch (err) {
+      console.error(`Error in search: ${err}`);
+      throw err;
+    }
   }
 }
 
@@ -83,6 +99,24 @@ async function getInput (options) {
     const fileData = await getStdin();
 
     return JSON.parse(fileData);
+  }
+}
+
+async function formatData (dataArray) {
+  try {
+    const formattedData = dataArray.map(article => ({
+      paperId: article.doi,
+      doi: article.doi,
+      title: article.title,
+      journal: article.server,
+      date: article.date,
+      brief: null,
+      authors: article.authors
+    }));
+    return formattedData;
+  } catch (err) {
+    console.error(`Error in formatting data: ${err}`);
+    throw err;
   }
 }
 

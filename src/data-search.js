@@ -1,61 +1,48 @@
 #! /usr/bin/env node
-
-// here we will convert the search.sh script into JS
+import _ from 'lodash';
+import fs from 'fs';
 import { format, sub } from 'date-fns';
-import fs from 'fs/promises';
-import { download, search, sendOutput } from './cli.js';
+import { download } from './download.js';
+import { Search } from './search.js';
+import { writeFormattedJSON } from './cli.js';
 
-const CATEGORY_ID = 'alzheimers-disease';
-const DATA_DIRECTORY = 'example-data';
+/**
+ * Download preprint data from BiorXiv and MedrXiv servers and perform search for preprints in each topic.
+ * @returns {collection}, a JSON array of search results for each set topic.
+ */
+export async function getData () {
+  // Set dates for past month
+  const now = new Date();
+  const startOffset = { months: 1 };
+  const start = format(sub(now, startOffset), 'yyyy-MM-dd');
+  const end = format(now, 'yyyy-MM-dd');
 
-const MEDRXIV_SOURCE = 'medrxiv';
-const BIORXIV_SOURCE = 'biorxiv';
+  // Reading config file for list of topics
+  const config = JSON.parse(fs.readFileSync('example-data/data-config.json'));
 
-const now = new Date();
-const startOffset = { days: 1 };
-const START_DATE = format(sub(now, startOffset), 'yyyy-MM-dd');
-const END_DATE = format(now, 'yyyy-MM-dd');
+  // Download all recent papers & combine the arrays
+  const data = await Promise.all([
+    download('biorxiv', start, end),
+    download('medrxiv', start, end)
+  ]);
 
-const BIORXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${BIORXIV_SOURCE}.json`;
-const MEDRXIV_FILE = `${DATA_DIRECTORY}/${END_DATE}_${MEDRXIV_SOURCE}.json`;
-const COMBINED_FILE = `${DATA_DIRECTORY}/${END_DATE}.json`;
-const OUTPUT_FILE = `${DATA_DIRECTORY}/${CATEGORY_ID}.json`;
+  const articles = _.flatten(data);
 
-// Getting all latest articles from BiorXiv
-console.log(`Fetching from ${BIORXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-fs.open(BIORXIV_FILE, 'w');
-const bioOptions = {
-  source: BIORXIV_SOURCE,
-  output: BIORXIV_FILE
-};
-const bioData = await download(START_DATE, END_DATE, bioOptions);
+  // Search using list of topic objects from config
+  const searcher = new Search();
 
-// Getting all latest articles from MedrXiv
-console.log(`Fetching from ${MEDRXIV_SOURCE} between ${START_DATE} and ${END_DATE}`);
-fs.open(MEDRXIV_FILE, 'w');
-const medOptions = {
-  source: MEDRXIV_SOURCE,
-  output: MEDRXIV_FILE
-};
-const medData = await download(START_DATE, END_DATE, medOptions);
+  await searcher.articles(articles);
+  const doSearches = async config => {
+    const { keywords } = config;
+    const papers = await searcher.search(keywords, {
+      combineWith: 'AND'
+    });
+    return _.assign({}, config, { papers });
+  };
+  const collection = await Promise.all(config.map(doSearches));
 
-// Creating a JSON with all the results, both sources combined
-console.log('Combining results...');
-fs.open(COMBINED_FILE, 'w');
-const combinedData = bioData.concat(medData);
-const combinedOptions = {
-  output: COMBINED_FILE
-};
-await sendOutput(combinedData, combinedOptions);
+  // Output all search result papers into data.json
+  await writeFormattedJSON(collection, 'example-data/data.json');
+}
 
-// Search for the QUERY keyword in all the downloaded articles & compile the related articles
-const QUERY = 'alzheimer';
-fs.open(OUTPUT_FILE, 'w');
-const outputOptions = {
-  input: COMBINED_FILE,
-  output: OUTPUT_FILE
-};
-console.log(`Searching for ${QUERY}`);
-const searchHits = await search(QUERY, outputOptions);
-const numSearchHits = searchHits.length;
-console.log(`Found ${numSearchHits} hits`);
+getData();
