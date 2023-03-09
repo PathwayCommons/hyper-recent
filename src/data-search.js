@@ -1,16 +1,19 @@
 #! /usr/bin/env node
 import _ from 'lodash';
 import fs from 'fs';
+import { writeFile } from 'fs/promises';
 import { format, sub } from 'date-fns';
 import { download } from './download.js';
 import { Search } from './search.js';
-import { writeFormattedJSON } from './cli.js';
 
 /**
  * Download preprint data from BiorXiv and MedrXiv servers and perform search for preprints in each topic.
  * @returns {collection}, a JSON array of search results for each set topic.
  */
 export async function getData () {
+  const formatJSON = obj => JSON.stringify(obj, null, 2);
+  const writeFormattedJSON = async (obj, file) => await writeFile(file, formatJSON(obj));
+
   // Set dates for past month
   const now = new Date();
   const startOffset = { months: 1 };
