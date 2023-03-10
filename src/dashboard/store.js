@@ -1,5 +1,4 @@
 import EventEmitter from 'eventemitter3';
-import { categories, getPapers } from './categories.js';
 
 export default class Store {
   emitter = new EventEmitter();
@@ -8,11 +7,23 @@ export default class Store {
 
   selectedCategory = null;
   selectedPapers = null;
-  categories = categories;
+  categories = null;
+
+  getPapers ({ id, limit = 20 }) {
+    const toDate = o => {
+      o.date = new Date(o.date);
+      return o;
+    };
+    const byDate = (a, b) => { return b.date - a.date; };
+    let papers = [];
+    const category = this.categories.find(cat => cat.id === id);
+    papers = category && category.papers.map(toDate).sort(byDate).slice(1, limit);
+    return papers;
+  };
 
   selectCategory (category) {
     this.selectedCategory = category;
-    this.selectedPapers = getPapers(category);
+    this.selectedPapers = this.getPapers(category);
 
     document.title = `${this.selectedCategory.name} : ${this.appName}`;
 
