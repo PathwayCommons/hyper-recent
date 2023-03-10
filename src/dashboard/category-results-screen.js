@@ -18,6 +18,8 @@ function Paper ({ paper }) {
 export default function CategoryResultsScreen ({ store }) {
   const { selectedPapers, selectedCategory } = store;
 
+  if (!selectedCategory) return null;
+
   return h('div', { class: 'category-results-screen' }, [
     h(Link, { href: '/', class: 'category-results-reset link' }, '< Select a different topic'), // TODO: < should be a nice SVG icon
     h('div', { class: 'category-results-info' }, [ // TODO: better css for mobile
