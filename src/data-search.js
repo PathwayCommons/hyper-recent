@@ -21,7 +21,7 @@ export async function getData () {
   const end = format(now, 'yyyy-MM-dd');
 
   // Reading config file for list of topics
-  const config = JSON.parse(fs.readFileSync('example-data/data-config.json'));
+  const config = JSON.parse(fs.readFileSync('src/data-config.json'));
 
   // Download all recent papers & combine the arrays
   const data = await Promise.all([
