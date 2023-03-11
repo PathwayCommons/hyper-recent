@@ -27,8 +27,8 @@ export default class Store {
 
     document.title = `${this.selectedCategory.name} : ${this.appName}`;
 
-    this.emitter.emit('selectcategory', category);
-    this.emitter.emit('update');
+    // this.emitter.emit('selectcategory', category);
+    // this.emitter.emit('update');
   }
 
   clearCategorySelection () {
@@ -37,9 +37,9 @@ export default class Store {
 
     document.title = this.appName;
 
-    this.emitter.emit('selectcategory', null);
-    this.emitter.emit('clearcategory');
-    this.emitter.emit('update');
+    // this.emitter.emit('selectcategory', null);
+    // this.emitter.emit('clearcategory');
+    // this.emitter.emit('update');
   }
 
   selectCategoryByID (id) {

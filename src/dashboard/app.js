@@ -12,8 +12,7 @@ export default class App extends Component {
     const store = new Store();
 
     this.state = {
-      store,
-      data: null
+      store
     };
 
     store.emitter.on('update', () => {
@@ -21,21 +20,23 @@ export default class App extends Component {
     });
   }
 
-  async fetchData () {
+  async updateStore () {
     const response = await fetch(DATA_URL);
-    const json = await response.json();
+    const categories = await response.json();
     const { store } = this.state;
-    store.categories = json;
-    this.setState({ data: json, store });
+    store.categories = categories;
+    this.setState({ store });
   }
 
   render () {
-    const { store, data } = this.state;
+    const { store } = this.state;
+
+    // Do not continue if store is empty (could be loader)
+    if (!store.categories) return this.updateStore().then(() => null);
 
     return h(Router, {
       onChange: async e => {
         const url = e.url;
-        if (!data) await this.fetchData();
 
         if (url === '/') {
           store.clearCategorySelection();

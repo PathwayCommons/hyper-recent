@@ -4,6 +4,7 @@ import CategoryCard from './category-card.js';
 // TODO: the css should be better for mobile and large empty screens
 export default function CategorySelectionScreen ({ store }) {
   const { categories } = store;
+  if (categories == null) return null;
   const haveCategories = categories != null && categories.length !== 0;
 
   return h('div', { class: 'category-selection-screen' }, [
