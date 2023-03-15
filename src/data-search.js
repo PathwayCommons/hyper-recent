@@ -5,6 +5,7 @@ import { writeFile } from 'fs/promises';
 import { format, sub } from 'date-fns';
 import { download } from './download.js';
 import { Search } from './search.js';
+import { DATA_CONFIG, DATA_FILE } from './config.js';
 
 /**
  * Download preprint data from BiorXiv and MedrXiv servers and perform search for preprints in each topic.
@@ -21,7 +22,7 @@ export async function getData () {
   const end = format(now, 'yyyy-MM-dd');
 
   // Reading config file for list of topics
-  const config = JSON.parse(fs.readFileSync('example-data/data-config.json'));
+  const config = JSON.parse(fs.readFileSync(DATA_CONFIG));
 
   // Download all recent papers & combine the arrays
   const data = await Promise.all([
@@ -45,7 +46,7 @@ export async function getData () {
   const collection = await Promise.all(config.map(doSearches));
 
   // Output all search result papers into data.json
-  await writeFormattedJSON(collection, 'example-data/data.json');
+  await writeFormattedJSON(collection, DATA_FILE);
 }
 
 getData();
