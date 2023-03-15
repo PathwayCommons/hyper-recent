@@ -120,7 +120,7 @@ async function formatData (dataArray) {
   }
 }
 
-async function main () { // eslint-disable-line no-unused-vars
+async function main () {
   (program
     .name('hyper-recent')
     .description('A CLI to do hyper-recent feed analysis')
@@ -150,3 +150,5 @@ async function main () { // eslint-disable-line no-unused-vars
 
   await program.parseAsync();
 }
+
+main();

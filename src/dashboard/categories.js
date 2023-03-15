@@ -1,4 +1,4 @@
-import data from '../../example-data/data.json';
+import data from './data.json';
 
 const toDate = o => {
   o.date = new Date(o.date);

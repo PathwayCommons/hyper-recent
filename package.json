@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "http-server -p 3000 --proxy http://localhost:3000? dist",
-    "build:data": "cd ./scripts && ./search.sh && ./recommendations.sh",
+    "build:data": "node src/data-search.js",
     "build:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl",
     "watch:css": "esbuild --bundle src/dashboard/index.css --outfile=src/dashboard/build/bundle.css --loader:.jpg=dataurl --watch --sourcemap",
     "build:js": "esbuild src/dashboard/index.js --bundle --outfile=src/dashboard/build/bundle.js",
@@ -26,8 +26,7 @@
     "coverage": "nyc mocha",
     "fix": "eslint ./src --fix",
     "lint": "eslint ./src",
-    "clean": "rimraf dist src/dashboard/build",
-    "data": "node src/data-search.js"
+    "clean": "rimraf dist src/dashboard/build"
   },
   "author": "Pathway Commons",
   "license": "MIT",
