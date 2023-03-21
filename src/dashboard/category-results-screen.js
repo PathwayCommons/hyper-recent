@@ -1,17 +1,11 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import CategoryCard from './category-card.js';
-import { checkRedirect } from '../redirects.js';
+import { getFinalURL } from '../redirects.js';
 
 function Paper ({ paper }) {
-  let doiLink = `https://doi.org/${paper.doi}`; // check for redirects, set link as final URL
-  const path = checkRedirect(doiLink);
-  if (path.isRedirected) {
-    doiLink = path.finalURL;
-  }
-
   return h('div', { class: 'paper' }, [
-    h('a', { href: doiLink, target: '_blank', class: 'paper-link' }, [
+    h('a', { href: `https://doi.org/${paper.doi}`, target: '_blank', class: 'paper-link' }, [
       h('div', { class: 'paper-read' }),
       h('div', { class: 'paper-title' }, paper.title)
     ]),

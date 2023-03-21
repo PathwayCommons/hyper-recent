@@ -28,9 +28,4 @@ export async function deleteCache (cache) {
   });
 }
 
-/** we have 2 options: delete the cache every night & recreate it, or only add to cache the new articles for that day
- * for the latter, that would require finding which articles are the newest + deleting cache of outdated artcles
- * for now we can do the first option and move on to the second to improve later on
- */
-
 getFinalURL('https://doi.org/10.1101/2023.03.09.23286958'); // url provided in issue 24 to paper with 5 versions

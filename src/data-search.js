@@ -6,6 +6,7 @@ import { format, sub } from 'date-fns';
 import { download } from './download.js';
 import { Search } from './search.js';
 import { DATA_CONFIG, DATA_FILE } from './config.js';
+import { getFinalURL } from './redirects.js';
 
 /**
  * Download preprint data from BiorXiv and MedrXiv servers and perform search for preprints in each topic.
@@ -17,7 +18,7 @@ export async function getData () {
 
   // Set dates for past month
   const now = new Date();
-  const startOffset = { months: 1 };
+  const startOffset = { days: 1 };
   const start = format(sub(now, startOffset), 'yyyy-MM-dd');
   const end = format(now, 'yyyy-MM-dd');
 
@@ -44,6 +45,15 @@ export async function getData () {
     return _.assign({}, config, { papers });
   };
   const collection = await Promise.all(config.map(doSearches));
+
+  // Find and save final link for each paper's DOI
+  const { papers } = collection;
+  for (const paper in papers) {
+    const doiLink = `https://doi.org/${paper.doi}`;
+    const finalURL = getFinalURL(doiLink); // add to an array of final links & return, then assign to collection?
+  }
+
+  // add function from redirects, return an array and do _.assign to combine collection with the links?
 
   // Output all search result papers into data.json
   await writeFormattedJSON(collection, DATA_FILE);
