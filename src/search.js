@@ -12,7 +12,7 @@ export class Search {
   constructor () {
     this.miniSearch = new MiniSearch({
       fields: ['title', 'authors', 'category', 'abstract'], // fields to index for full-text search
-      storeFields: ['title', 'authors', 'category', 'abstract', 'date', 'server', 'doi'] // fields to return with search results
+      storeFields: ['title', 'authors', 'category', 'abstract', 'date', 'server', 'doi', 'version', 'finalURL'] // fields to return with search results
     });
   }
 

@@ -44,13 +44,12 @@ export async function getData () {
     });
 
     // Find and save final link for each paper's DOI
-    let doiLink, finalURL;
-    for (const paper in { papers }) { // does not work
-      doiLink = `https://doi.org/${paper.doi}`;
-      finalURL = await getFinalURL(doiLink);
-      paper.finalURL = finalURL;
-    }
-    return _.assign({}, config, { papers });
+    _.forIn(papers, async function (value, key) {
+      const doiLink = `https://doi.org/${value.doi}`;
+      const finalURL = await getFinalURL(doiLink);
+      value.finalURL = finalURL;
+    });
+    return _.assign({}, config, papers);
   };
   const collection = await Promise.all(config.map(doSearches));
 
