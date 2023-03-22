@@ -48,7 +48,7 @@ export async function getData () {
       const finalURL = `https://www.biorxiv.org/content/${value.doi}v${value.version}`;
       value.finalURL = finalURL;
     });
-    return _.assign({}, config, papers);
+    return _.assign({}, config, { papers });
   };
   const collection = await Promise.all(config.map(doSearches));
 
