@@ -1,7 +1,6 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import CategoryCard from './category-card.js';
-import { getFinalURL } from '../redirects.js';
 
 function Paper ({ paper }) {
   return h('div', { class: 'paper' }, [

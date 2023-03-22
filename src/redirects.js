@@ -12,8 +12,9 @@ export async function getFinalURL (url) {
 
 export async function cacheData (array) {
   const cache = await caches.open('new-cache');
+  let finalURL;
   for (const link in array) {
-    const finalURL = getFinalURL(link);
+    finalURL = getFinalURL(link);
     cache.add(finalURL);
   }
   return cache;
