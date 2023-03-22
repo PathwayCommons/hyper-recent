@@ -45,8 +45,7 @@ export async function getData () {
 
     // Find and save final link for each paper's DOI
     _.forIn(papers, async function (value, key) {
-      const doiLink = `https://doi.org/${value.doi}`;
-      const finalURL = await getFinalURL(doiLink);
+      const finalURL = `https://www.biorxiv.org/content/${value.doi}v${value.version}`;
       value.finalURL = finalURL;
     });
     return _.assign({}, config, papers);
