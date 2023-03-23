@@ -18,7 +18,7 @@ export async function getData () {
 
   // Set dates for past month
   const now = new Date();
-  const startOffset = { days: 1 };
+  const startOffset = { months: 1 };
   const start = format(sub(now, startOffset), 'yyyy-MM-dd');
   const end = format(now, 'yyyy-MM-dd');
 
@@ -44,10 +44,10 @@ export async function getData () {
     });
 
     // Find and save final link for each paper's DOI
-    _.forIn(papers, async function (value, key) {
-      const finalURL = `https://www.biorxiv.org/content/${value.doi}v${value.version}`;
-      value.finalURL = finalURL;
-    });
+    for (const paper of papers) {
+      const finalURL = `https://www.${paper.server}.org/content/${paper.doi}v${paper.version}`;
+      paper.finalURL = finalURL;
+    }
     return _.assign({}, config, { papers });
   };
   const collection = await Promise.all(config.map(doSearches));
