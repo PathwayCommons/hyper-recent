@@ -6,7 +6,6 @@ import { format, sub } from 'date-fns';
 import { download } from './download.js';
 import { Search } from './search.js';
 import { DATA_CONFIG, DATA_FILE } from './config.js';
-import { getFinalURL } from './redirects.js';
 
 /**
  * Download preprint data from BiorXiv and MedrXiv servers and perform search for preprints in each topic.
