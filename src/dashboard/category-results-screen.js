@@ -4,7 +4,7 @@ import CategoryCard from './category-card.js';
 
 function Paper ({ paper }) {
   return h('div', { class: 'paper' }, [
-    h('a', { href: `https://doi.org/${paper.doi}`, target: '_blank', class: 'paper-link' }, [
+    h('a', { href: paper.finalURL, target: '_blank', class: 'paper-link' }, [
       h('div', { class: 'paper-read' }),
       h('div', { class: 'paper-title' }, paper.title)
     ]),
