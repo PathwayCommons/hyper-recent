@@ -42,12 +42,34 @@ export async function getData () {
       combineWith: 'AND'
     });
 
-    // Find and save final link for each paper's DOI
+    // Filter for multiple versions of the same paper
+    const unique = [];
     for (const paper of papers) {
+      const exists = unique.find((obj) => obj.title === paper.title);
+
+      if (!exists) {
+        const allVersions = papers.filter((obj) => obj.title === paper.title);
+        if (allVersions.length > 1) {
+          const max = allVersions.reduce((maxObj, obj) => {
+            if (obj.version > maxObj.version) {
+              return obj;
+            } else {
+              return maxObj;
+            }
+          }, { version: -Infinity });
+          unique.push(max);
+        } else {
+          unique.push(paper);
+        }
+      }
+    }
+
+    // Find and save final link for each paper's DOI
+    for (const paper of unique) {
       const finalURL = `https://www.${paper.server}.org/content/${paper.doi}v${paper.version}`;
       paper.finalURL = finalURL;
     }
-    return _.assign({}, config, { papers });
+    return _.assign({}, config, { unique });
   };
   const collection = await Promise.all(config.map(doSearches));
 
