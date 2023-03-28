@@ -75,16 +75,6 @@
       ],
       "program": "${workspaceFolder}/src/data-search.js",
       "console": "integratedTerminal"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Redirects",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}/src/redirects.js",
-      "console": "integratedTerminal"
     }
   ]
 }
