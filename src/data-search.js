@@ -45,10 +45,10 @@ export async function getData () {
     // Filter for multiple versions of the same paper
     const papers = [];
     for (const paper of allPapers) {
-      const exists = papers.find((obj) => obj.title === paper.title);
+      const exists = papers.find((obj) => obj.doi === paper.doi);
 
       if (!exists) {
-        const allVersions = allPapers.filter((obj) => obj.title === paper.title);
+        const allVersions = allPapers.filter((obj) => obj.doi === paper.doi);
         if (allVersions.length > 1) {
           const max = allVersions.reduce((maxObj, obj) => {
             if (obj.version > maxObj.version) {
