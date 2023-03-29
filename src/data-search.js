@@ -38,9 +38,37 @@ export async function getData () {
   await searcher.articles(articles);
   const doSearches = async config => {
     const { keywords } = config;
-    const papers = await searcher.search(keywords, {
+    const allPapers = await searcher.search(keywords, {
       combineWith: 'AND'
     });
+
+    // Filter for multiple versions of the same paper
+    const papers = [];
+    for (const paper of allPapers) {
+      const exists = papers.find((obj) => obj.doi === paper.doi);
+
+      if (!exists) {
+        const allVersions = allPapers.filter((obj) => obj.doi === paper.doi);
+        if (allVersions.length > 1) {
+          const max = allVersions.reduce((maxObj, obj) => {
+            if (obj.version > maxObj.version) {
+              return obj;
+            } else {
+              return maxObj;
+            }
+          }, { version: -Infinity });
+          papers.push(max);
+        } else {
+          papers.push(paper);
+        }
+      }
+    }
+
+    // Find and save final link for each paper's DOI
+    for (const paper of papers) {
+      const finalURL = `https://www.${paper.server}.org/content/${paper.doi}v${paper.version}`;
+      paper.finalURL = finalURL;
+    }
     return _.assign({}, config, { papers });
   };
   const collection = await Promise.all(config.map(doSearches));
