@@ -53,7 +53,6 @@
     "commander": "^9.3.0",
     "date-fns": "^2.29.3",
     "eventemitter3": "^4.0.7",
-    "follow-redirects": "^1.15.2",
     "get-stdin": "^9.0.0",
     "lodash": "^4.17.21",
     "minisearch": "^5.0.0",
