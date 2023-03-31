@@ -28,6 +28,21 @@ export default function CategoryResultsScreen ({ store }) {
         h('div', { class: 'category-results-description' }, selectedCategory.description)
       ])
     ]),
-    h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+    h('div', { class: 'papers-today' }, [
+      h('h2', { class: 'papers-today-title' }, 'New papers today'),
+      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+    ]),
+    h('div', { class: 'papers-last-few-days' }, [
+      h('h2', { class: 'papers-last-few-days-title' }, 'Papers in the last few days'),
+      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+    ]),
+    h('div', { class: 'papers-last-week' }, [
+      h('h2', { class: 'papers-last-week-title' }, 'Papers in the last week'),
+      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+    ]),
+    h('div', { class: 'papers-this-month' }, [
+      h('h2', { class: 'papers-this-month-title' }, 'Papers this month'),
+      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+    ])
   ]);
 }
