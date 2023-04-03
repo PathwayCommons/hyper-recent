@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import CategoryCard from './category-card.js';
+import { format, sub } from 'date-fns';
 
 function Paper ({ paper }) {
   return h('div', { class: 'paper' }, [
@@ -13,6 +14,51 @@ function Paper ({ paper }) {
     h('div', { class: 'paper-journal' }, paper.journal),
     h('div', { class: 'paper-brief' }, paper.brief)
   ]);
+}
+
+function findRelativeDate (papers, range) {
+  const now = new Date();
+  const today = format(now, 'yyyy-MM-dd');
+  const displayPapers = [];
+
+  if (range === 'today') {
+    for (const paper of papers) {
+      const paperDate = paper.date.substring(0, 9);
+      if (paperDate === today) {
+        displayPapers.push(paper);
+      }
+    }
+  } else if (range === 'days') { // if between now & 3 days
+    const startOffset = { days: 3 };
+    const start = format(sub(now, startOffset), 'yyyy-MM-dd');
+
+    for (const paper of papers) {
+      const paperDate = paper.date.substring(0, 9);
+      if (paperDate >= start && paperDate <= today) {
+        displayPapers.push(paper);
+      }
+    }
+  } else if (range === 'week') {
+    const startOffset = { weeks: 1 };
+    const start = format(sub(now, startOffset), 'yyyy-MM-dd');
+
+    for (const paper of papers) {
+      const paperDate = paper.date.substring(0, 9);
+      if (paperDate >= start && paperDate <= today) { // between now & 7 days
+        displayPapers.push(paper);
+      }
+    }
+  } else {
+    const startOffset = { motnhs: 1 };
+    const start = format(sub(now, startOffset), 'yyyy-MM-dd');
+
+    for (const paper of papers) {
+      const paperDate = paper.date.substring(0, 9);
+      if (paperDate >= start && paperDate <= today) { // past month
+        displayPapers.push(paper);
+      }
+    }
+  }
 }
 
 export default function CategoryResultsScreen ({ store }) {
