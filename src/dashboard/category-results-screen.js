@@ -34,27 +34,31 @@ function findRelativeDate (papers, range) {
 
     for (const paper of papers) {
       const paperDate = paper.date.substring(0, 9);
-      if (paperDate >= start && paperDate <= today) {
+      if (paperDate >= start && paperDate < today) {
         displayPapers.push(paper);
       }
     }
   } else if (range === 'week') {
     const startOffset = { weeks: 1 };
+    const endOffset = { days: 3 };
     const start = format(sub(now, startOffset), 'yyyy-MM-dd');
+    const end = format(sub(now, endOffset), 'yyyy-MM-dd');
 
     for (const paper of papers) {
       const paperDate = paper.date.substring(0, 9);
-      if (paperDate >= start && paperDate <= today) { // between now & 7 days
+      if (paperDate >= start && paperDate < end) { // between now & 7 days
         displayPapers.push(paper);
       }
     }
   } else {
-    const startOffset = { motnhs: 1 };
+    const startOffset = { months: 1 };
+    const endOffset = { weeks: 1 };
     const start = format(sub(now, startOffset), 'yyyy-MM-dd');
+    const end = format(sub(now, endOffset), 'yyyy-MM-dd');
 
     for (const paper of papers) {
       const paperDate = paper.date.substring(0, 9);
-      if (paperDate >= start && paperDate <= today) { // past month
+      if (paperDate >= start && paperDate < end) { // past month
         displayPapers.push(paper);
       }
     }
@@ -63,6 +67,10 @@ function findRelativeDate (papers, range) {
 
 export default function CategoryResultsScreen ({ store }) {
   const { selectedPapers, selectedCategory } = store;
+  const todayPapers = findRelativeDate(selectedPapers, 'today');
+  const fewDaysPapers = findRelativeDate(selectedPapers, 'days');
+  const weekPapers = findRelativeDate(selectedPapers, 'week');
+  const monthPapers = findRelativeDate(selectedPapers, 'month');
 
   return h('div', { class: 'category-results-screen' }, [
     h(Link, { href: '/', class: 'category-results-reset link' }, '< Select a different topic'), // TODO: < should be a nice SVG icon
