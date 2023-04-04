@@ -24,7 +24,7 @@ function findRelativeDate (papers, range) {
   if (range === 'today') {
     for (const paper of papers) {
       const paperDate = format(paper.date, 'yyyy-MM-dd');
-      if (paperDate >= today) {
+      if (paperDate === today) {
         displayPapers.push(paper);
       }
     }
