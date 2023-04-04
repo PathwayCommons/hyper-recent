@@ -23,30 +23,30 @@ function findRelativeDate (papers, range) {
 
   if (range === 'today') {
     for (const paper of papers) {
-      const paperDate = paper.date.substring(0, 9);
-      if (paperDate === today) {
+      const paperDate = format(paper.date, 'yyyy-MM-dd');
+      if (paperDate >= today) {
         displayPapers.push(paper);
       }
     }
-  } else if (range === 'days') { // if between now & 3 days
-    const startOffset = { days: 3 };
+  } else if (range === 'days') { // within the past 4 days
+    const startOffset = { days: 4 };
     const start = format(sub(now, startOffset), 'yyyy-MM-dd');
 
     for (const paper of papers) {
-      const paperDate = paper.date.substring(0, 9);
+      const paperDate = format(paper.date, 'yyyy-MM-dd');
       if (paperDate >= start && paperDate < today) {
         displayPapers.push(paper);
       }
     }
   } else if (range === 'week') {
     const startOffset = { weeks: 1 };
-    const endOffset = { days: 3 };
+    const endOffset = { days: 4 };
     const start = format(sub(now, startOffset), 'yyyy-MM-dd');
     const end = format(sub(now, endOffset), 'yyyy-MM-dd');
 
     for (const paper of papers) {
-      const paperDate = paper.date.substring(0, 9);
-      if (paperDate >= start && paperDate < end) { // between now & 7 days
+      const paperDate = format(paper.date, 'yyyy-MM-dd');
+      if (paperDate >= start && paperDate < end) { // within the past week
         displayPapers.push(paper);
       }
     }
@@ -57,12 +57,13 @@ function findRelativeDate (papers, range) {
     const end = format(sub(now, endOffset), 'yyyy-MM-dd');
 
     for (const paper of papers) {
-      const paperDate = paper.date.substring(0, 9);
-      if (paperDate >= start && paperDate < end) { // past month
+      const paperDate = format(paper.date, 'yyyy-MM-dd');
+      if (paperDate >= start && paperDate < end) { // everything else within the past month
         displayPapers.push(paper);
       }
     }
   }
+  return displayPapers;
 }
 
 export default function CategoryResultsScreen ({ store }) {
@@ -84,19 +85,19 @@ export default function CategoryResultsScreen ({ store }) {
     ]),
     h('div', { class: 'papers-today' }, [
       h('h2', { class: 'papers-today-title' }, 'New papers today'),
-      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+      h('div', { class: 'papers' }, todayPapers.map(paper => h(Paper, { paper })))
     ]),
     h('div', { class: 'papers-last-few-days' }, [
       h('h2', { class: 'papers-last-few-days-title' }, 'Papers in the last few days'),
-      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+      h('div', { class: 'papers' }, fewDaysPapers.map(paper => h(Paper, { paper })))
     ]),
     h('div', { class: 'papers-last-week' }, [
       h('h2', { class: 'papers-last-week-title' }, 'Papers in the last week'),
-      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+      h('div', { class: 'papers' }, weekPapers.map(paper => h(Paper, { paper })))
     ]),
     h('div', { class: 'papers-this-month' }, [
-      h('h2', { class: 'papers-this-month-title' }, 'Papers this month'),
-      h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
+      h('h2', { class: 'papers-this-month-title' }, 'Papers in the past month'),
+      h('div', { class: 'papers' }, monthPapers.map(paper => h(Paper, { paper })))
     ])
   ]);
 }
