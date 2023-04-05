@@ -9,7 +9,7 @@ export const categories = data.map(({ id, name, description, img }) => ({ id, na
 export const getPapers = ({ id }) => {
   let papers = [];
   const category = data.find(cat => cat.id === id);
-  papers = category && category.papers.map(toDate).sort(byDate).slice(1);
+  papers = category && category.papers.map(toDate).sort(byDate);
   return papers;
 };
 
