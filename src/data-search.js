@@ -68,6 +68,7 @@ export async function getData () {
     for (const paper of papers) {
       const finalURL = `https://www.${paper.server}.org/content/${paper.doi}v${paper.version}`;
       paper.finalURL = finalURL;
+      paper.journal = paper.server;
     }
     return _.assign({}, config, { papers });
   };
