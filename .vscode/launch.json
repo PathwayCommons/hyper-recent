@@ -75,6 +75,16 @@
       ],
       "program": "${workspaceFolder}/src/data-search.js",
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "App",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/dashboard/app.js", 
+      "console": "integratedTerminal"
     }
   ]
 }

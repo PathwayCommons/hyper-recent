@@ -8,7 +8,7 @@ export default function CategorySelectionScreen ({ store }) {
 
   return h('div', { class: 'category-selection-screen' }, [
     h('div', { class: 'app-name' }, 'The Digest'),
-    h('div', { class: 'app-tagline' }, 'Quick acess to the latest papers in the biomedicine.'),
+    h('div', { class: 'app-tagline' }, 'Quick access to the latest papers in the biomedicine.'),
     h('div', { class: 'categories' }, (haveCategories
       ? categories.map(category => h(CategoryCard, { category, store }))
       : h('div', {}, 'No categories!')

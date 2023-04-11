@@ -6,10 +6,10 @@ const toDate = o => {
 };
 const byDate = (a, b) => { return b.date - a.date; };
 export const categories = data.map(({ id, name, description, img }) => ({ id, name, description, img }));
-export const getPapers = ({ id, limit = 100 }) => {
+export const getPapers = ({ id }) => {
   let papers = [];
   const category = data.find(cat => cat.id === id);
-  papers = category && category.papers.map(toDate).sort(byDate).slice(1, limit);
+  papers = category && category.papers.map(toDate).sort(byDate);
   return papers;
 };
 

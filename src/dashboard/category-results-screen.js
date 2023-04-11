@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import CategoryCard from './category-card.js';
+import { sub } from 'date-fns';
 
 function Paper ({ paper }) {
   return h('div', { class: 'paper' }, [
@@ -15,11 +16,39 @@ function Paper ({ paper }) {
   ]);
 }
 
+function findRelativeDate (papers, range) {
+  const now = new Date();
+  const today = now.toISOString().split('T')[0];
+  const daysAgo = sub(now, { days: 4 }).toISOString();
+  const weekAgo = sub(now, { weeks: 1 }).toISOString();
+  const monthAgo = sub(now, { months: 1 }).toISOString();
+  const displayPapers = [];
+
+  for (const paper of papers) {
+    const paperDate = paper.date.toISOString().split('T')[0];
+
+    if (range === 'today' && paperDate === today) { // Today's papers
+      displayPapers.push(paper);
+    } else if (range === 'days' && paperDate >= daysAgo && paperDate < today) { // Papers from 4 days ago
+      displayPapers.push(paper);
+    } else if (range === 'week' && paperDate >= weekAgo && paperDate < daysAgo) { // Papers from past week
+      displayPapers.push(paper);
+    } else if (range === 'month' && paperDate >= monthAgo && paperDate < weekAgo) { // Rest of the papers from the past month
+      displayPapers.push(paper);
+    }
+  }
+  return displayPapers;
+}
+
 export default function CategoryResultsScreen ({ store }) {
   const { selectedPapers, selectedCategory } = store;
+  const todayPapers = findRelativeDate(selectedPapers, 'today');
+  const fewDaysPapers = findRelativeDate(selectedPapers, 'days');
+  const weekPapers = findRelativeDate(selectedPapers, 'week');
+  const monthPapers = findRelativeDate(selectedPapers, 'month');
 
-  return h('div', { class: 'category-results-screen' }, [
-    h(Link, { href: '/', class: 'category-results-reset link' }, '< Select a different topic'), // TODO: < should be a nice SVG icon
+  const resultsScreenElements = [
+    h(Link, { href: '/', class: 'category-results-reset link' }, '< Select a different topic'),
     h('div', { class: 'category-results-info' }, [ // TODO: better css for mobile
       CategoryCard({ category: selectedCategory, store, selectable: false, includeName: false }),
       h('div', { class: 'category-results-details' }, [
@@ -27,7 +56,33 @@ export default function CategoryResultsScreen ({ store }) {
         h('div', { class: 'category-results-date' }, 'Updated yesterday'),
         h('div', { class: 'category-results-description' }, selectedCategory.description)
       ])
-    ]),
-    h('div', { class: 'papers' }, selectedPapers.map(paper => h(Paper, { paper })))
-  ]);
+    ])
+  ];
+
+  if (todayPapers.length !== 0) {
+    resultsScreenElements.push(h('div', { class: 'papers-today' }, [
+      h('h2', { class: 'papers-today-title' }, 'New papers today'),
+      h('div', { class: 'papers' }, todayPapers.map(paper => h(Paper, { paper })))
+    ]));
+  }
+  if (fewDaysPapers.length !== 0) {
+    resultsScreenElements.push(h('div', { class: 'papers-last-few-days' }, [
+      h('h2', { class: 'papers-last-few-days-title' }, 'Papers in the last few days'),
+      h('div', { class: 'papers' }, fewDaysPapers.map(paper => h(Paper, { paper })))
+    ]));
+  }
+  if (weekPapers.length !== 0) {
+    resultsScreenElements.push(h('div', { class: 'papers-last-week' }, [
+      h('h2', { class: 'papers-last-week-title' }, 'Papers in the last week'),
+      h('div', { class: 'papers' }, weekPapers.map(paper => h(Paper, { paper })))
+    ]));
+  }
+  if (monthPapers.length !== 0) {
+    resultsScreenElements.push(h('div', { class: 'category-results-papers-this-month' }, [
+      h('h2', { class: 'papers-this-month-title' }, 'Papers in the past month'),
+      h('div', { class: 'papers' }, monthPapers.map(paper => h(Paper, { paper })))
+    ]));
+  }
+
+  return h('div', { class: 'category-results-screen' }, resultsScreenElements);
 }
