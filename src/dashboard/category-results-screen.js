@@ -9,7 +9,9 @@ function Paper ({ paper }) {
       h('div', { class: 'paper-read' }),
       h('div', { class: 'paper-title' }, paper.title)
     ]),
-    h('div', { class: 'paper-authors' }, paper.authors),
+    h('div', { class: 'paper-authors tooltip' }, paper.authors, [
+      h('span', { class: 'tooltiptext' }, paper.author_corresponding_institution)
+    ]),
     h('div', { class: 'paper-date' }, paper.date.toISOString().split('T')[0]),
     h('div', { class: 'paper-journal' }, paper.journal),
     h('div', { class: 'paper-brief' }, paper.brief)
