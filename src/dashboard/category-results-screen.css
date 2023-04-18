@@ -1,6 +1,5 @@
 .category-results-screen {
   margin: 2em;
-  overflow: hidden;
 }
 
 .category-results-screen .category {
@@ -87,12 +86,13 @@
 .tooltip {
   position: relative;
   display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: max-content;
-  max-width: 120px;
+  max-width: 200px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -112,10 +112,10 @@
 .tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent black transparent;
+  border-color: transparent black transparent transparent;
 }

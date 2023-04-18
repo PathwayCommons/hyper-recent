@@ -4,18 +4,40 @@ import CategoryCard from './category-card.js';
 import { sub } from 'date-fns';
 
 function Paper ({ paper }) {
-  return h('div', { class: 'paper' }, [
+  const paperElements = [
     h('a', { href: paper.finalURL, target: '_blank', class: 'paper-link' }, [
       h('div', { class: 'paper-read' }),
       h('div', { class: 'paper-title' }, paper.title)
     ]),
-    h('div', { class: 'paper-authors tooltip' }, paper.authors, [
-      h('span', { class: 'tooltiptext' }, paper.author_corresponding_institution)
-    ]),
+    h('div', { class: 'paper-authors' }, paper.authors, [
+      h('span', { class: 'paper.authors tooltip' }, findCorrespondingAuthor(paper), [
+        h('span', { class: 'tooltiptext' }, paper.author_corresponding_institution)
+      ])
+    ])
+  ];
+
+  paperElements.push(
     h('div', { class: 'paper-date' }, paper.date.toISOString().split('T')[0]),
     h('div', { class: 'paper-journal' }, paper.journal),
     h('div', { class: 'paper-brief' }, paper.brief)
-  ]);
+  );
+
+  return h('div', { class: 'paper' }, paperElements);
+}
+
+function findCorrespondingAuthor (paper) {
+  const authors = paper.authors.split(';');
+  const nameArray = paper.author_corresponding.split(' ');
+  const lastName = nameArray[nameArray.length - 1];
+
+  for (const author of authors) {
+    const fullName = author.split(',');
+    const last = fullName[0].trim();
+
+    if (last === lastName) {
+      return author;
+    }
+  }
 }
 
 function findRelativeDate (papers, range) {
