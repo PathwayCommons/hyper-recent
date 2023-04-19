@@ -26,16 +26,18 @@ function Paper ({ paper }) {
 }
 
 function findCorrespondingAuthor (paper) {
-  const authors = paper.authors.split(';');
-  const nameArray = paper.author_corresponding.split(' ');
-  const lastName = nameArray[nameArray.length - 1];
+  const authorsArray = paper.authors.split(';'); // "Prasad, P.; Chongtham, J.; Tripathi, S. C.; Ganguly, N. K.; Mittal, S. A.; Srivastava, T."
 
-  for (const author of authors) {
-    const fullName = author.split(',');
-    const last = fullName[0].trim();
+  const regexPattern = /\s+/g;
+  const corrNameArray = paper.author_corresponding.replace(regexPattern, ' ').split(' '); // "Shivani Arora Mittal" in an array
+  const corrLastName = corrNameArray[corrNameArray.length - 1]; // "Mittal" last name
 
-    if (last === lastName) {
-      return author;
+  for (const name of authorsArray) {
+    const nameArray = name.split(','); // Tripathi, S. C. into ['Tripathi', 'S. C.']
+    const lastName = nameArray[0].trim(); // Tripathi
+
+    if (lastName === corrLastName) { // matches last name of corresponding author
+      return name;
     }
   }
 }
