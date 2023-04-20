@@ -4,13 +4,15 @@ import CategoryCard from './category-card.js';
 import { sub } from 'date-fns';
 
 function Paper ({ paper }) {
+  const corrAuthor = findCorrespondingAuthor(paper).toString();
+
   const paperElements = [
     h('a', { href: paper.finalURL, target: '_blank', class: 'paper-link' }, [
       h('div', { class: 'paper-read' }),
       h('div', { class: 'paper-title' }, paper.title)
     ]),
-    h('div', { class: 'paper-authors' }, paper.authors, [
-      h('span', { class: 'paper.authors tooltip' }, findCorrespondingAuthor(paper), [
+    h('div', { class: 'paper-authors' }, finalizeAuthorsList(paper.authors, corrAuthor), [
+      h('span', { class: 'paper.authors tooltip' }, corrAuthor, [
         h('span', { class: 'tooltiptext' }, paper.author_corresponding_institution)
       ])
     ])
@@ -40,7 +42,7 @@ function findCorrespondingAuthor (paper) {
   const corrLastName = corrNameArray[corrNameArray.length - 1];
 
   for (const name of authorsArray) {
-    const nameArray = name.split(','); // Tripathi, S. C. into ['Tripathi', 'S. C.']
+    const nameArray = name.split(','); // split up last name from initials
     const lastName = nameArray[0].trim();
     let initialsArray = [];
 
@@ -56,7 +58,7 @@ function findCorrespondingAuthor (paper) {
       console.log(initialsArray);
     }
 
-    if (lastName === corrLastName && initialsArray.length === corrInitialsArray.length) { // matches last name of corresponding author
+    if (lastName === corrLastName && initialsArray.length === corrInitialsArray.length) {
       const sameInitials = initialsArray.every((element, index) => element === corrInitialsArray[index]);
 
       if (sameInitials) {
@@ -64,6 +66,14 @@ function findCorrespondingAuthor (paper) {
       }
     }
   }
+}
+
+function finalizeAuthorsList (authorString, corrAuthor) {
+  const authorsArray = authorString.split(';');
+  const finalAuthorsArray = authorsArray.filter(name => name !== corrAuthor);
+  let finalAuthorsList = finalAuthorsArray.join(';');
+  finalAuthorsList = finalAuthorsList + '; ';
+  return finalAuthorsList;
 }
 
 function findRelativeDate (papers, range) {
