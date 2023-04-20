@@ -26,6 +26,10 @@ function Paper ({ paper }) {
 }
 
 function findCorrespondingAuthor (paper) {
+  if (!paper.author_corresponding) {
+    return;
+  }
+
   const authorsArray = paper.authors.split(';'); // "Prasad, P.; Chongtham, J.; Tripathi, S. C.; Ganguly, N. K.; Mittal, S. A.; Srivastava, T."
 
   const regexPattern = /\s+/g;
@@ -35,9 +39,26 @@ function findCorrespondingAuthor (paper) {
   for (const name of authorsArray) {
     const nameArray = name.split(','); // Tripathi, S. C. into ['Tripathi', 'S. C.']
     const lastName = nameArray[0].trim(); // Tripathi
+    let initialsArray = [];
 
-    if (lastName === corrLastName) { // matches last name of corresponding author
-      return name;
+    const corrInitialsArray = corrNameArray.map(word => word[0].trim());
+    corrInitialsArray.pop();
+    console.log(corrInitialsArray);
+
+    if (nameArray[1]) {
+      const rawInitials = nameArray[1].split('.');
+      console.log(rawInitials);
+      initialsArray = rawInitials.map((element) => element.trim());
+      initialsArray.pop();
+      console.log(initialsArray);
+    }
+
+    if (lastName === corrLastName && initialsArray.length === corrInitialsArray.length) { // matches last name of corresponding author
+      const sameInitials = initialsArray.every((element, index) => element === corrInitialsArray[index]);
+
+      if (sameInitials) {
+        return name;
+      }
     }
   }
 }
