@@ -30,15 +30,18 @@ function findCorrespondingAuthor (paper) {
     return;
   }
 
-  const authorsArray = paper.authors.split(';'); // "Prasad, P.; Chongtham, J.; Tripathi, S. C.; Ganguly, N. K.; Mittal, S. A.; Srivastava, T."
+  const authorsArray = paper.authors.split(';');
+
+  const removeAccents = str => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const corrAuthor = removeAccents(paper.author_corresponding);
 
   const regexPattern = /\s+/g;
-  const corrNameArray = paper.author_corresponding.replace(regexPattern, ' ').split(' '); // "Shivani Arora Mittal" in an array
-  const corrLastName = corrNameArray[corrNameArray.length - 1]; // "Mittal" last name
+  const corrNameArray = corrAuthor.replace(regexPattern, ' ').split(' '); // replacing extra spaces in name input & creating array
+  const corrLastName = corrNameArray[corrNameArray.length - 1];
 
   for (const name of authorsArray) {
     const nameArray = name.split(','); // Tripathi, S. C. into ['Tripathi', 'S. C.']
-    const lastName = nameArray[0].trim(); // Tripathi
+    const lastName = nameArray[0].trim();
     let initialsArray = [];
 
     const corrInitialsArray = corrNameArray.map(word => word[0].trim());
