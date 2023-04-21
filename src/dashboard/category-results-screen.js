@@ -4,7 +4,7 @@ import CategoryCard from './category-card.js';
 import { sub } from 'date-fns';
 
 function Paper ({ paper }) {
-  const corrAuthor = findCorrespondingAuthor(paper).toString();
+  const corrAuthor = findCorrespondingAuthor(paper);
 
   const paperElements = [
     h('a', { href: paper.finalURL, target: '_blank', class: 'paper-link' }, [
