@@ -4,76 +4,17 @@ import CategoryCard from './category-card.js';
 import { sub } from 'date-fns';
 
 function Paper ({ paper }) {
-  const corrAuthor = findCorrespondingAuthor(paper);
-
-  const paperElements = [
+  return h('div', { class: 'paper' }, [
     h('a', { href: paper.finalURL, target: '_blank', class: 'paper-link' }, [
       h('div', { class: 'paper-read' }),
       h('div', { class: 'paper-title' }, paper.title)
     ]),
-    h('div', { class: 'paper-authors' }, finalizeAuthorsList(paper.authors, corrAuthor), [
-      h('span', { class: 'paper.authors tooltip' }, corrAuthor, [
-        h('span', { class: 'tooltiptext' }, paper.author_corresponding_institution)
-      ])
-    ])
-  ];
-
-  paperElements.push(
+    h('div', { class: 'paper-authors' }, paper.authors),
+    h('div', { class: 'paper-institution' }, paper.author_corresponding_institution),
     h('div', { class: 'paper-date' }, paper.date.toISOString().split('T')[0]),
     h('div', { class: 'paper-journal' }, paper.journal),
     h('div', { class: 'paper-brief' }, paper.brief)
-  );
-
-  return h('div', { class: 'paper' }, paperElements);
-}
-
-function findCorrespondingAuthor (paper) {
-  if (!paper.author_corresponding) {
-    return;
-  }
-
-  const authorsArray = paper.authors.split(';');
-
-  const removeAccents = str => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  const corrAuthor = removeAccents(paper.author_corresponding);
-
-  const regexPattern = /\s+/g;
-  const corrNameArray = corrAuthor.replace(regexPattern, ' ').split(' '); // replacing extra spaces in name input & creating array
-  const corrLastName = corrNameArray[corrNameArray.length - 1];
-
-  for (const name of authorsArray) {
-    const nameArray = name.split(','); // split up last name from initials
-    const lastName = nameArray[0].trim();
-    let initialsArray = [];
-
-    const corrInitialsArray = corrNameArray.map(word => word[0].trim());
-    corrInitialsArray.pop();
-    console.log(corrInitialsArray);
-
-    if (nameArray[1]) {
-      const rawInitials = nameArray[1].split('.');
-      console.log(rawInitials);
-      initialsArray = rawInitials.map((element) => element.trim());
-      initialsArray.pop();
-      console.log(initialsArray);
-    }
-
-    if (lastName === corrLastName && initialsArray.length === corrInitialsArray.length) {
-      const sameInitials = initialsArray.every((element, index) => element === corrInitialsArray[index]);
-
-      if (sameInitials) {
-        return name;
-      }
-    }
-  }
-}
-
-function finalizeAuthorsList (authorString, corrAuthor) {
-  const authorsArray = authorString.split(';');
-  const finalAuthorsArray = authorsArray.filter(name => name !== corrAuthor);
-  let finalAuthorsList = finalAuthorsArray.join(';');
-  finalAuthorsList = finalAuthorsList + '; ';
-  return finalAuthorsList;
+  ]);
 }
 
 function findRelativeDate (papers, range) {
