@@ -58,6 +58,11 @@
   position: relative;
 }
 
+.paper-institution {
+  color: #888;
+  font-size: 0.9em;
+}
+
 .paper-date {
   color: #888;
   font-size: 0.8em;
