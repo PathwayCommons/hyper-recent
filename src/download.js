@@ -131,7 +131,7 @@ async function getRecent (server, N, opts) { // eslint-disable-line no-unused-va
 async function getDateRange (server, start, end, offset = 0, opts) {
   validateDate(start);
   validateDate(end);
-  const url = `${CONTENT_DETAIL_BASE_URL}/${server}/${start}/${end}/${offset}/json`;
+  const url = `${CONTENT_DETAIL_BASE_URL}${server}/${start}/${end}/${offset}/json`;
   return getNormalized(url, opts);
 };
 

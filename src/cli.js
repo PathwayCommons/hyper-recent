@@ -106,6 +106,7 @@ async function formatData (dataArray) {
   try {
     const formattedData = dataArray.map(article => ({
       paperId: article.doi,
+      abstract: article.abstract,
       doi: article.doi,
       title: article.title,
       journal: article.server,

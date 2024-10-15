@@ -43,11 +43,10 @@
       "args": [
         "download",
         "--output",
-        "example-data/2022-06-22.json",
-        "2022-06-22",
-        "2022-06-22"
-      ],
-      "console": "integratedTerminal"
+        "example-data/2024-08-01_2024-10-011.json",
+        "2024-08-01",
+        "2024-10-11"
+      ]
     },
     {
       "type": "node",
@@ -60,11 +59,12 @@
       "args": [
         "search",
         "--input",
-        "example-data/2022-06-22.json",
-        "breast cancer",
-        "--pretty"
-      ],
-      "console": "integratedTerminal"
+        "example-data/2024-08-01_2024-10-011.json",
+        "--output",
+        "example-data/2024-08-01_2024-10-011-alzheimer.json",
+        "alzheimer"
+        // "--pretty"
+      ]
     },
     {
       "type": "node",
@@ -83,7 +83,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/src/dashboard/app.js", 
+      "program": "${workspaceFolder}/src/dashboard/app.js",
       "console": "integratedTerminal"
     }
   ]
